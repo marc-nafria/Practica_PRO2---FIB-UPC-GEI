@@ -29,10 +29,10 @@
 
 using namespace std;
 
-map<string, Jugador> jugadors;
-map<string, Torneig> tornejos;
-vector<Categoria> categories;
-vector<pair<string, int>> ranking;
+map<string, Jugador> jugadors;  /**< Diccionari que emmagatzema als jugadors */
+map<string, Torneig> tornejos;  /**< Diccionari que emmagatzema els tornejos */
+vector<Categoria> categories;   /**< Vector que conté les categories */
+vector<pair<string, int>> ranking; /**< Vector que conté el ranking */
 
 
 /** @brief Actualitza el ranking del circuit i 

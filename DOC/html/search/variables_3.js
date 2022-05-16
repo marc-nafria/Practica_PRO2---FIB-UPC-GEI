@@ -1,7 +1,0 @@
-var searchData=
-[
-  ['partits_5fcontra_0',['partits_contra',['../struct_resultat.html#aca52912746cb59f55400107364a740c3',1,'Resultat']]],
-  ['partits_5ffavor_1',['partits_favor',['../struct_resultat.html#a9d84f0247214721722337d36720e1184',1,'Resultat']]],
-  ['punts_2',['punts',['../struct_resultat.html#ab81e13e65ea0d122d6836a1cead8f242',1,'Resultat']]],
-  ['punts_5fper_5fnivell_3',['punts_per_nivell',['../struct_categoria.html#a73793e1a6f68e974972b0789f9a31e91',1,'Categoria']]]
-];

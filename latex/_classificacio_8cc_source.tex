@@ -1,0 +1,56 @@
+\hypertarget{_classificacio_8cc_source}{}\doxysection{Classificacio.\+cc}
+\mbox{\hyperlink{_classificacio_8cc}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_classificacio_8hh}{Classificacio.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00003}00003 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00004}00004 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00005}00005 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00007}00007 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00009}\mbox{\hyperlink{class_classificacio_a5d2e4d797a1793ccbbec6f700a467b2d}{00009}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_classificacio_a5d2e4d797a1793ccbbec6f700a467b2d}{Classificacio::copiar\_classificacio}} (\textcolor{keyword}{const} \mbox{\hyperlink{class_classificacio}{Classificacio}} \&copia) \{}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00010}00010     \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}}.clear();}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00011}00011     }
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00012}00012     this-\/>\mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}} = copia.\mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}};}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00013}00013 \}}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00015}\mbox{\hyperlink{class_classificacio_a1164331a4fd08d20f2bb6e1ab2a85a5e}{00015}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_classificacio_a1164331a4fd08d20f2bb6e1ab2a85a5e}{Classificacio::afegir\_partit}}(}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00016}00016     \textcolor{keywordtype}{string} nom\_jugador, \textcolor{keywordtype}{int} jocs\_favor, \textcolor{keywordtype}{int} jocs\_contra,}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00017}00017     \textcolor{keywordtype}{int} sets\_favor, \textcolor{keywordtype}{int} sets\_contra, \textcolor{keywordtype}{int} resultat\_partit) \{}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00019}00019     \textcolor{comment}{/* sumem les estadístiques del partit a les del jugadors */}}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00020}00020     \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}}[nom\_jugador].jocs\_favor += jocs\_favor;}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00021}00021     \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}}[nom\_jugador].jocs\_contra += jocs\_contra;}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00022}00022     \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}}[nom\_jugador].sets\_favor += sets\_favor;}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00023}00023     \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}}[nom\_jugador].sets\_contra += sets\_contra;}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00025}00025     \textcolor{keywordflow}{if} (resultat\_partit == 1) \{}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00026}00026         \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}}[nom\_jugador].partits\_favor += 1;}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00027}00027     \}}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00028}00028     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (resultat\_partit == -\/1) \{}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00029}00029         \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}}[nom\_jugador].partits\_contra += 1;}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00030}00030     \}}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00031}00031 \}}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00033}\mbox{\hyperlink{class_classificacio_a861e0203f1dac9af26f3c5ee80264bb8}{00033}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_classificacio_a861e0203f1dac9af26f3c5ee80264bb8}{Classificacio::establir\_punts}}(\textcolor{keywordtype}{string} nom\_jugador, \textcolor{keywordtype}{int} punts)}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00034}00034 \{}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00035}00035     \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}}[nom\_jugador].punts = punts;}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00036}00036 \}}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00038}\mbox{\hyperlink{class_classificacio_a75f3ac772019e0e020c02f79de7a37f7}{00038}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_classificacio_a75f3ac772019e0e020c02f79de7a37f7}{Classificacio::borrar\_jugador}}(\textcolor{keywordtype}{string} nom\_jugador) \{}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00039}00039     \textcolor{comment}{/* borrem el jugado corresponent */}}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00040}00040     \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}}.erase(nom\_jugador);}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00041}00041 \}}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00043}\mbox{\hyperlink{class_classificacio_ad8ecec54f53d504f95f18dba9b96a531}{00043}} map<string, Resultat> \mbox{\hyperlink{class_classificacio_ad8ecec54f53d504f95f18dba9b96a531}{Classificacio::consultar\_classificacio}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00044}00044     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}};}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00045}00045 \}}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00047}\mbox{\hyperlink{class_classificacio_a195ac9a0ea2b43d67122d17e121fc520}{00047}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_classificacio_a195ac9a0ea2b43d67122d17e121fc520}{Classificacio::borrar\_classificacio}}() \{}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00048}00048     \textcolor{comment}{/* borrem tot el diccionari ijuagdors */}}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00049}00049     \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}}.clear();}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00050}00050 \}}
+\DoxyCodeLine{\Hypertarget{_classificacio_8cc_source_l00051}00051 }
+
+\end{DoxyCode}

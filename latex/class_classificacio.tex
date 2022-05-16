@@ -1,0 +1,238 @@
+\hypertarget{class_classificacio}{}\doxysection{Referencia de la Clase Classificacio}
+\label{class_classificacio}\index{Classificacio@{Classificacio}}
+
+
+Representa el resum d\textquotesingle{}un torneig, es a dir, es un conjunt dels resultats de tots els jugadors.  
+
+
+
+
+{\ttfamily \#include $<$Classificacio.\+hh$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_classificacio_a1164331a4fd08d20f2bb6e1ab2a85a5e}{afegir\+\_\+partit}} (string nom\+\_\+jugador, int jocs\+\_\+favor, int jocs\+\_\+contra, int sets\+\_\+favor, int sets\+\_\+contra, int resultat\+\_\+partit)
+\begin{DoxyCompactList}\small\item\em Afegeix un nou partir a la classificacio d\textquotesingle{}un jugador, modificant el seu resultat en el diccionari jugadors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_classificacio_a861e0203f1dac9af26f3c5ee80264bb8}{establir\+\_\+punts}} (string nom\+\_\+jugador, int punts)
+\begin{DoxyCompactList}\small\item\em Determina els punts que guanya el jugador en el torneig, afegint-\/los al seu resultat en el diccionari jugadors. També retorna si s\textquotesingle{}han afegit amb exit, ja que potser hem afegit menys punts dels que tocavem perquè ens trobem en un nivell inferior al que ha quedat el jugador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_classificacio_a75f3ac772019e0e020c02f79de7a37f7}{borrar\+\_\+jugador}} (string nom\+\_\+jugador)
+\begin{DoxyCompactList}\small\item\em Borra el jugador de la classificacio. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_classificacio_a5d2e4d797a1793ccbbec6f700a467b2d}{copiar\+\_\+classificacio}} (const \mbox{\hyperlink{class_classificacio}{Classificacio}} \&copia)
+\begin{DoxyCompactList}\small\item\em Modifica el parametre implícit com una copia de una altra classficacio. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_classificacio_a195ac9a0ea2b43d67122d17e121fc520}{borrar\+\_\+classificacio}} ()
+\begin{DoxyCompactList}\small\item\em Esborra tots els resultats de la classificacio. \end{DoxyCompactList}\item 
+map$<$ string, \mbox{\hyperlink{struct_resultat}{Resultat}} $>$ \mbox{\hyperlink{class_classificacio_ad8ecec54f53d504f95f18dba9b96a531}{consultar\+\_\+classificacio}} () const
+\begin{DoxyCompactList}\small\item\em Retorna una copia del diccionari \textquotesingle{}jugadors\textquotesingle{}, per a modificar els jugadors desde el programa principal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ string, \mbox{\hyperlink{struct_resultat}{Resultat}} $>$ \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa el resum d\textquotesingle{}un torneig, es a dir, es un conjunt dels resultats de tots els jugadors. 
+
+Definición en la línea \mbox{\hyperlink{_classificacio_8hh_source_l00030}{30}} del archivo \mbox{\hyperlink{_classificacio_8hh_source}{Classificacio.\+hh}}.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_classificacio_a1164331a4fd08d20f2bb6e1ab2a85a5e}\label{class_classificacio_a1164331a4fd08d20f2bb6e1ab2a85a5e}} 
+\index{Classificacio@{Classificacio}!afegir\_partit@{afegir\_partit}}
+\index{afegir\_partit@{afegir\_partit}!Classificacio@{Classificacio}}
+\doxysubsubsection{\texorpdfstring{afegir\_partit()}{afegir\_partit()}}
+{\footnotesize\ttfamily void Classificacio\+::afegir\+\_\+partit (\begin{DoxyParamCaption}\item[{string}]{nom\+\_\+jugador,  }\item[{int}]{jocs\+\_\+favor,  }\item[{int}]{jocs\+\_\+contra,  }\item[{int}]{sets\+\_\+favor,  }\item[{int}]{sets\+\_\+contra,  }\item[{int}]{resultat\+\_\+partit }\end{DoxyParamCaption})}
+
+
+
+Afegeix un nou partir a la classificacio d\textquotesingle{}un jugador, modificant el seu resultat en el diccionari jugadors. 
+
+\begin{DoxyPrecond}{Precondición}
+Un string, 4 enters d\textquotesingle{}estadistiques, més un enter que determina si ha guanyat(1) o ha perdut(-\/1). 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+S\textquotesingle{}afegeix aquest partit al resultat del jugador. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_classificacio_8cc_source_l00015}{15}} del archivo \mbox{\hyperlink{_classificacio_8cc_source}{Classificacio.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017                                                           \{}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019     \textcolor{comment}{/* sumem les estadístiques del partit a les del jugadors */}}
+\DoxyCodeLine{00020     \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}}[nom\_jugador].jocs\_favor += jocs\_favor;}
+\DoxyCodeLine{00021     \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}}[nom\_jugador].jocs\_contra += jocs\_contra;}
+\DoxyCodeLine{00022     \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}}[nom\_jugador].sets\_favor += sets\_favor;}
+\DoxyCodeLine{00023     \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}}[nom\_jugador].sets\_contra += sets\_contra;}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025     \textcolor{keywordflow}{if} (resultat\_partit == 1) \{}
+\DoxyCodeLine{00026         \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}}[nom\_jugador].partits\_favor += 1;}
+\DoxyCodeLine{00027     \}}
+\DoxyCodeLine{00028     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (resultat\_partit == -\/1) \{}
+\DoxyCodeLine{00029         \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}}[nom\_jugador].partits\_contra += 1;}
+\DoxyCodeLine{00030     \}}
+\DoxyCodeLine{00031 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_classificacio_a861e0203f1dac9af26f3c5ee80264bb8}\label{class_classificacio_a861e0203f1dac9af26f3c5ee80264bb8}} 
+\index{Classificacio@{Classificacio}!establir\_punts@{establir\_punts}}
+\index{establir\_punts@{establir\_punts}!Classificacio@{Classificacio}}
+\doxysubsubsection{\texorpdfstring{establir\_punts()}{establir\_punts()}}
+{\footnotesize\ttfamily void Classificacio\+::establir\+\_\+punts (\begin{DoxyParamCaption}\item[{string}]{nom\+\_\+jugador,  }\item[{int}]{punts }\end{DoxyParamCaption})}
+
+
+
+Determina els punts que guanya el jugador en el torneig, afegint-\/los al seu resultat en el diccionari jugadors. També retorna si s\textquotesingle{}han afegit amb exit, ja que potser hem afegit menys punts dels que tocavem perquè ens trobem en un nivell inferior al que ha quedat el jugador. 
+
+\begin{DoxyPrecond}{Precondición}
+Un string (nom del jugador) i els respectius punts. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Es guarden els punts al resultat del jugador. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_classificacio_8cc_source_l00033}{33}} del archivo \mbox{\hyperlink{_classificacio_8cc_source}{Classificacio.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034 \{}
+\DoxyCodeLine{00035     \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}}[nom\_jugador].punts = punts;}
+\DoxyCodeLine{00036 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_classificacio_a75f3ac772019e0e020c02f79de7a37f7}\label{class_classificacio_a75f3ac772019e0e020c02f79de7a37f7}} 
+\index{Classificacio@{Classificacio}!borrar\_jugador@{borrar\_jugador}}
+\index{borrar\_jugador@{borrar\_jugador}!Classificacio@{Classificacio}}
+\doxysubsubsection{\texorpdfstring{borrar\_jugador()}{borrar\_jugador()}}
+{\footnotesize\ttfamily void Classificacio\+::borrar\+\_\+jugador (\begin{DoxyParamCaption}\item[{string}]{nom\+\_\+jugador }\end{DoxyParamCaption})}
+
+
+
+Borra el jugador de la classificacio. 
+
+\begin{DoxyPrecond}{Precondición}
+Un string (nom del jugador). 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+S\textquotesingle{}esborra el jugador. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_classificacio_8cc_source_l00038}{38}} del archivo \mbox{\hyperlink{_classificacio_8cc_source}{Classificacio.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038                                                      \{}
+\DoxyCodeLine{00039     \textcolor{comment}{/* borrem el jugado corresponent */}}
+\DoxyCodeLine{00040     \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}}.erase(nom\_jugador);}
+\DoxyCodeLine{00041 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_classificacio_a5d2e4d797a1793ccbbec6f700a467b2d}\label{class_classificacio_a5d2e4d797a1793ccbbec6f700a467b2d}} 
+\index{Classificacio@{Classificacio}!copiar\_classificacio@{copiar\_classificacio}}
+\index{copiar\_classificacio@{copiar\_classificacio}!Classificacio@{Classificacio}}
+\doxysubsubsection{\texorpdfstring{copiar\_classificacio()}{copiar\_classificacio()}}
+{\footnotesize\ttfamily void Classificacio\+::copiar\+\_\+classificacio (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_classificacio}{Classificacio}} \&}]{copia }\end{DoxyParamCaption})}
+
+
+
+Modifica el parametre implícit com una copia de una altra classficacio. 
+
+\begin{DoxyPrecond}{Precondición}
+Una classificacio a copiar 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+this-\/\texorpdfstring{$>$}{>}jugadors = copia.\+jugadors 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_classificacio_8cc_source_l00009}{9}} del archivo \mbox{\hyperlink{_classificacio_8cc_source}{Classificacio.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009                                                                     \{}
+\DoxyCodeLine{00010     \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}}.clear();}
+\DoxyCodeLine{00011     }
+\DoxyCodeLine{00012     this-\/>\mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}} = copia.\mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}};}
+\DoxyCodeLine{00013 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_classificacio_a195ac9a0ea2b43d67122d17e121fc520}\label{class_classificacio_a195ac9a0ea2b43d67122d17e121fc520}} 
+\index{Classificacio@{Classificacio}!borrar\_classificacio@{borrar\_classificacio}}
+\index{borrar\_classificacio@{borrar\_classificacio}!Classificacio@{Classificacio}}
+\doxysubsubsection{\texorpdfstring{borrar\_classificacio()}{borrar\_classificacio()}}
+{\footnotesize\ttfamily void Classificacio\+::borrar\+\_\+classificacio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Esborra tots els resultats de la classificacio. 
+
+\begin{DoxyPrecond}{Precondición}
+Cert. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+S\textquotesingle{}esborra la classificacio. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_classificacio_8cc_source_l00047}{47}} del archivo \mbox{\hyperlink{_classificacio_8cc_source}{Classificacio.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047                                          \{}
+\DoxyCodeLine{00048     \textcolor{comment}{/* borrem tot el diccionari ijuagdors */}}
+\DoxyCodeLine{00049     \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}}.clear();}
+\DoxyCodeLine{00050 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_classificacio_ad8ecec54f53d504f95f18dba9b96a531}\label{class_classificacio_ad8ecec54f53d504f95f18dba9b96a531}} 
+\index{Classificacio@{Classificacio}!consultar\_classificacio@{consultar\_classificacio}}
+\index{consultar\_classificacio@{consultar\_classificacio}!Classificacio@{Classificacio}}
+\doxysubsubsection{\texorpdfstring{consultar\_classificacio()}{consultar\_classificacio()}}
+{\footnotesize\ttfamily map$<$ string, \mbox{\hyperlink{struct_resultat}{Resultat}} $>$ Classificacio\+::consultar\+\_\+classificacio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna una copia del diccionari \textquotesingle{}jugadors\textquotesingle{}, per a modificar els jugadors desde el programa principal. 
+
+\begin{DoxyPrecond}{Precondición}
+Cert. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Una copia de la classificacio. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_classificacio_8cc_source_l00043}{43}} del archivo \mbox{\hyperlink{_classificacio_8cc_source}{Classificacio.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043                                                                    \{}
+\DoxyCodeLine{00044     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_classificacio_a0a77f27c0488b91895de66b276818b45}{jugadors}};}
+\DoxyCodeLine{00045 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_classificacio_a0a77f27c0488b91895de66b276818b45}\label{class_classificacio_a0a77f27c0488b91895de66b276818b45}} 
+\index{Classificacio@{Classificacio}!jugadors@{jugadors}}
+\index{jugadors@{jugadors}!Classificacio@{Classificacio}}
+\doxysubsubsection{\texorpdfstring{jugadors}{jugadors}}
+{\footnotesize\ttfamily map$<$string, \mbox{\hyperlink{struct_resultat}{Resultat}}$>$ Classificacio\+::jugadors\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_classificacio_8hh_source_l00083}{83}} del archivo \mbox{\hyperlink{_classificacio_8hh_source}{Classificacio.\+hh}}.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_classificacio_8hh}{Classificacio.\+hh}}\item 
+\mbox{\hyperlink{_classificacio_8cc}{Classificacio.\+cc}}\end{DoxyCompactItemize}

@@ -86,38 +86,65 @@ class Torneig {
 
 	private:
         
-		/* contrueix un primer arbre d'emparellaments, amb alguns valors auxiliars
-		que ja seran modificats en un futur. També imprimeix la sortida de 
-		"iniciar_torneig" */
+		/** @brief Contrueix un primer arbre d'emparellaments, amb alguns valors auxiliars
+		 *  que ja seran modificats en un futur. També imprimeix la sortida de 
+		 *  "iniciar_torneig".
+		 * \pre: Un arbre binari i tres enters
+		 * \post: Construiex un primer arbre d'emparellaments, fent crides resucrsives
+		 * a si mateixa.
+		 */
         void construir_arbre_emparellaments(BinTree<int> &a, int i, int k, int k_max);
 
-        /* modifica l'arbre d'emparellaments amb els guanaydors definitius de cada 
-        enfrontament, també reparteix els punts corresponents a cada jugador */
+        /** @brief Modifica l'arbre d'emparellaments amb els guanaydors definitius de cada 
+         * enfrontament, també reparteix els punts corresponents a cada jugador 
+         * \pre Una abre binari d'enter representant l'arbre d'emparellaments, un 
+         * altre arbre que representi els resultats de cada enfrontalment, i un enter per 
+         * saber a quin nivell estem.
+         * \post Es modifica l'arbre d'emparellaments i s'afegeixen els punts de cada jugador.
+         */
         void modificar_arbre_emparellaments(BinTree<int> &a, const BinTree<string> &b, int nivell);
 
-        /* llegeix els resultats de cada partit del torneig i els guarda a un arbre */
+        /** @brief Llegeix els resultats de cada partit del torneig i els guarda a un arbre.
+         * \pre Un arbre binari de strings.
+         * \post S'actualitza l'arbre amb els resultats.
+         */
 		void llegir_arbre_resultat(BinTree<string> &a);
 
-        /* escriu els resultats de l'arbre final recorrent els dos somultaneament */
+        /** @brieg Escriu els resultats de l'arbre final recorrent els dos simultaneament.
+         * \pre Dos arbres binaris, un representant els enfrentaments i l'altre els resultats.
+         * \post Escriu l'output de finalizar_torneo.
+         */
         void escriure_arbres(const BinTree<int> &a, const BinTree<string> &b);
 		
-		/* afegeix el resultat del partit(resultat) i afegeix les estadístiques
-		als jugadors(j1, j2) */
+		/** @brief Afegeix el resultat del partit(resultat) i afegeix les estadístiques
+		 * als jugadors(j1, j2).
+		 * \pre Dos enters (posicions del jugadors al ranking local del torneig) i un 
+		 * string que conté el resultat del torneig.
+		 * \post S'afegeixen les estadístiques obtingudes en el torneig als jugados, i 
+		 * es retorna la posició del ranking del guanyador.
+		 */
 		int llegir_partit(int j1, int j2, string resultat);
 
-		/* escriu els punts de cada jugador en ordre del ranking al iniciar
-		el torneig */
+		/** @brief Escriu els punts de cada jugador en ordre del ranking al iniciar
+		 * el torneig.
+		 * \pre Cert.
+		 * \post S'acaba de escriure el output de finalizar_torneo.
+		 */
 		void escriure_ranking();
 
-		vector<string> ranking;
-		vector<int> ranking_punts;
+		vector<string> ranking; /**< Conté els noms del jugadors del torneig, 
+		en l'ordre del ranking en el moment que va iniciar el torneig */
+		vector<int> ranking_punts; /**< Conté els punts obtinguts en el torneig
+		per els jugadors en el mateix ordre que el ranking */
 
-		BinTree<int> arbre_emparellaments;
-		BinTree<string> arbre_resultat;
+		BinTree<int> arbre_emparellaments; /**< Arbre binari d'enters on cada 
+		arrel reprenta un enforntament del fills esquerre i dret de l'arbre */
+		BinTree<string> arbre_resultat; /**< Arbre de strings, que conté el 
+		resultat de cada enfrontament */
 
-		Categoria categoria;
-		Classificacio darrera_classificacio;
-		Classificacio nova_classificacio;
+		Categoria categoria; /**< Categoria del torneig */
+		Classificacio darrera_classificacio; /**< Darrera Classificació del torneig */
+		Classificacio nova_classificacio; /**< Nova classificació del torneig */
 
 };
 

@@ -1,0 +1,278 @@
+\hypertarget{_torneig_8cc_source}{}\doxysection{Torneig.\+cc}
+\mbox{\hyperlink{_torneig_8cc}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_torneig_8hh}{Torneig.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00003}00003 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00004}00004 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00005}00005 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00007}\mbox{\hyperlink{class_torneig_a98d476aced1063c8a0ff8e4d0d31b8da}{00007}} \mbox{\hyperlink{class_torneig_a833b2f486a1648a8741d2115a9bb186c}{Torneig::Torneig}}(\mbox{\hyperlink{struct_categoria}{Categoria}} categoria\_torneig) \{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00008}00008     this-\/>\mbox{\hyperlink{class_torneig_a4477c61eb5b2b1c365ba6d195e60fc0a}{categoria}} = categoria\_torneig;}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00009}00009 \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00010}\mbox{\hyperlink{class_torneig_a0a12df5121f79dd97d43a7cbfd291ddf}{00010}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_torneig_a0a12df5121f79dd97d43a7cbfd291ddf}{Torneig::iniciar\_torneig}}(\textcolor{keyword}{const} vector<pair<string, int> > \&\mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}) \{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00011}00011     \textcolor{comment}{/* entre un nombre n */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00012}00012     \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00013}00013     cin >> n;}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00014}00014     }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00015}00015     \textcolor{comment}{/* inicialitzem el ranking */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00016}00016     this-\/>\mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}} = vector<string>(n);}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00018}00018     \textcolor{comment}{/* i hi copiem els respectius jugadors */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00019}00019     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00020}00020         \textcolor{keywordtype}{int} ordre;}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00021}00021         cin >> ordre;}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00022}00022         this-\/>\mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[i] = \mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[ordre -\/ 1].first;}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00023}00023     \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00025}00025     \textcolor{comment}{/* ara contruim el arbre d'emparellament, que ja treurà l'output */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00026}00026     \mbox{\hyperlink{class_torneig_aaee898ef9497d6727f975399e9c2cec4}{construir\_arbre\_emparellaments}}(\mbox{\hyperlink{class_torneig_af9fb24eeb2c5759c38f9bc184b5e981b}{arbre\_emparellaments}}, 1, 2, n);}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00027}00027     cout << endl;}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00028}00028 \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00029}\mbox{\hyperlink{class_torneig_a13a2d58c29700e30a052ea2e6d9c833b}{00029}} \mbox{\hyperlink{class_classificacio}{Classificacio}} \mbox{\hyperlink{class_torneig_a13a2d58c29700e30a052ea2e6d9c833b}{Torneig::finalitzar\_torneig}}() \{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00030}00030     \textcolor{comment}{/* borrem la nova classificació ja que pot quedar-\/hi algo}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00031}00031 \textcolor{comment}{    de l'última edició del torneig */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00032}00032     \mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\_classificacio}}.\mbox{\hyperlink{class_classificacio_a195ac9a0ea2b43d67122d17e121fc520}{borrar\_classificacio}}();}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00034}00034     \textcolor{comment}{/* inicialitzem l'arbre que emmagatzema els resultats com}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00035}00035 \textcolor{comment}{    un arbre buit */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00036}00036     \mbox{\hyperlink{class_torneig_a39c56244360d31c57321450d65120a80}{arbre\_resultat}} = \mbox{\hyperlink{class_bin_tree}{BinTree<string>}}();}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00038}00038     \textcolor{comment}{/* llegim es resultats dels partits i els guardem a l'arbre */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00039}00039     \mbox{\hyperlink{class_torneig_a6a62c85f744db666f381ed5d58ae726f}{llegir\_arbre\_resultat}}(\mbox{\hyperlink{class_torneig_a39c56244360d31c57321450d65120a80}{arbre\_resultat}});}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00041}00041     \textcolor{comment}{/* en base als resultats llegits, actulitzem l'arbre d'emparellaments}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00042}00042 \textcolor{comment}{    amb cada guanyador de cada partit */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00044}00044     \mbox{\hyperlink{class_torneig_aec970031f07d9cffbc21cec8f6b9dff8}{ranking\_punts}} = vector<int> (\mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}.size());}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00045}00045     \mbox{\hyperlink{class_torneig_a6d9f3946189e672630edb70cf04e81f0}{modificar\_arbre\_emparellaments}}(\mbox{\hyperlink{class_torneig_af9fb24eeb2c5759c38f9bc184b5e981b}{arbre\_emparellaments}}, \mbox{\hyperlink{class_torneig_a39c56244360d31c57321450d65120a80}{arbre\_resultat}}, 0);}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00047}00047     \textcolor{comment}{/* escribim l'output de la funció amb l'ajuda dels dos arbres */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00048}00048     \mbox{\hyperlink{class_torneig_a15a87fcad3dcf2e8e25cfae2a96d13eb}{escriure\_arbres}}(\mbox{\hyperlink{class_torneig_af9fb24eeb2c5759c38f9bc184b5e981b}{arbre\_emparellaments}}, \mbox{\hyperlink{class_torneig_a39c56244360d31c57321450d65120a80}{arbre\_resultat}});}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00049}00049     cout << endl;}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00051}00051     \textcolor{comment}{/* escribim els punts de cada jugador per ordre del ranking en el}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00052}00052 \textcolor{comment}{    moment de començar el torneig */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00053}00053     \mbox{\hyperlink{class_torneig_aac89d36a6a9616c0c585d9b125c2d86a}{escriure\_ranking}}();}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00054}00054     }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00055}00055     \textcolor{comment}{/* en acabar el torneig, la nova classificació a es la darrera */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00056}00056     \mbox{\hyperlink{class_torneig_a08eb04b47bf8112e6153ea9b5d0daa14}{darrera\_classificacio}}.\mbox{\hyperlink{class_classificacio_a5d2e4d797a1793ccbbec6f700a467b2d}{copiar\_classificacio}}(\mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\_classificacio}});}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00058}00058     \textcolor{comment}{/* i retornem la classificació per que es puguin actualitzar els }}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00059}00059 \textcolor{comment}{    jugadors des del programa principal */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00060}00060     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\_classificacio}};}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00061}00061 \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00062}\mbox{\hyperlink{class_torneig_ad05e7c87b8e338194582001a89e5c6aa}{00062}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_torneig_ad05e7c87b8e338194582001a89e5c6aa}{Torneig::borrar\_jugador}}(\textcolor{keywordtype}{string} nom\_jugador) \{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00063}00063     this-\/>\mbox{\hyperlink{class_torneig_a08eb04b47bf8112e6153ea9b5d0daa14}{darrera\_classificacio}}.\mbox{\hyperlink{class_classificacio_a75f3ac772019e0e020c02f79de7a37f7}{borrar\_jugador}}(nom\_jugador);}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00064}00064 \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00066}00066 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/Arbre d'emparells-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00067}\mbox{\hyperlink{class_torneig_a6d9f3946189e672630edb70cf04e81f0}{00067}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_torneig_a6d9f3946189e672630edb70cf04e81f0}{Torneig::modificar\_arbre\_emparellaments}}(\mbox{\hyperlink{class_bin_tree}{BinTree<int>}} \&a, \textcolor{keyword}{const} \mbox{\hyperlink{class_bin_tree}{BinTree<string>}} \&b, \textcolor{keywordtype}{int} nivell)  \{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00068}00068     \textcolor{comment}{/* cas base, arribem a una fulla */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00069}00069     \textcolor{keywordflow}{if} (a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}().\mbox{\hyperlink{class_bin_tree_a74cda259ba5c25b8ee38ed4dc33e4fad}{empty}}() and a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}().\mbox{\hyperlink{class_bin_tree_a74cda259ba5c25b8ee38ed4dc33e4fad}{empty}}()) \{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00070}00070         \mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\_classificacio}}.\mbox{\hyperlink{class_classificacio_a861e0203f1dac9af26f3c5ee80264bb8}{establir\_punts}}(\mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[a.\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}() -\/ 1],}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00071}00071         \mbox{\hyperlink{class_torneig_a4477c61eb5b2b1c365ba6d195e60fc0a}{categoria}}.\mbox{\hyperlink{struct_categoria_a73793e1a6f68e974972b0789f9a31e91}{punts\_per\_nivell}}[nivell]);}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00072}00072         \mbox{\hyperlink{class_torneig_aec970031f07d9cffbc21cec8f6b9dff8}{ranking\_punts}}[a.\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}() -\/ 1] = \mbox{\hyperlink{class_torneig_a4477c61eb5b2b1c365ba6d195e60fc0a}{categoria}}.\mbox{\hyperlink{struct_categoria_a73793e1a6f68e974972b0789f9a31e91}{punts\_per\_nivell}}[nivell];}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00073}00073         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00074}00074     \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00076}00076     \textcolor{comment}{/* si no modifiquem els subarbres dret i esquerre */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00077}00077     \mbox{\hyperlink{class_bin_tree}{BinTree<int>}} left = a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}();}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00078}00078     \mbox{\hyperlink{class_bin_tree}{BinTree<int>}} right = a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}();}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00080}00080     \mbox{\hyperlink{class_torneig_a6d9f3946189e672630edb70cf04e81f0}{modificar\_arbre\_emparellaments}}(left, b.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}(), nivell + 1);}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00081}00081     \mbox{\hyperlink{class_torneig_a6d9f3946189e672630edb70cf04e81f0}{modificar\_arbre\_emparellaments}}(right, b.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}(), nivell + 1);}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00082}00082     }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00083}00083     \textcolor{comment}{/* el valor de la arrel es el guanyador dels dos jugadors}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00084}00084 \textcolor{comment}{    que s'enfronten. Un el trobem a la esquerra i l'altre a la dreta */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00085}00085     \textcolor{keywordtype}{int} guanyador = \mbox{\hyperlink{class_torneig_a1fdb8f1635cc65316bee2b9865fb02ab}{llegir\_partit}}(left.\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}(), right.\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}(), b.\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}());}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00086}00086     a = \mbox{\hyperlink{class_bin_tree}{BinTree<int>}}(}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00087}00087         guanyador,}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00088}00088         left,}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00089}00089         right);}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00091}00091     \textcolor{comment}{/* i al guanyador li actualitzem els punts en funció del nivell en el que estem,}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00092}00092 \textcolor{comment}{    d'aquesta manera assegurem que, al llegir-\/lo en postordre, al final de recorre'l,}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00093}00093 \textcolor{comment}{    cada jugadors tindrà els punts del nivell més alt en el que hagi guanyat */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00094}00094     \mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\_classificacio}}.\mbox{\hyperlink{class_classificacio_a861e0203f1dac9af26f3c5ee80264bb8}{establir\_punts}}(\mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[guanyador -\/ 1],}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00095}00095         \mbox{\hyperlink{class_torneig_a4477c61eb5b2b1c365ba6d195e60fc0a}{categoria}}.\mbox{\hyperlink{struct_categoria_a73793e1a6f68e974972b0789f9a31e91}{punts\_per\_nivell}}[nivell]);}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00096}00096     \mbox{\hyperlink{class_torneig_aec970031f07d9cffbc21cec8f6b9dff8}{ranking\_punts}}[guanyador -\/ 1] = \mbox{\hyperlink{class_torneig_a4477c61eb5b2b1c365ba6d195e60fc0a}{categoria}}.\mbox{\hyperlink{struct_categoria_a73793e1a6f68e974972b0789f9a31e91}{punts\_per\_nivell}}[nivell];}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00098}00098 \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00099}\mbox{\hyperlink{class_torneig_aaee898ef9497d6727f975399e9c2cec4}{00099}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_torneig_aaee898ef9497d6727f975399e9c2cec4}{Torneig::construir\_arbre\_emparellaments}}(\mbox{\hyperlink{class_bin_tree}{BinTree<int>}} \&a, \textcolor{keywordtype}{int} i, \textcolor{keywordtype}{int} k, \textcolor{keywordtype}{int} k\_max) \{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00100}00100     \textcolor{comment}{/* cas base k -\/ i > k\_max */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00101}00101 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00102}00102     \textcolor{keywordflow}{if} (k -\/ i + 1 > k\_max) \{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00103}00103         a = \mbox{\hyperlink{class_bin_tree}{BinTree<int>}}(i);}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00104}00104         cout << a.\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}() << \textcolor{stringliteral}{"{}."{}}  << \mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[a.\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}() -\/ 1];}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00105}00105         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00106}00106     \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00108}00108     \mbox{\hyperlink{class_bin_tree}{BinTree<int>}} left = \mbox{\hyperlink{class_bin_tree}{BinTree<int>}}();}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00109}00109     \mbox{\hyperlink{class_bin_tree}{BinTree<int>}} right = \mbox{\hyperlink{class_bin_tree}{BinTree<int>}}();}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00111}00111     cout << \textcolor{stringliteral}{"{}("{}};}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00112}00112     \mbox{\hyperlink{class_torneig_aaee898ef9497d6727f975399e9c2cec4}{construir\_arbre\_emparellaments}}(left, i, k * 2, k\_max);}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00113}00113     cout << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00114}00114     \mbox{\hyperlink{class_torneig_aaee898ef9497d6727f975399e9c2cec4}{construir\_arbre\_emparellaments}}(right, k -\/ i + 1, k * 2, k\_max);}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00115}00115     cout << \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00117}00117     a = \mbox{\hyperlink{class_bin_tree}{BinTree<int>}}(i, left, right);}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00118}00118 \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00119}00119 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00120}00120 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/Arbre resultat-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00121}\mbox{\hyperlink{class_torneig_a6a62c85f744db666f381ed5d58ae726f}{00121}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_torneig_a6a62c85f744db666f381ed5d58ae726f}{Torneig::llegir\_arbre\_resultat}}(\mbox{\hyperlink{class_bin_tree}{BinTree<string>}} \&a) \{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00122}00122     \textcolor{comment}{/* llegim resultat */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00123}00123     \textcolor{keywordtype}{string} r;}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00124}00124     cin >> r;}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00125}00125 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00126}00126     \textcolor{comment}{/* cas base, estem en una fulla? */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00127}00127     \textcolor{keywordflow}{if} (r == \textcolor{stringliteral}{"{}0"{}}) \{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00128}00128         a = \mbox{\hyperlink{class_bin_tree}{BinTree<string>}}(\textcolor{stringliteral}{"{}0"{}});}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00129}00129         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00130}00130     \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00131}00131 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00132}00132     \textcolor{comment}{/* si no llegim també el subarbre dret i esquerra */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00133}00133     \mbox{\hyperlink{class_bin_tree}{BinTree<string>}} left = \mbox{\hyperlink{class_bin_tree}{BinTree<string>}}();}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00134}00134     \mbox{\hyperlink{class_bin_tree}{BinTree<string>}} right = \mbox{\hyperlink{class_bin_tree}{BinTree<string>}}();}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00135}00135 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00136}00136     \mbox{\hyperlink{class_torneig_a6a62c85f744db666f381ed5d58ae726f}{llegir\_arbre\_resultat}}(left);}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00137}00137     \mbox{\hyperlink{class_torneig_a6a62c85f744db666f381ed5d58ae726f}{llegir\_arbre\_resultat}}(right);}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00138}00138 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00139}00139     \textcolor{comment}{/* i ara els juntem */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00140}00140     a = \mbox{\hyperlink{class_bin_tree}{BinTree<string>}}(r, left, right);}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00141}00141 \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00142}00142 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/Altres-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00143}\mbox{\hyperlink{class_torneig_a1fdb8f1635cc65316bee2b9865fb02ab}{00143}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_torneig_a1fdb8f1635cc65316bee2b9865fb02ab}{Torneig::llegir\_partit}}(\textcolor{keywordtype}{int} j1, \textcolor{keywordtype}{int} j2, \textcolor{keywordtype}{string} resultat) \{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00144}00144 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00145}00145     \textcolor{comment}{/* per consultar els resultats tractarem la string resultat}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00146}00146 \textcolor{comment}{    com un vector de caràcters, fent la conversió a enter mitjançant}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00147}00147 \textcolor{comment}{    la resta int(caràcter -\/ '0') */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00148}00148     }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00149}00149     \textcolor{comment}{/* cas: juguen tots els sets */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00150}00150     \textcolor{keywordflow}{if} (resultat.length() == 11) \{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00151}00151 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00152}00152         \textcolor{comment}{/* mirem qui ha guanyat: */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00153}00153         \textcolor{comment}{/* 1: guanya j1, -\/1:guanya j2 */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00154}00154         \textcolor{keywordtype}{int} guanyador = 1; }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00155}00155         \textcolor{keywordflow}{if} (resultat[8] < resultat[10]) \{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00156}00156             guanyador = -\/1;}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00157}00157         \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00158}00158 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00159}00159         \textcolor{comment}{/* afegim les estadístiques del jugador 1 */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00160}00160         \mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\_classificacio}}.\mbox{\hyperlink{class_classificacio_a1164331a4fd08d20f2bb6e1ab2a85a5e}{afegir\_partit}}(\mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[j1 -\/ 1],}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00161}00161             \textcolor{keywordtype}{int}(resultat[0] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[4] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[8] -\/ \textcolor{charliteral}{'0'}),}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00162}00162             \textcolor{keywordtype}{int}(resultat[2] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[6] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[10] -\/ \textcolor{charliteral}{'0'}),}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00163}00163             1 + \textcolor{keywordtype}{int}(guanyador ==  1),}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00164}00164             1 + \textcolor{keywordtype}{int}(guanyador == -\/1),}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00165}00165             guanyador);}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00166}00166 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00167}00167         \textcolor{comment}{/* afegim les estacístiques del jugdor 2 */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00168}00168         \mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\_classificacio}}.\mbox{\hyperlink{class_classificacio_a1164331a4fd08d20f2bb6e1ab2a85a5e}{afegir\_partit}}(}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00169}00169             \mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[j2 -\/ 1],}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00170}00170             \textcolor{keywordtype}{int}(resultat[2] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[6] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[10] -\/ \textcolor{charliteral}{'0'}),}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00171}00171             \textcolor{keywordtype}{int}(resultat[0] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[4] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[8] -\/ \textcolor{charliteral}{'0'}),}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00172}00172             1 + \textcolor{keywordtype}{int}(guanyador == -\/1),}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00173}00173             1 + \textcolor{keywordtype}{int}(guanyador ==  1),}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00174}00174             -\/guanyador);}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00175}00175 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00176}00176         \textcolor{comment}{/* retornem la posició del jugador guanyador */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00177}00177         \textcolor{keywordflow}{if} (guanyador == 1) \textcolor{keywordflow}{return} j1;}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00178}00178         \textcolor{keywordflow}{return} j2;}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00179}00179     \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00180}00180 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00181}00181     \textcolor{comment}{/* cas: juguen només dos sets */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00182}00182     \textcolor{keywordflow}{if} (resultat.length() == 7) \{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00183}00183 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00184}00184         \textcolor{comment}{/* mirem qui ha guanyat */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00185}00185         \textcolor{comment}{/* 1: guanya j1, -\/1: guanya j2 */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00186}00186         \textcolor{keywordtype}{int} guanyador = 1;}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00187}00187         \textcolor{keywordflow}{if} (resultat[0] < resultat[2]) \{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00188}00188             guanyador = -\/1;}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00189}00189         \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00190}00190 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00191}00191         \textcolor{comment}{/* afegim les estadístiques del jugador 1 */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00192}00192         \mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\_classificacio}}.\mbox{\hyperlink{class_classificacio_a1164331a4fd08d20f2bb6e1ab2a85a5e}{afegir\_partit}}(}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00193}00193             \mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[j1 -\/ 1],}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00194}00194             \textcolor{keywordtype}{int}(resultat[0] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[4] -\/ \textcolor{charliteral}{'0'}),}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00195}00195             \textcolor{keywordtype}{int}(resultat[2] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[6] -\/ \textcolor{charliteral}{'0'}),}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00196}00196             2*\textcolor{keywordtype}{int}(guanyador ==  1),}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00197}00197             2*\textcolor{keywordtype}{int}(guanyador == -\/1),}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00198}00198             guanyador);}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00199}00199 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00200}00200         \textcolor{comment}{/* afegim les estacístiques del jugdor 2 */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00201}00201         \mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\_classificacio}}.\mbox{\hyperlink{class_classificacio_a1164331a4fd08d20f2bb6e1ab2a85a5e}{afegir\_partit}}(}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00202}00202             \mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[j2 -\/ 1],}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00203}00203             \textcolor{keywordtype}{int}(resultat[2] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[6] -\/ \textcolor{charliteral}{'0'}),}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00204}00204             \textcolor{keywordtype}{int}(resultat[0] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[4] -\/ \textcolor{charliteral}{'0'}),}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00205}00205             2*\textcolor{keywordtype}{int}(guanyador == -\/1),}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00206}00206             2*\textcolor{keywordtype}{int}(guanyador ==  1),}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00207}00207             -\/guanyador);}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00208}00208 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00209}00209         \textcolor{comment}{/* retornem la posició del jugador guanyador */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00210}00210         \textcolor{keywordflow}{if} (guanyador == 1) \textcolor{keywordflow}{return} j1;}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00211}00211         \textcolor{keywordflow}{return} j2;}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00212}00212     \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00213}00213 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00214}00214     \textcolor{comment}{/* cas: partit abortat */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00215}00215     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00216}00216         \textcolor{comment}{//* mirem qui ha guanyat */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00217}00217         \textcolor{comment}{/* 1: guanya j1, -\/1: guanya j2 */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00218}00218         \textcolor{keywordtype}{int} guanyador = 1;}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00219}00219         \textcolor{keywordflow}{if} (resultat[0] < resultat[2]) \{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00220}00220             guanyador = -\/1;}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00221}00221         \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00222}00222 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00223}00223         \textcolor{comment}{/* afegim les estadístiques del jugador 1 */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00224}00224         \mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\_classificacio}}.\mbox{\hyperlink{class_classificacio_a1164331a4fd08d20f2bb6e1ab2a85a5e}{afegir\_partit}}(}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00225}00225             \mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[j1 -\/ 1], 0, 0, 0, 0, guanyador);}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00226}00226 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00227}00227         \textcolor{comment}{/* afegim les estacístiques del jugdor 2 */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00228}00228         \mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\_classificacio}}.\mbox{\hyperlink{class_classificacio_a1164331a4fd08d20f2bb6e1ab2a85a5e}{afegir\_partit}}(}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00229}00229             \mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[j2 -\/ 1], 0, 0, 0, 0, -\/guanyador);}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00230}00230 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00231}00231         \textcolor{comment}{/* retornem la posició del jugador guanyador */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00232}00232         \textcolor{keywordflow}{if} (guanyador == 1) \textcolor{keywordflow}{return} j1;}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00233}00233         \textcolor{keywordflow}{return} j2;}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00234}00234     \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00235}00235 \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00236}00236 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/Sortida del torneig-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00237}\mbox{\hyperlink{class_torneig_a15a87fcad3dcf2e8e25cfae2a96d13eb}{00237}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_torneig_a15a87fcad3dcf2e8e25cfae2a96d13eb}{Torneig::escriure\_arbres}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_bin_tree}{BinTree<int>}} \&a, \textcolor{keyword}{const} \mbox{\hyperlink{class_bin_tree}{BinTree<string>}} \&b) \{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00238}00238     \textcolor{comment}{/* cas base: fulla de l'arbre de resultats */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00239}00239     \textcolor{keywordflow}{if} (b.\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}() == \textcolor{stringliteral}{"{}0"{}}) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00240}00240     }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00241}00241     \textcolor{comment}{/* escribim en el format corresponent */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00242}00242     cout << \textcolor{stringliteral}{"{}("{}};}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00243}00243     cout << a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}().\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}() << \textcolor{stringliteral}{"{}."{}} << \mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}().\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}() -\/ 1] }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00244}00244         << \textcolor{stringliteral}{"{} vs "{}}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00245}00245         << a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}().\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}() << \textcolor{stringliteral}{"{}."{}} << \mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}().\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}() -\/ 1]}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00246}00246         << \textcolor{stringliteral}{"{} "{}}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00247}00247         << b.\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}();}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00248}00248 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00249}00249 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00250}00250     \textcolor{comment}{/* pas inductiu: fer el mateix per als subarbres */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00251}00251     \mbox{\hyperlink{class_torneig_a15a87fcad3dcf2e8e25cfae2a96d13eb}{escriure\_arbres}}(a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}(), b.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}());}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00252}00252     \mbox{\hyperlink{class_torneig_a15a87fcad3dcf2e8e25cfae2a96d13eb}{escriure\_arbres}}(a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}(), b.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}());}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00253}00253     }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00254}00254     cout << \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00255}00255 \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00256}\mbox{\hyperlink{class_torneig_aac89d36a6a9616c0c585d9b125c2d86a}{00256}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_torneig_aac89d36a6a9616c0c585d9b125c2d86a}{Torneig::escriure\_ranking}}() \{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00257}00257     \textcolor{comment}{/* recorrem simultaniamen el ranking i el ranking\_punts, }}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00258}00258 \textcolor{comment}{    per associar cada jugador amb els seus punts corresponents */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00259}00259     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_torneig_aec970031f07d9cffbc21cec8f6b9dff8}{ranking\_punts}}.size(); ++i) \{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00260}00260         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_torneig_aec970031f07d9cffbc21cec8f6b9dff8}{ranking\_punts}}[i] != 0) \{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00261}00261             cout << i + 1 << \textcolor{stringliteral}{"{}."{}} << \mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[i] << \textcolor{stringliteral}{"{} "{}} }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00262}00262             << \mbox{\hyperlink{class_torneig_aec970031f07d9cffbc21cec8f6b9dff8}{ranking\_punts}}[i] << endl;}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00263}00263         \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00264}00264     \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00265}00265 \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00266}00266 }
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00267}00267 \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/Consulta-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00268}\mbox{\hyperlink{class_torneig_a2fdf459665896c0bc542d6d9f1e40586}{00268}} \mbox{\hyperlink{class_classificacio}{Classificacio}} \mbox{\hyperlink{class_torneig_a2fdf459665896c0bc542d6d9f1e40586}{Torneig::consultar\_darrera\_classificacio}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00269}00269     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_torneig_a08eb04b47bf8112e6153ea9b5d0daa14}{darrera\_classificacio}};}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00270}00270 \}}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00271}\mbox{\hyperlink{class_torneig_ad126d3be0c787e50ba49278acf5c8937}{00271}} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_torneig_ad126d3be0c787e50ba49278acf5c8937}{Torneig::consultar\_nom\_categoria}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00272}00272     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_torneig_a4477c61eb5b2b1c365ba6d195e60fc0a}{categoria}}.\mbox{\hyperlink{struct_categoria_ad39955d54081f0d7f31db96909a4f6bf}{nom}};}
+\DoxyCodeLine{\Hypertarget{_torneig_8cc_source_l00273}00273 \}}
+
+\end{DoxyCode}

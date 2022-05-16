@@ -1,0 +1,712 @@
+\hypertarget{class_torneig}{}\doxysection{Referencia de la Clase Torneig}
+\label{class_torneig}\index{Torneig@{Torneig}}
+
+
+Representa un torneig del circuit.  
+
+
+
+
+{\ttfamily \#include $<$Torneig.\+hh$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_torneig_a833b2f486a1648a8741d2115a9bb186c}{Torneig}} ()
+\item 
+\mbox{\hyperlink{class_torneig_a98d476aced1063c8a0ff8e4d0d31b8da}{Torneig}} (\mbox{\hyperlink{struct_categoria}{Categoria}} categoria\+\_\+torneig)
+\begin{DoxyCompactList}\small\item\em Construeix un \mbox{\hyperlink{class_torneig}{Torneig}} en funció d\textquotesingle{}una categoria. La categoria s\textquotesingle{}emmagatzema per a saber quants punts corresponen a cada jugador en acabar el torneig. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_torneig_a0a12df5121f79dd97d43a7cbfd291ddf}{iniciar\+\_\+torneig}} (const vector$<$ pair$<$ string, int $>$ $>$ \&\mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}})
+\begin{DoxyCompactList}\small\item\em Inicia el torneig, es a dir, llegeix les inscripcions, es confecciona i imprimeix l\textquotesingle{}arbre d\textquotesingle{}emparellaments. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_classificacio}{Classificacio}} \mbox{\hyperlink{class_torneig_a13a2d58c29700e30a052ea2e6d9c833b}{finalitzar\+\_\+torneig}} ()
+\begin{DoxyCompactList}\small\item\em Es llegeixen els resultats del torneix i es retorna una classificacio, que indica quants punts ha guanyat cada jugador i quines estadísitques ha sumat. A més, el torneig guarda una copia de la classificació, que servirà per a la seguent edició o per a quan s\textquotesingle{}elimini el torneig. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_torneig_ad05e7c87b8e338194582001a89e5c6aa}{borrar\+\_\+jugador}} (string nom\+\_\+jugador)
+\begin{DoxyCompactList}\small\item\em Borra un jugador de la darrera classificació del torneig. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_classificacio}{Classificacio}} \mbox{\hyperlink{class_torneig_a2fdf459665896c0bc542d6d9f1e40586}{consultar\+\_\+darrera\+\_\+classificacio}} () const
+\begin{DoxyCompactList}\small\item\em Retorna la \mbox{\hyperlink{class_classificacio}{Classificacio}} de la útlima edició del torneig. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_torneig_ad126d3be0c787e50ba49278acf5c8937}{consultar\+\_\+nom\+\_\+categoria}} () const
+\begin{DoxyCompactList}\small\item\em Retorna un string amb el nom de la categoria. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_torneig_aaee898ef9497d6727f975399e9c2cec4}{construir\+\_\+arbre\+\_\+emparellaments}} (\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ int $>$ \&a, int i, int k, int k\+\_\+max)
+\begin{DoxyCompactList}\small\item\em Contrueix un primer arbre d\textquotesingle{}emparellaments, amb alguns valors auxiliars que ja seran modificats en un futur. També imprimeix la sortida de \char`\"{}iniciar\+\_\+torneig\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_torneig_a6d9f3946189e672630edb70cf04e81f0}{modificar\+\_\+arbre\+\_\+emparellaments}} (\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ int $>$ \&a, const \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$ \&b, int nivell)
+\begin{DoxyCompactList}\small\item\em Modifica l\textquotesingle{}arbre d\textquotesingle{}emparellaments amb els guanaydors definitius de cada enfrontament, també reparteix els punts corresponents a cada jugador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_torneig_a6a62c85f744db666f381ed5d58ae726f}{llegir\+\_\+arbre\+\_\+resultat}} (\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$ \&a)
+\begin{DoxyCompactList}\small\item\em Llegeix els resultats de cada partit del torneig i els guarda a un arbre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_torneig_a15a87fcad3dcf2e8e25cfae2a96d13eb}{escriure\+\_\+arbres}} (const \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ int $>$ \&a, const \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$ \&b)
+\item 
+int \mbox{\hyperlink{class_torneig_a1fdb8f1635cc65316bee2b9865fb02ab}{llegir\+\_\+partit}} (int j1, int j2, string resultat)
+\begin{DoxyCompactList}\small\item\em Afegeix el resultat del partit(resultat) i afegeix les estadístiques als jugadors(j1, j2). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_torneig_aac89d36a6a9616c0c585d9b125c2d86a}{escriure\+\_\+ranking}} ()
+\begin{DoxyCompactList}\small\item\em Escriu els punts de cada jugador en ordre del ranking al iniciar el torneig. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_torneig_aec970031f07d9cffbc21cec8f6b9dff8}{ranking\+\_\+punts}}
+\item 
+\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ int $>$ \mbox{\hyperlink{class_torneig_af9fb24eeb2c5759c38f9bc184b5e981b}{arbre\+\_\+emparellaments}}
+\item 
+\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$ \mbox{\hyperlink{class_torneig_a39c56244360d31c57321450d65120a80}{arbre\+\_\+resultat}}
+\item 
+\mbox{\hyperlink{struct_categoria}{Categoria}} \mbox{\hyperlink{class_torneig_a4477c61eb5b2b1c365ba6d195e60fc0a}{categoria}}
+\item 
+\mbox{\hyperlink{class_classificacio}{Classificacio}} \mbox{\hyperlink{class_torneig_a08eb04b47bf8112e6153ea9b5d0daa14}{darrera\+\_\+classificacio}}
+\item 
+\mbox{\hyperlink{class_classificacio}{Classificacio}} \mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\+\_\+classificacio}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa un torneig del circuit. 
+
+Aquest consta de dues funcions principals, la d\textquotesingle{}inici i la de final. La de final resumeix la tasca del torneig, retornar un \mbox{\hyperlink{class_classificacio}{Classificacio}} que resumeixi que ha passat. A més, un torneig sempre guarda la classificació de la última edició, perque farà falta treure punts a certs jugadors, ja sigui quan es borrir el torneig o s\textquotesingle{}en faci una nova edició. També es contempla que, en esborrar un jugador del circuit, s\textquotesingle{}ha de borrar aquest de la darrera classificació en cas de que hi sigui, ja que hi poden haver futurs jugadors amb el mateix nom. 
+
+Definición en la línea \mbox{\hyperlink{_torneig_8hh_source_l00031}{31}} del archivo \mbox{\hyperlink{_torneig_8hh_source}{Torneig.\+hh}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_torneig_a833b2f486a1648a8741d2115a9bb186c}\label{class_torneig_a833b2f486a1648a8741d2115a9bb186c}} 
+\index{Torneig@{Torneig}!Torneig@{Torneig}}
+\index{Torneig@{Torneig}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{Torneig()}{Torneig()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Torneig\+::\+Torneig (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_torneig_8hh_source_l00035}{35}} del archivo \mbox{\hyperlink{_torneig_8hh_source}{Torneig.\+hh}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035 \{\};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneig_a98d476aced1063c8a0ff8e4d0d31b8da}\label{class_torneig_a98d476aced1063c8a0ff8e4d0d31b8da}} 
+\index{Torneig@{Torneig}!Torneig@{Torneig}}
+\index{Torneig@{Torneig}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{Torneig()}{Torneig()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Torneig\+::\+Torneig (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_categoria}{Categoria}}}]{categoria\+\_\+torneig }\end{DoxyParamCaption})}
+
+
+
+Construeix un \mbox{\hyperlink{class_torneig}{Torneig}} en funció d\textquotesingle{}una categoria. La categoria s\textquotesingle{}emmagatzema per a saber quants punts corresponen a cada jugador en acabar el torneig. 
+
+\begin{DoxyPrecond}{Precondición}
+Un string (nom del torneig) i una categoria. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Es crea un torneig amb el nom i la categoria corresponents. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_torneig_8cc_source_l00007}{7}} del archivo \mbox{\hyperlink{_torneig_8cc_source}{Torneig.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007                                             \{}
+\DoxyCodeLine{00008     this-\/>\mbox{\hyperlink{class_torneig_a4477c61eb5b2b1c365ba6d195e60fc0a}{categoria}} = categoria\_torneig;}
+\DoxyCodeLine{00009 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_torneig_a0a12df5121f79dd97d43a7cbfd291ddf}\label{class_torneig_a0a12df5121f79dd97d43a7cbfd291ddf}} 
+\index{Torneig@{Torneig}!iniciar\_torneig@{iniciar\_torneig}}
+\index{iniciar\_torneig@{iniciar\_torneig}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{iniciar\_torneig()}{iniciar\_torneig()}}
+{\footnotesize\ttfamily void Torneig\+::iniciar\+\_\+torneig (\begin{DoxyParamCaption}\item[{const vector$<$ pair$<$ string, int $>$ $>$ \&}]{ranking }\end{DoxyParamCaption})}
+
+
+
+Inicia el torneig, es a dir, llegeix les inscripcions, es confecciona i imprimeix l\textquotesingle{}arbre d\textquotesingle{}emparellaments. 
+
+\begin{DoxyPrecond}{Precondición}
+El ranking en el moment de començar el torneig. El torneig no està començat (cert), i a l\textquotesingle{}entrada es troba un enter n, seguit de n strings (noms de jugadors) i n enters (posicions ranking). 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Es llegeixen les inscripcions i es confecciona i imprimeix el quadre d\textquotesingle{}emparellaments 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_torneig_8cc_source_l00010}{10}} del archivo \mbox{\hyperlink{_torneig_8cc_source}{Torneig.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010                                                                        \{}
+\DoxyCodeLine{00011     \textcolor{comment}{/* entre un nombre n */}}
+\DoxyCodeLine{00012     \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{00013     cin >> n;}
+\DoxyCodeLine{00014     }
+\DoxyCodeLine{00015     \textcolor{comment}{/* inicialitzem el ranking */}}
+\DoxyCodeLine{00016     this-\/>\mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}} = vector<string>(n);}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00018     \textcolor{comment}{/* i hi copiem els respectius jugadors */}}
+\DoxyCodeLine{00019     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{00020         \textcolor{keywordtype}{int} ordre;}
+\DoxyCodeLine{00021         cin >> ordre;}
+\DoxyCodeLine{00022         this-\/>\mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[i] = \mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[ordre -\/ 1].first;}
+\DoxyCodeLine{00023     \}}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025     \textcolor{comment}{/* ara contruim el arbre d'emparellament, que ja treurà l'output */}}
+\DoxyCodeLine{00026     \mbox{\hyperlink{class_torneig_aaee898ef9497d6727f975399e9c2cec4}{construir\_arbre\_emparellaments}}(\mbox{\hyperlink{class_torneig_af9fb24eeb2c5759c38f9bc184b5e981b}{arbre\_emparellaments}}, 1, 2, n);}
+\DoxyCodeLine{00027     cout << endl;}
+\DoxyCodeLine{00028 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneig_a13a2d58c29700e30a052ea2e6d9c833b}\label{class_torneig_a13a2d58c29700e30a052ea2e6d9c833b}} 
+\index{Torneig@{Torneig}!finalitzar\_torneig@{finalitzar\_torneig}}
+\index{finalitzar\_torneig@{finalitzar\_torneig}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{finalitzar\_torneig()}{finalitzar\_torneig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_classificacio}{Classificacio}} Torneig\+::finalitzar\+\_\+torneig (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Es llegeixen els resultats del torneix i es retorna una classificacio, que indica quants punts ha guanyat cada jugador i quines estadísitques ha sumat. A més, el torneig guarda una copia de la classificació, que servirà per a la seguent edició o per a quan s\textquotesingle{}elimini el torneig. 
+
+\begin{DoxyPrecond}{Precondición}
+El torneig s\textquotesingle{}ha iniciat. Tots els resultats es trobem a la entrada amb alguns a 0 marcant així les fulles. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Es llegeixen els resultats del torneig i es retorna i guarda la classificació. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_torneig_8cc_source_l00029}{29}} del archivo \mbox{\hyperlink{_torneig_8cc_source}{Torneig.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029                                           \{}
+\DoxyCodeLine{00030     \textcolor{comment}{/* borrem la nova classificació ja que pot quedar-\/hi algo}}
+\DoxyCodeLine{00031 \textcolor{comment}{    de l'última edició del torneig */}}
+\DoxyCodeLine{00032     \mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\_classificacio}}.\mbox{\hyperlink{class_classificacio_a195ac9a0ea2b43d67122d17e121fc520}{borrar\_classificacio}}();}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034     \textcolor{comment}{/* inicialitzem l'arbre que emmagatzema els resultats com}}
+\DoxyCodeLine{00035 \textcolor{comment}{    un arbre buit */}}
+\DoxyCodeLine{00036     \mbox{\hyperlink{class_torneig_a39c56244360d31c57321450d65120a80}{arbre\_resultat}} = \mbox{\hyperlink{class_bin_tree}{BinTree<string>}}();}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038     \textcolor{comment}{/* llegim es resultats dels partits i els guardem a l'arbre */}}
+\DoxyCodeLine{00039     \mbox{\hyperlink{class_torneig_a6a62c85f744db666f381ed5d58ae726f}{llegir\_arbre\_resultat}}(\mbox{\hyperlink{class_torneig_a39c56244360d31c57321450d65120a80}{arbre\_resultat}});}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041     \textcolor{comment}{/* en base als resultats llegits, actulitzem l'arbre d'emparellaments}}
+\DoxyCodeLine{00042 \textcolor{comment}{    amb cada guanyador de cada partit */}}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{00044     \mbox{\hyperlink{class_torneig_aec970031f07d9cffbc21cec8f6b9dff8}{ranking\_punts}} = vector<int> (\mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}.size());}
+\DoxyCodeLine{00045     \mbox{\hyperlink{class_torneig_a6d9f3946189e672630edb70cf04e81f0}{modificar\_arbre\_emparellaments}}(\mbox{\hyperlink{class_torneig_af9fb24eeb2c5759c38f9bc184b5e981b}{arbre\_emparellaments}}, \mbox{\hyperlink{class_torneig_a39c56244360d31c57321450d65120a80}{arbre\_resultat}}, 0);}
+\DoxyCodeLine{00046 }
+\DoxyCodeLine{00047     \textcolor{comment}{/* escribim l'output de la funció amb l'ajuda dels dos arbres */}}
+\DoxyCodeLine{00048     \mbox{\hyperlink{class_torneig_a15a87fcad3dcf2e8e25cfae2a96d13eb}{escriure\_arbres}}(\mbox{\hyperlink{class_torneig_af9fb24eeb2c5759c38f9bc184b5e981b}{arbre\_emparellaments}}, \mbox{\hyperlink{class_torneig_a39c56244360d31c57321450d65120a80}{arbre\_resultat}});}
+\DoxyCodeLine{00049     cout << endl;}
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{00051     \textcolor{comment}{/* escribim els punts de cada jugador per ordre del ranking en el}}
+\DoxyCodeLine{00052 \textcolor{comment}{    moment de començar el torneig */}}
+\DoxyCodeLine{00053     \mbox{\hyperlink{class_torneig_aac89d36a6a9616c0c585d9b125c2d86a}{escriure\_ranking}}();}
+\DoxyCodeLine{00054     }
+\DoxyCodeLine{00055     \textcolor{comment}{/* en acabar el torneig, la nova classificació a es la darrera */}}
+\DoxyCodeLine{00056     \mbox{\hyperlink{class_torneig_a08eb04b47bf8112e6153ea9b5d0daa14}{darrera\_classificacio}}.\mbox{\hyperlink{class_classificacio_a5d2e4d797a1793ccbbec6f700a467b2d}{copiar\_classificacio}}(\mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\_classificacio}});}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058     \textcolor{comment}{/* i retornem la classificació per que es puguin actualitzar els }}
+\DoxyCodeLine{00059 \textcolor{comment}{    jugadors des del programa principal */}}
+\DoxyCodeLine{00060     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\_classificacio}};}
+\DoxyCodeLine{00061 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneig_ad05e7c87b8e338194582001a89e5c6aa}\label{class_torneig_ad05e7c87b8e338194582001a89e5c6aa}} 
+\index{Torneig@{Torneig}!borrar\_jugador@{borrar\_jugador}}
+\index{borrar\_jugador@{borrar\_jugador}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{borrar\_jugador()}{borrar\_jugador()}}
+{\footnotesize\ttfamily void Torneig\+::borrar\+\_\+jugador (\begin{DoxyParamCaption}\item[{string}]{nom\+\_\+jugador }\end{DoxyParamCaption})}
+
+
+
+Borra un jugador de la darrera classificació del torneig. 
+
+\begin{DoxyPrecond}{Precondición}
+Un string (nom del jugador a borrar). 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Es borra el jugador de la darrera classificació del torneig. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_torneig_8cc_source_l00062}{62}} del archivo \mbox{\hyperlink{_torneig_8cc_source}{Torneig.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062                                                \{}
+\DoxyCodeLine{00063     this-\/>\mbox{\hyperlink{class_torneig_a08eb04b47bf8112e6153ea9b5d0daa14}{darrera\_classificacio}}.\mbox{\hyperlink{class_classificacio_a75f3ac772019e0e020c02f79de7a37f7}{borrar\_jugador}}(nom\_jugador);}
+\DoxyCodeLine{00064 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneig_a2fdf459665896c0bc542d6d9f1e40586}\label{class_torneig_a2fdf459665896c0bc542d6d9f1e40586}} 
+\index{Torneig@{Torneig}!consultar\_darrera\_classificacio@{consultar\_darrera\_classificacio}}
+\index{consultar\_darrera\_classificacio@{consultar\_darrera\_classificacio}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{consultar\_darrera\_classificacio()}{consultar\_darrera\_classificacio()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_classificacio}{Classificacio}} Torneig\+::consultar\+\_\+darrera\+\_\+classificacio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna la \mbox{\hyperlink{class_classificacio}{Classificacio}} de la útlima edició del torneig. 
+
+\begin{DoxyPrecond}{Precondición}
+Cert. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Una copia de la darrera classificacio. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_torneig_8cc_source_l00268}{268}} del archivo \mbox{\hyperlink{_torneig_8cc_source}{Torneig.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00268                                                              \{}
+\DoxyCodeLine{00269     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_torneig_a08eb04b47bf8112e6153ea9b5d0daa14}{darrera\_classificacio}};}
+\DoxyCodeLine{00270 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneig_ad126d3be0c787e50ba49278acf5c8937}\label{class_torneig_ad126d3be0c787e50ba49278acf5c8937}} 
+\index{Torneig@{Torneig}!consultar\_nom\_categoria@{consultar\_nom\_categoria}}
+\index{consultar\_nom\_categoria@{consultar\_nom\_categoria}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{consultar\_nom\_categoria()}{consultar\_nom\_categoria()}}
+{\footnotesize\ttfamily string Torneig\+::consultar\+\_\+nom\+\_\+categoria (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna un string amb el nom de la categoria. 
+
+\begin{DoxyPrecond}{Precondición}
+Cert. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Nom de la categoria. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_torneig_8cc_source_l00271}{271}} del archivo \mbox{\hyperlink{_torneig_8cc_source}{Torneig.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00271                                               \{}
+\DoxyCodeLine{00272     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_torneig_a4477c61eb5b2b1c365ba6d195e60fc0a}{categoria}}.\mbox{\hyperlink{struct_categoria_ad39955d54081f0d7f31db96909a4f6bf}{nom}};}
+\DoxyCodeLine{00273 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneig_aaee898ef9497d6727f975399e9c2cec4}\label{class_torneig_aaee898ef9497d6727f975399e9c2cec4}} 
+\index{Torneig@{Torneig}!construir\_arbre\_emparellaments@{construir\_arbre\_emparellaments}}
+\index{construir\_arbre\_emparellaments@{construir\_arbre\_emparellaments}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{construir\_arbre\_emparellaments()}{construir\_arbre\_emparellaments()}}
+{\footnotesize\ttfamily void Torneig\+::construir\+\_\+arbre\+\_\+emparellaments (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ int $>$ \&}]{a,  }\item[{int}]{i,  }\item[{int}]{k,  }\item[{int}]{k\+\_\+max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Contrueix un primer arbre d\textquotesingle{}emparellaments, amb alguns valors auxiliars que ja seran modificats en un futur. També imprimeix la sortida de \char`\"{}iniciar\+\_\+torneig\char`\"{}. 
+
+\begin{DoxyPrecond}{Precondición}
+\+: Un arbre binari i tres enters 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+\+: Construiex un primer arbre d\textquotesingle{}emparellaments, fent crides resucrsives a si mateixa. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_torneig_8cc_source_l00099}{99}} del archivo \mbox{\hyperlink{_torneig_8cc_source}{Torneig.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00099                                                                                      \{}
+\DoxyCodeLine{00100     \textcolor{comment}{/* cas base k -\/ i > k\_max */}}
+\DoxyCodeLine{00101 }
+\DoxyCodeLine{00102     \textcolor{keywordflow}{if} (k -\/ i + 1 > k\_max) \{}
+\DoxyCodeLine{00103         a = \mbox{\hyperlink{class_bin_tree}{BinTree<int>}}(i);}
+\DoxyCodeLine{00104         cout << a.\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}() << \textcolor{stringliteral}{"{}."{}}  << \mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[a.\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}() -\/ 1];}
+\DoxyCodeLine{00105         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00106     \}}
+\DoxyCodeLine{00107 }
+\DoxyCodeLine{00108     \mbox{\hyperlink{class_bin_tree}{BinTree<int>}} left = \mbox{\hyperlink{class_bin_tree}{BinTree<int>}}();}
+\DoxyCodeLine{00109     \mbox{\hyperlink{class_bin_tree}{BinTree<int>}} right = \mbox{\hyperlink{class_bin_tree}{BinTree<int>}}();}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111     cout << \textcolor{stringliteral}{"{}("{}};}
+\DoxyCodeLine{00112     \mbox{\hyperlink{class_torneig_aaee898ef9497d6727f975399e9c2cec4}{construir\_arbre\_emparellaments}}(left, i, k * 2, k\_max);}
+\DoxyCodeLine{00113     cout << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{00114     \mbox{\hyperlink{class_torneig_aaee898ef9497d6727f975399e9c2cec4}{construir\_arbre\_emparellaments}}(right, k -\/ i + 1, k * 2, k\_max);}
+\DoxyCodeLine{00115     cout << \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{00116 }
+\DoxyCodeLine{00117     a = \mbox{\hyperlink{class_bin_tree}{BinTree<int>}}(i, left, right);}
+\DoxyCodeLine{00118 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneig_a6d9f3946189e672630edb70cf04e81f0}\label{class_torneig_a6d9f3946189e672630edb70cf04e81f0}} 
+\index{Torneig@{Torneig}!modificar\_arbre\_emparellaments@{modificar\_arbre\_emparellaments}}
+\index{modificar\_arbre\_emparellaments@{modificar\_arbre\_emparellaments}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{modificar\_arbre\_emparellaments()}{modificar\_arbre\_emparellaments()}}
+{\footnotesize\ttfamily void Torneig\+::modificar\+\_\+arbre\+\_\+emparellaments (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ int $>$ \&}]{a,  }\item[{const \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$ \&}]{b,  }\item[{int}]{nivell }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Modifica l\textquotesingle{}arbre d\textquotesingle{}emparellaments amb els guanaydors definitius de cada enfrontament, també reparteix els punts corresponents a cada jugador. 
+
+\begin{DoxyPrecond}{Precondición}
+Una abre binari d\textquotesingle{}enter representant l\textquotesingle{}arbre d\textquotesingle{}emparellaments, un altre arbre que representi els resultats de cada enfrontalment, i un enter per saber a quin nivell estem. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Es modifica l\textquotesingle{}arbre d\textquotesingle{}emparellaments i s\textquotesingle{}afegeixen els punts de cada jugador. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_torneig_8cc_source_l00067}{67}} del archivo \mbox{\hyperlink{_torneig_8cc_source}{Torneig.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067                                                                                                    \{}
+\DoxyCodeLine{00068     \textcolor{comment}{/* cas base, arribem a una fulla */}}
+\DoxyCodeLine{00069     \textcolor{keywordflow}{if} (a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}().\mbox{\hyperlink{class_bin_tree_a74cda259ba5c25b8ee38ed4dc33e4fad}{empty}}() and a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}().\mbox{\hyperlink{class_bin_tree_a74cda259ba5c25b8ee38ed4dc33e4fad}{empty}}()) \{}
+\DoxyCodeLine{00070         \mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\_classificacio}}.\mbox{\hyperlink{class_classificacio_a861e0203f1dac9af26f3c5ee80264bb8}{establir\_punts}}(\mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[a.\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}() -\/ 1],}
+\DoxyCodeLine{00071         \mbox{\hyperlink{class_torneig_a4477c61eb5b2b1c365ba6d195e60fc0a}{categoria}}.\mbox{\hyperlink{struct_categoria_a73793e1a6f68e974972b0789f9a31e91}{punts\_per\_nivell}}[nivell]);}
+\DoxyCodeLine{00072         \mbox{\hyperlink{class_torneig_aec970031f07d9cffbc21cec8f6b9dff8}{ranking\_punts}}[a.\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}() -\/ 1] = \mbox{\hyperlink{class_torneig_a4477c61eb5b2b1c365ba6d195e60fc0a}{categoria}}.\mbox{\hyperlink{struct_categoria_a73793e1a6f68e974972b0789f9a31e91}{punts\_per\_nivell}}[nivell];}
+\DoxyCodeLine{00073         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00074     \}}
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{00076     \textcolor{comment}{/* si no modifiquem els subarbres dret i esquerre */}}
+\DoxyCodeLine{00077     \mbox{\hyperlink{class_bin_tree}{BinTree<int>}} left = a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}();}
+\DoxyCodeLine{00078     \mbox{\hyperlink{class_bin_tree}{BinTree<int>}} right = a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}();}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{00080     \mbox{\hyperlink{class_torneig_a6d9f3946189e672630edb70cf04e81f0}{modificar\_arbre\_emparellaments}}(left, b.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}(), nivell + 1);}
+\DoxyCodeLine{00081     \mbox{\hyperlink{class_torneig_a6d9f3946189e672630edb70cf04e81f0}{modificar\_arbre\_emparellaments}}(right, b.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}(), nivell + 1);}
+\DoxyCodeLine{00082     }
+\DoxyCodeLine{00083     \textcolor{comment}{/* el valor de la arrel es el guanyador dels dos jugadors}}
+\DoxyCodeLine{00084 \textcolor{comment}{    que s'enfronten. Un el trobem a la esquerra i l'altre a la dreta */}}
+\DoxyCodeLine{00085     \textcolor{keywordtype}{int} guanyador = \mbox{\hyperlink{class_torneig_a1fdb8f1635cc65316bee2b9865fb02ab}{llegir\_partit}}(left.\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}(), right.\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}(), b.\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}());}
+\DoxyCodeLine{00086     a = \mbox{\hyperlink{class_bin_tree}{BinTree<int>}}(}
+\DoxyCodeLine{00087         guanyador,}
+\DoxyCodeLine{00088         left,}
+\DoxyCodeLine{00089         right);}
+\DoxyCodeLine{00090 }
+\DoxyCodeLine{00091     \textcolor{comment}{/* i al guanyador li actualitzem els punts en funció del nivell en el que estem,}}
+\DoxyCodeLine{00092 \textcolor{comment}{    d'aquesta manera assegurem que, al llegir-\/lo en postordre, al final de recorre'l,}}
+\DoxyCodeLine{00093 \textcolor{comment}{    cada jugadors tindrà els punts del nivell més alt en el que hagi guanyat */}}
+\DoxyCodeLine{00094     \mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\_classificacio}}.\mbox{\hyperlink{class_classificacio_a861e0203f1dac9af26f3c5ee80264bb8}{establir\_punts}}(\mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[guanyador -\/ 1],}
+\DoxyCodeLine{00095         \mbox{\hyperlink{class_torneig_a4477c61eb5b2b1c365ba6d195e60fc0a}{categoria}}.\mbox{\hyperlink{struct_categoria_a73793e1a6f68e974972b0789f9a31e91}{punts\_per\_nivell}}[nivell]);}
+\DoxyCodeLine{00096     \mbox{\hyperlink{class_torneig_aec970031f07d9cffbc21cec8f6b9dff8}{ranking\_punts}}[guanyador -\/ 1] = \mbox{\hyperlink{class_torneig_a4477c61eb5b2b1c365ba6d195e60fc0a}{categoria}}.\mbox{\hyperlink{struct_categoria_a73793e1a6f68e974972b0789f9a31e91}{punts\_per\_nivell}}[nivell];}
+\DoxyCodeLine{00097 }
+\DoxyCodeLine{00098 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneig_a6a62c85f744db666f381ed5d58ae726f}\label{class_torneig_a6a62c85f744db666f381ed5d58ae726f}} 
+\index{Torneig@{Torneig}!llegir\_arbre\_resultat@{llegir\_arbre\_resultat}}
+\index{llegir\_arbre\_resultat@{llegir\_arbre\_resultat}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{llegir\_arbre\_resultat()}{llegir\_arbre\_resultat()}}
+{\footnotesize\ttfamily void Torneig\+::llegir\+\_\+arbre\+\_\+resultat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Llegeix els resultats de cada partit del torneig i els guarda a un arbre. 
+
+\begin{DoxyPrecond}{Precondición}
+Un arbre binari de strings. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+S\textquotesingle{}actualitza l\textquotesingle{}arbre amb els resultats. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_torneig_8cc_source_l00121}{121}} del archivo \mbox{\hyperlink{_torneig_8cc_source}{Torneig.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00121                                                       \{}
+\DoxyCodeLine{00122     \textcolor{comment}{/* llegim resultat */}}
+\DoxyCodeLine{00123     \textcolor{keywordtype}{string} r;}
+\DoxyCodeLine{00124     cin >> r;}
+\DoxyCodeLine{00125 }
+\DoxyCodeLine{00126     \textcolor{comment}{/* cas base, estem en una fulla? */}}
+\DoxyCodeLine{00127     \textcolor{keywordflow}{if} (r == \textcolor{stringliteral}{"{}0"{}}) \{}
+\DoxyCodeLine{00128         a = \mbox{\hyperlink{class_bin_tree}{BinTree<string>}}(\textcolor{stringliteral}{"{}0"{}});}
+\DoxyCodeLine{00129         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00130     \}}
+\DoxyCodeLine{00131 }
+\DoxyCodeLine{00132     \textcolor{comment}{/* si no llegim també el subarbre dret i esquerra */}}
+\DoxyCodeLine{00133     \mbox{\hyperlink{class_bin_tree}{BinTree<string>}} left = \mbox{\hyperlink{class_bin_tree}{BinTree<string>}}();}
+\DoxyCodeLine{00134     \mbox{\hyperlink{class_bin_tree}{BinTree<string>}} right = \mbox{\hyperlink{class_bin_tree}{BinTree<string>}}();}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136     \mbox{\hyperlink{class_torneig_a6a62c85f744db666f381ed5d58ae726f}{llegir\_arbre\_resultat}}(left);}
+\DoxyCodeLine{00137     \mbox{\hyperlink{class_torneig_a6a62c85f744db666f381ed5d58ae726f}{llegir\_arbre\_resultat}}(right);}
+\DoxyCodeLine{00138 }
+\DoxyCodeLine{00139     \textcolor{comment}{/* i ara els juntem */}}
+\DoxyCodeLine{00140     a = \mbox{\hyperlink{class_bin_tree}{BinTree<string>}}(r, left, right);}
+\DoxyCodeLine{00141 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneig_a15a87fcad3dcf2e8e25cfae2a96d13eb}\label{class_torneig_a15a87fcad3dcf2e8e25cfae2a96d13eb}} 
+\index{Torneig@{Torneig}!escriure\_arbres@{escriure\_arbres}}
+\index{escriure\_arbres@{escriure\_arbres}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{escriure\_arbres()}{escriure\_arbres()}}
+{\footnotesize\ttfamily void Torneig\+::escriure\+\_\+arbres (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ int $>$ \&}]{a,  }\item[{const \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ string $>$ \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+@brieg Escriu els resultats de l\textquotesingle{}arbre final recorrent els dos simultaneament. \begin{DoxyPrecond}{Precondición}
+Dos arbres binaris, un representant els enfrentaments i l\textquotesingle{}altre els resultats. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Escriu l\textquotesingle{}output de finalizar\+\_\+torneo. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_torneig_8cc_source_l00237}{237}} del archivo \mbox{\hyperlink{_torneig_8cc_source}{Torneig.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00237                                                                              \{}
+\DoxyCodeLine{00238     \textcolor{comment}{/* cas base: fulla de l'arbre de resultats */}}
+\DoxyCodeLine{00239     \textcolor{keywordflow}{if} (b.\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}() == \textcolor{stringliteral}{"{}0"{}}) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00240     }
+\DoxyCodeLine{00241     \textcolor{comment}{/* escribim en el format corresponent */}}
+\DoxyCodeLine{00242     cout << \textcolor{stringliteral}{"{}("{}};}
+\DoxyCodeLine{00243     cout << a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}().\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}() << \textcolor{stringliteral}{"{}."{}} << \mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}().\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}() -\/ 1] }
+\DoxyCodeLine{00244         << \textcolor{stringliteral}{"{} vs "{}}}
+\DoxyCodeLine{00245         << a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}().\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}() << \textcolor{stringliteral}{"{}."{}} << \mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}().\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}() -\/ 1]}
+\DoxyCodeLine{00246         << \textcolor{stringliteral}{"{} "{}}}
+\DoxyCodeLine{00247         << b.\mbox{\hyperlink{class_bin_tree_aaccb0c5b6cfe3b84dfeefc58efa24cda}{value}}();}
+\DoxyCodeLine{00248 }
+\DoxyCodeLine{00249 }
+\DoxyCodeLine{00250     \textcolor{comment}{/* pas inductiu: fer el mateix per als subarbres */}}
+\DoxyCodeLine{00251     \mbox{\hyperlink{class_torneig_a15a87fcad3dcf2e8e25cfae2a96d13eb}{escriure\_arbres}}(a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}(), b.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}());}
+\DoxyCodeLine{00252     \mbox{\hyperlink{class_torneig_a15a87fcad3dcf2e8e25cfae2a96d13eb}{escriure\_arbres}}(a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}(), b.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}());}
+\DoxyCodeLine{00253     }
+\DoxyCodeLine{00254     cout << \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{00255 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneig_a1fdb8f1635cc65316bee2b9865fb02ab}\label{class_torneig_a1fdb8f1635cc65316bee2b9865fb02ab}} 
+\index{Torneig@{Torneig}!llegir\_partit@{llegir\_partit}}
+\index{llegir\_partit@{llegir\_partit}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{llegir\_partit()}{llegir\_partit()}}
+{\footnotesize\ttfamily int Torneig\+::llegir\+\_\+partit (\begin{DoxyParamCaption}\item[{int}]{j1,  }\item[{int}]{j2,  }\item[{string}]{resultat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Afegeix el resultat del partit(resultat) i afegeix les estadístiques als jugadors(j1, j2). 
+
+\begin{DoxyPrecond}{Precondición}
+Dos enters (posicions del jugadors al ranking local del torneig) i un string que conté el resultat del torneig. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+S\textquotesingle{}afegeixen les estadístiques obtingudes en el torneig als jugados, i es retorna la posició del ranking del guanyador. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_torneig_8cc_source_l00143}{143}} del archivo \mbox{\hyperlink{_torneig_8cc_source}{Torneig.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00143                                                           \{}
+\DoxyCodeLine{00144 }
+\DoxyCodeLine{00145     \textcolor{comment}{/* per consultar els resultats tractarem la string resultat}}
+\DoxyCodeLine{00146 \textcolor{comment}{    com un vector de caràcters, fent la conversió a enter mitjançant}}
+\DoxyCodeLine{00147 \textcolor{comment}{    la resta int(caràcter -\/ '0') */}}
+\DoxyCodeLine{00148     }
+\DoxyCodeLine{00149     \textcolor{comment}{/* cas: juguen tots els sets */}}
+\DoxyCodeLine{00150     \textcolor{keywordflow}{if} (resultat.length() == 11) \{}
+\DoxyCodeLine{00151 }
+\DoxyCodeLine{00152         \textcolor{comment}{/* mirem qui ha guanyat: */}}
+\DoxyCodeLine{00153         \textcolor{comment}{/* 1: guanya j1, -\/1:guanya j2 */}}
+\DoxyCodeLine{00154         \textcolor{keywordtype}{int} guanyador = 1; }
+\DoxyCodeLine{00155         \textcolor{keywordflow}{if} (resultat[8] < resultat[10]) \{}
+\DoxyCodeLine{00156             guanyador = -\/1;}
+\DoxyCodeLine{00157         \}}
+\DoxyCodeLine{00158 }
+\DoxyCodeLine{00159         \textcolor{comment}{/* afegim les estadístiques del jugador 1 */}}
+\DoxyCodeLine{00160         \mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\_classificacio}}.\mbox{\hyperlink{class_classificacio_a1164331a4fd08d20f2bb6e1ab2a85a5e}{afegir\_partit}}(\mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[j1 -\/ 1],}
+\DoxyCodeLine{00161             \textcolor{keywordtype}{int}(resultat[0] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[4] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[8] -\/ \textcolor{charliteral}{'0'}),}
+\DoxyCodeLine{00162             \textcolor{keywordtype}{int}(resultat[2] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[6] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[10] -\/ \textcolor{charliteral}{'0'}),}
+\DoxyCodeLine{00163             1 + \textcolor{keywordtype}{int}(guanyador ==  1),}
+\DoxyCodeLine{00164             1 + \textcolor{keywordtype}{int}(guanyador == -\/1),}
+\DoxyCodeLine{00165             guanyador);}
+\DoxyCodeLine{00166 }
+\DoxyCodeLine{00167         \textcolor{comment}{/* afegim les estacístiques del jugdor 2 */}}
+\DoxyCodeLine{00168         \mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\_classificacio}}.\mbox{\hyperlink{class_classificacio_a1164331a4fd08d20f2bb6e1ab2a85a5e}{afegir\_partit}}(}
+\DoxyCodeLine{00169             \mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[j2 -\/ 1],}
+\DoxyCodeLine{00170             \textcolor{keywordtype}{int}(resultat[2] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[6] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[10] -\/ \textcolor{charliteral}{'0'}),}
+\DoxyCodeLine{00171             \textcolor{keywordtype}{int}(resultat[0] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[4] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[8] -\/ \textcolor{charliteral}{'0'}),}
+\DoxyCodeLine{00172             1 + \textcolor{keywordtype}{int}(guanyador == -\/1),}
+\DoxyCodeLine{00173             1 + \textcolor{keywordtype}{int}(guanyador ==  1),}
+\DoxyCodeLine{00174             -\/guanyador);}
+\DoxyCodeLine{00175 }
+\DoxyCodeLine{00176         \textcolor{comment}{/* retornem la posició del jugador guanyador */}}
+\DoxyCodeLine{00177         \textcolor{keywordflow}{if} (guanyador == 1) \textcolor{keywordflow}{return} j1;}
+\DoxyCodeLine{00178         \textcolor{keywordflow}{return} j2;}
+\DoxyCodeLine{00179     \}}
+\DoxyCodeLine{00180 }
+\DoxyCodeLine{00181     \textcolor{comment}{/* cas: juguen només dos sets */}}
+\DoxyCodeLine{00182     \textcolor{keywordflow}{if} (resultat.length() == 7) \{}
+\DoxyCodeLine{00183 }
+\DoxyCodeLine{00184         \textcolor{comment}{/* mirem qui ha guanyat */}}
+\DoxyCodeLine{00185         \textcolor{comment}{/* 1: guanya j1, -\/1: guanya j2 */}}
+\DoxyCodeLine{00186         \textcolor{keywordtype}{int} guanyador = 1;}
+\DoxyCodeLine{00187         \textcolor{keywordflow}{if} (resultat[0] < resultat[2]) \{}
+\DoxyCodeLine{00188             guanyador = -\/1;}
+\DoxyCodeLine{00189         \}}
+\DoxyCodeLine{00190 }
+\DoxyCodeLine{00191         \textcolor{comment}{/* afegim les estadístiques del jugador 1 */}}
+\DoxyCodeLine{00192         \mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\_classificacio}}.\mbox{\hyperlink{class_classificacio_a1164331a4fd08d20f2bb6e1ab2a85a5e}{afegir\_partit}}(}
+\DoxyCodeLine{00193             \mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[j1 -\/ 1],}
+\DoxyCodeLine{00194             \textcolor{keywordtype}{int}(resultat[0] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[4] -\/ \textcolor{charliteral}{'0'}),}
+\DoxyCodeLine{00195             \textcolor{keywordtype}{int}(resultat[2] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[6] -\/ \textcolor{charliteral}{'0'}),}
+\DoxyCodeLine{00196             2*\textcolor{keywordtype}{int}(guanyador ==  1),}
+\DoxyCodeLine{00197             2*\textcolor{keywordtype}{int}(guanyador == -\/1),}
+\DoxyCodeLine{00198             guanyador);}
+\DoxyCodeLine{00199 }
+\DoxyCodeLine{00200         \textcolor{comment}{/* afegim les estacístiques del jugdor 2 */}}
+\DoxyCodeLine{00201         \mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\_classificacio}}.\mbox{\hyperlink{class_classificacio_a1164331a4fd08d20f2bb6e1ab2a85a5e}{afegir\_partit}}(}
+\DoxyCodeLine{00202             \mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[j2 -\/ 1],}
+\DoxyCodeLine{00203             \textcolor{keywordtype}{int}(resultat[2] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[6] -\/ \textcolor{charliteral}{'0'}),}
+\DoxyCodeLine{00204             \textcolor{keywordtype}{int}(resultat[0] -\/ \textcolor{charliteral}{'0'}) + \textcolor{keywordtype}{int}(resultat[4] -\/ \textcolor{charliteral}{'0'}),}
+\DoxyCodeLine{00205             2*\textcolor{keywordtype}{int}(guanyador == -\/1),}
+\DoxyCodeLine{00206             2*\textcolor{keywordtype}{int}(guanyador ==  1),}
+\DoxyCodeLine{00207             -\/guanyador);}
+\DoxyCodeLine{00208 }
+\DoxyCodeLine{00209         \textcolor{comment}{/* retornem la posició del jugador guanyador */}}
+\DoxyCodeLine{00210         \textcolor{keywordflow}{if} (guanyador == 1) \textcolor{keywordflow}{return} j1;}
+\DoxyCodeLine{00211         \textcolor{keywordflow}{return} j2;}
+\DoxyCodeLine{00212     \}}
+\DoxyCodeLine{00213 }
+\DoxyCodeLine{00214     \textcolor{comment}{/* cas: partit abortat */}}
+\DoxyCodeLine{00215     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00216         \textcolor{comment}{//* mirem qui ha guanyat */}}
+\DoxyCodeLine{00217         \textcolor{comment}{/* 1: guanya j1, -\/1: guanya j2 */}}
+\DoxyCodeLine{00218         \textcolor{keywordtype}{int} guanyador = 1;}
+\DoxyCodeLine{00219         \textcolor{keywordflow}{if} (resultat[0] < resultat[2]) \{}
+\DoxyCodeLine{00220             guanyador = -\/1;}
+\DoxyCodeLine{00221         \}}
+\DoxyCodeLine{00222 }
+\DoxyCodeLine{00223         \textcolor{comment}{/* afegim les estadístiques del jugador 1 */}}
+\DoxyCodeLine{00224         \mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\_classificacio}}.\mbox{\hyperlink{class_classificacio_a1164331a4fd08d20f2bb6e1ab2a85a5e}{afegir\_partit}}(}
+\DoxyCodeLine{00225             \mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[j1 -\/ 1], 0, 0, 0, 0, guanyador);}
+\DoxyCodeLine{00226 }
+\DoxyCodeLine{00227         \textcolor{comment}{/* afegim les estacístiques del jugdor 2 */}}
+\DoxyCodeLine{00228         \mbox{\hyperlink{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}{nova\_classificacio}}.\mbox{\hyperlink{class_classificacio_a1164331a4fd08d20f2bb6e1ab2a85a5e}{afegir\_partit}}(}
+\DoxyCodeLine{00229             \mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[j2 -\/ 1], 0, 0, 0, 0, -\/guanyador);}
+\DoxyCodeLine{00230 }
+\DoxyCodeLine{00231         \textcolor{comment}{/* retornem la posició del jugador guanyador */}}
+\DoxyCodeLine{00232         \textcolor{keywordflow}{if} (guanyador == 1) \textcolor{keywordflow}{return} j1;}
+\DoxyCodeLine{00233         \textcolor{keywordflow}{return} j2;}
+\DoxyCodeLine{00234     \}}
+\DoxyCodeLine{00235 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneig_aac89d36a6a9616c0c585d9b125c2d86a}\label{class_torneig_aac89d36a6a9616c0c585d9b125c2d86a}} 
+\index{Torneig@{Torneig}!escriure\_ranking@{escriure\_ranking}}
+\index{escriure\_ranking@{escriure\_ranking}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{escriure\_ranking()}{escriure\_ranking()}}
+{\footnotesize\ttfamily void Torneig\+::escriure\+\_\+ranking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Escriu els punts de cada jugador en ordre del ranking al iniciar el torneig. 
+
+\begin{DoxyPrecond}{Precondición}
+Cert. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+S\textquotesingle{}acaba de escriure el output de finalizar\+\_\+torneo. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_torneig_8cc_source_l00256}{256}} del archivo \mbox{\hyperlink{_torneig_8cc_source}{Torneig.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00256                                \{}
+\DoxyCodeLine{00257     \textcolor{comment}{/* recorrem simultaniamen el ranking i el ranking\_punts, }}
+\DoxyCodeLine{00258 \textcolor{comment}{    per associar cada jugador amb els seus punts corresponents */}}
+\DoxyCodeLine{00259     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_torneig_aec970031f07d9cffbc21cec8f6b9dff8}{ranking\_punts}}.size(); ++i) \{}
+\DoxyCodeLine{00260         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_torneig_aec970031f07d9cffbc21cec8f6b9dff8}{ranking\_punts}}[i] != 0) \{}
+\DoxyCodeLine{00261             cout << i + 1 << \textcolor{stringliteral}{"{}."{}} << \mbox{\hyperlink{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}{ranking}}[i] << \textcolor{stringliteral}{"{} "{}} }
+\DoxyCodeLine{00262             << \mbox{\hyperlink{class_torneig_aec970031f07d9cffbc21cec8f6b9dff8}{ranking\_punts}}[i] << endl;}
+\DoxyCodeLine{00263         \}}
+\DoxyCodeLine{00264     \}}
+\DoxyCodeLine{00265 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}\label{class_torneig_a3d203da4e8b2dd80ee785f5702a525b4}} 
+\index{Torneig@{Torneig}!ranking@{ranking}}
+\index{ranking@{ranking}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{ranking}{ranking}}
+{\footnotesize\ttfamily vector$<$string$>$ Torneig\+::ranking\hspace{0.3cm}{\ttfamily [private]}}
+
+Conté els noms del jugadors del torneig, en l\textquotesingle{}ordre del ranking en el moment que va iniciar el torneig 
+
+Definición en la línea \mbox{\hyperlink{_torneig_8hh_source_l00135}{135}} del archivo \mbox{\hyperlink{_torneig_8hh_source}{Torneig.\+hh}}.
+
+\mbox{\Hypertarget{class_torneig_aec970031f07d9cffbc21cec8f6b9dff8}\label{class_torneig_aec970031f07d9cffbc21cec8f6b9dff8}} 
+\index{Torneig@{Torneig}!ranking\_punts@{ranking\_punts}}
+\index{ranking\_punts@{ranking\_punts}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{ranking\_punts}{ranking\_punts}}
+{\footnotesize\ttfamily vector$<$int$>$ Torneig\+::ranking\+\_\+punts\hspace{0.3cm}{\ttfamily [private]}}
+
+Conté els punts obtinguts en el torneig per els jugadors en el mateix ordre que el ranking 
+
+Definición en la línea \mbox{\hyperlink{_torneig_8hh_source_l00137}{137}} del archivo \mbox{\hyperlink{_torneig_8hh_source}{Torneig.\+hh}}.
+
+\mbox{\Hypertarget{class_torneig_af9fb24eeb2c5759c38f9bc184b5e981b}\label{class_torneig_af9fb24eeb2c5759c38f9bc184b5e981b}} 
+\index{Torneig@{Torneig}!arbre\_emparellaments@{arbre\_emparellaments}}
+\index{arbre\_emparellaments@{arbre\_emparellaments}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{arbre\_emparellaments}{arbre\_emparellaments}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$int$>$ Torneig\+::arbre\+\_\+emparellaments\hspace{0.3cm}{\ttfamily [private]}}
+
+Arbre binari d\textquotesingle{}enters on cada arrel reprenta un enforntament del fills esquerre i dret de l\textquotesingle{}arbre 
+
+Definición en la línea \mbox{\hyperlink{_torneig_8hh_source_l00140}{140}} del archivo \mbox{\hyperlink{_torneig_8hh_source}{Torneig.\+hh}}.
+
+\mbox{\Hypertarget{class_torneig_a39c56244360d31c57321450d65120a80}\label{class_torneig_a39c56244360d31c57321450d65120a80}} 
+\index{Torneig@{Torneig}!arbre\_resultat@{arbre\_resultat}}
+\index{arbre\_resultat@{arbre\_resultat}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{arbre\_resultat}{arbre\_resultat}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$string$>$ Torneig\+::arbre\+\_\+resultat\hspace{0.3cm}{\ttfamily [private]}}
+
+Arbre de strings, que conté el resultat de cada enfrontament 
+
+Definición en la línea \mbox{\hyperlink{_torneig_8hh_source_l00142}{142}} del archivo \mbox{\hyperlink{_torneig_8hh_source}{Torneig.\+hh}}.
+
+\mbox{\Hypertarget{class_torneig_a4477c61eb5b2b1c365ba6d195e60fc0a}\label{class_torneig_a4477c61eb5b2b1c365ba6d195e60fc0a}} 
+\index{Torneig@{Torneig}!categoria@{categoria}}
+\index{categoria@{categoria}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{categoria}{categoria}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_categoria}{Categoria}} Torneig\+::categoria\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\hyperlink{struct_categoria}{Categoria}} del torneig 
+
+Definición en la línea \mbox{\hyperlink{_torneig_8hh_source_l00145}{145}} del archivo \mbox{\hyperlink{_torneig_8hh_source}{Torneig.\+hh}}.
+
+\mbox{\Hypertarget{class_torneig_a08eb04b47bf8112e6153ea9b5d0daa14}\label{class_torneig_a08eb04b47bf8112e6153ea9b5d0daa14}} 
+\index{Torneig@{Torneig}!darrera\_classificacio@{darrera\_classificacio}}
+\index{darrera\_classificacio@{darrera\_classificacio}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{darrera\_classificacio}{darrera\_classificacio}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_classificacio}{Classificacio}} Torneig\+::darrera\+\_\+classificacio\hspace{0.3cm}{\ttfamily [private]}}
+
+Darrera Classificació del torneig 
+
+Definición en la línea \mbox{\hyperlink{_torneig_8hh_source_l00146}{146}} del archivo \mbox{\hyperlink{_torneig_8hh_source}{Torneig.\+hh}}.
+
+\mbox{\Hypertarget{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}\label{class_torneig_afe1a3cbcbb4e2088a04614b4544ecd9d}} 
+\index{Torneig@{Torneig}!nova\_classificacio@{nova\_classificacio}}
+\index{nova\_classificacio@{nova\_classificacio}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{nova\_classificacio}{nova\_classificacio}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_classificacio}{Classificacio}} Torneig\+::nova\+\_\+classificacio\hspace{0.3cm}{\ttfamily [private]}}
+
+Nova classificació del torneig 
+
+Definición en la línea \mbox{\hyperlink{_torneig_8hh_source_l00147}{147}} del archivo \mbox{\hyperlink{_torneig_8hh_source}{Torneig.\+hh}}.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_torneig_8hh}{Torneig.\+hh}}\item 
+\mbox{\hyperlink{_torneig_8cc}{Torneig.\+cc}}\end{DoxyCompactItemize}

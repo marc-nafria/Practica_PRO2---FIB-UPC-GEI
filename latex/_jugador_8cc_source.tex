@@ -1,0 +1,100 @@
+\hypertarget{_jugador_8cc_source}{}\doxysection{Jugador.\+cc}
+\mbox{\hyperlink{_jugador_8cc}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00005}00005 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_jugador_8hh}{Jugador.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00007}00007 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00008}00008 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00010}00010 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00012}\mbox{\hyperlink{class_jugador_a7888f2833f55ff67626eea8469069839}{00012}} \mbox{\hyperlink{class_jugador_a232c46f75691af6210096e5972535d71}{Jugador::Jugador}}(\textcolor{keywordtype}{string} nom, \textcolor{keywordtype}{int} \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}})}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00013}00013 \{}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00014}00014     this-\/>nom = \mbox{\hyperlink{class_jugador_afd6bec98df8ebb3d2db3ef583a76cfa1}{nom}};}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00016}00016     this-\/>\mbox{\hyperlink{class_jugador_a438340e55baaec15ec14e854d646a37a}{punts}} = 0;}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00017}00017     this-\/>ranking = \mbox{\hyperlink{class_jugador_abfd82fbfa2e58fdd634c94f7bc11c66b}{ranking}};}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00019}00019     this-\/>\mbox{\hyperlink{class_jugador_ae123b3eb3aed8585a34272d9cc2bb70e}{jocs\_favor}} = 0;}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00020}00020     this-\/>\mbox{\hyperlink{class_jugador_aa2e394fec4426581e884bf7fe96cdefe}{jocs\_contra}} = 0;}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00022}00022     this-\/>\mbox{\hyperlink{class_jugador_a73d2ec1d219e26af2139b284b6c124b6}{sets\_favor}} = 0;}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00023}00023     this-\/>\mbox{\hyperlink{class_jugador_a6aa8967c1ff2f9ec0a0807bee6af7972}{sets\_contra}} = 0;}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00025}00025     this-\/>\mbox{\hyperlink{class_jugador_ae21c98b18aac779c71d0cd977557d1ea}{partits\_favor}} = 0;}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00026}00026     this-\/>\mbox{\hyperlink{class_jugador_a44f625121f668c28cb1fcfa706ba1290}{partits\_contra}} = 0;}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00028}00028     this-\/>\mbox{\hyperlink{class_jugador_a32623d8c3cacd4cbbd0c926eb14cfd8e}{tornejos\_disputats}} = 0;}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00030}00030 \}}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00032}\mbox{\hyperlink{class_jugador_a48a89d6fd87bec6abe759bdfc4490962}{00032}} \mbox{\hyperlink{class_jugador_a232c46f75691af6210096e5972535d71}{Jugador::Jugador}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_jugador}{Jugador}} \&j)}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00033}00033 \{}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00034}00034     this-\/>\mbox{\hyperlink{class_jugador_afd6bec98df8ebb3d2db3ef583a76cfa1}{nom}} = j.\mbox{\hyperlink{class_jugador_afd6bec98df8ebb3d2db3ef583a76cfa1}{nom}};}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00036}00036     this-\/>\mbox{\hyperlink{class_jugador_a438340e55baaec15ec14e854d646a37a}{punts}} = j.\mbox{\hyperlink{class_jugador_a438340e55baaec15ec14e854d646a37a}{punts}};}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00037}00037     this-\/>\mbox{\hyperlink{class_jugador_abfd82fbfa2e58fdd634c94f7bc11c66b}{ranking}} = j.\mbox{\hyperlink{class_jugador_abfd82fbfa2e58fdd634c94f7bc11c66b}{ranking}};}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00039}00039     this-\/>\mbox{\hyperlink{class_jugador_ae123b3eb3aed8585a34272d9cc2bb70e}{jocs\_favor}} = j.\mbox{\hyperlink{class_jugador_ae123b3eb3aed8585a34272d9cc2bb70e}{jocs\_favor}};}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00040}00040     this-\/>\mbox{\hyperlink{class_jugador_aa2e394fec4426581e884bf7fe96cdefe}{jocs\_contra}} = j.\mbox{\hyperlink{class_jugador_aa2e394fec4426581e884bf7fe96cdefe}{jocs\_contra}};}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00042}00042     this-\/>\mbox{\hyperlink{class_jugador_a73d2ec1d219e26af2139b284b6c124b6}{sets\_favor}} = j.\mbox{\hyperlink{class_jugador_a73d2ec1d219e26af2139b284b6c124b6}{sets\_favor}};}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00043}00043     this-\/>\mbox{\hyperlink{class_jugador_a6aa8967c1ff2f9ec0a0807bee6af7972}{sets\_contra}} = j.\mbox{\hyperlink{class_jugador_a6aa8967c1ff2f9ec0a0807bee6af7972}{sets\_contra}};}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00045}00045     this-\/>\mbox{\hyperlink{class_jugador_ae21c98b18aac779c71d0cd977557d1ea}{partits\_favor}} = j.\mbox{\hyperlink{class_jugador_ae21c98b18aac779c71d0cd977557d1ea}{partits\_favor}};}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00046}00046     this-\/>\mbox{\hyperlink{class_jugador_a44f625121f668c28cb1fcfa706ba1290}{partits\_contra}} = j.\mbox{\hyperlink{class_jugador_a44f625121f668c28cb1fcfa706ba1290}{partits\_contra}};}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00048}00048     this-\/>\mbox{\hyperlink{class_jugador_a32623d8c3cacd4cbbd0c926eb14cfd8e}{tornejos\_disputats}} = 0;}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00050}00050 \}}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00052}\mbox{\hyperlink{class_jugador_a62b77d189737a104bdb146ea0cac1e80}{00052}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_jugador_a62b77d189737a104bdb146ea0cac1e80}{Jugador::afegir\_resultat}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_resultat}{Resultat}} \&r)}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00053}00053 \{}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00054}00054     this-\/>\mbox{\hyperlink{class_jugador_a438340e55baaec15ec14e854d646a37a}{punts}} += r.\mbox{\hyperlink{struct_resultat_ab81e13e65ea0d122d6836a1cead8f242}{punts}};}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00056}00056     this-\/>\mbox{\hyperlink{class_jugador_ae123b3eb3aed8585a34272d9cc2bb70e}{jocs\_favor}} += r.\mbox{\hyperlink{struct_resultat_afdbe10c31ea6c47c7f8d8465749c75c9}{jocs\_favor}};}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00057}00057     this-\/>\mbox{\hyperlink{class_jugador_aa2e394fec4426581e884bf7fe96cdefe}{jocs\_contra}} += r.\mbox{\hyperlink{struct_resultat_a551c20855cfd9ba38b23f5a36756606d}{jocs\_contra}};}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00059}00059     this-\/>\mbox{\hyperlink{class_jugador_a73d2ec1d219e26af2139b284b6c124b6}{sets\_favor}} += r.\mbox{\hyperlink{struct_resultat_aaab0b2b778b7251a8b0e0a0426f44811}{sets\_favor}};}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00060}00060     this-\/>\mbox{\hyperlink{class_jugador_a6aa8967c1ff2f9ec0a0807bee6af7972}{sets\_contra}} += r.\mbox{\hyperlink{struct_resultat_a105f60fff84e0c84665238f059a09b22}{sets\_contra}};}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00062}00062     this-\/>\mbox{\hyperlink{class_jugador_ae21c98b18aac779c71d0cd977557d1ea}{partits\_favor}} += r.\mbox{\hyperlink{struct_resultat_a9d84f0247214721722337d36720e1184}{partits\_favor}};}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00063}00063     this-\/>\mbox{\hyperlink{class_jugador_a44f625121f668c28cb1fcfa706ba1290}{partits\_contra}} += r.\mbox{\hyperlink{struct_resultat_aca52912746cb59f55400107364a740c3}{partits\_contra}};}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00065}00065     this-\/>\mbox{\hyperlink{class_jugador_a32623d8c3cacd4cbbd0c926eb14cfd8e}{tornejos\_disputats}}++;}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00066}00066 \}}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00068}\mbox{\hyperlink{class_jugador_adf706a1f4a79da9495f47874c11810f5}{00068}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_jugador_adf706a1f4a79da9495f47874c11810f5}{Jugador::retirar\_resultat}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_resultat}{Resultat}} \&r)}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00069}00069 \{}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00070}00070     this-\/>\mbox{\hyperlink{class_jugador_a438340e55baaec15ec14e854d646a37a}{punts}} -\/= r.\mbox{\hyperlink{struct_resultat_ab81e13e65ea0d122d6836a1cead8f242}{punts}};}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00071}00071 \}}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00073}\mbox{\hyperlink{class_jugador_a209b78b3ece7c6226f76998ffc0d85f7}{00073}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_jugador_a209b78b3ece7c6226f76998ffc0d85f7}{Jugador::actualitzar\_ranking}}(\textcolor{keywordtype}{int} r)}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00074}00074 \{}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00075}00075     this-\/>\mbox{\hyperlink{class_jugador_abfd82fbfa2e58fdd634c94f7bc11c66b}{ranking}} = r;}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00076}00076 \}}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00077}\mbox{\hyperlink{class_jugador_a0beaa483a2c4608d6012adb1c457ade4}{00077}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_jugador_a0beaa483a2c4608d6012adb1c457ade4}{Jugador::escriure\_estadistiques}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00078}00078     cout << \mbox{\hyperlink{class_jugador_afd6bec98df8ebb3d2db3ef583a76cfa1}{nom}}}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00079}00079          << \textcolor{stringliteral}{"{} Rk:"{}} << this-\/>\mbox{\hyperlink{class_jugador_abfd82fbfa2e58fdd634c94f7bc11c66b}{ranking}}}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00080}00080          << \textcolor{stringliteral}{"{} Ps:"{}} << this-\/>\mbox{\hyperlink{class_jugador_a438340e55baaec15ec14e854d646a37a}{punts}}}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00081}00081          << \textcolor{stringliteral}{"{} Ts:"{}} << this-\/>\mbox{\hyperlink{class_jugador_a32623d8c3cacd4cbbd0c926eb14cfd8e}{tornejos\_disputats}}}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00082}00082          << \textcolor{stringliteral}{"{} WM:"{}} << this-\/>\mbox{\hyperlink{class_jugador_ae21c98b18aac779c71d0cd977557d1ea}{partits\_favor}}}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00083}00083          << \textcolor{stringliteral}{"{} LM:"{}} << this-\/>\mbox{\hyperlink{class_jugador_a44f625121f668c28cb1fcfa706ba1290}{partits\_contra}}}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00084}00084          << \textcolor{stringliteral}{"{} WS:"{}} << this-\/>\mbox{\hyperlink{class_jugador_a73d2ec1d219e26af2139b284b6c124b6}{sets\_favor}}}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00085}00085          << \textcolor{stringliteral}{"{} LS:"{}} << this-\/>\mbox{\hyperlink{class_jugador_a6aa8967c1ff2f9ec0a0807bee6af7972}{sets\_contra}}}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00086}00086          << \textcolor{stringliteral}{"{} WG:"{}} << this-\/>\mbox{\hyperlink{class_jugador_ae123b3eb3aed8585a34272d9cc2bb70e}{jocs\_favor}}}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00087}00087          << \textcolor{stringliteral}{"{} LG:"{}} << this-\/>\mbox{\hyperlink{class_jugador_aa2e394fec4426581e884bf7fe96cdefe}{jocs\_contra}}}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00088}00088          << endl;}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00089}00089 \}}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00091}\mbox{\hyperlink{class_jugador_a9db8d3e750619e7723065d74baf96529}{00091}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_jugador_a9db8d3e750619e7723065d74baf96529}{Jugador::consultar\_punts}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00092}00092 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00093}00093     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_jugador_a438340e55baaec15ec14e854d646a37a}{punts}};}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00094}00094 \}}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00096}\mbox{\hyperlink{class_jugador_a2b28e8d54fdc699ac9383f9b539e6119}{00096}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_jugador_a2b28e8d54fdc699ac9383f9b539e6119}{Jugador::consultar\_ranking}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00097}00097     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_jugador_abfd82fbfa2e58fdd634c94f7bc11c66b}{ranking}} -\/ 1;}
+\DoxyCodeLine{\Hypertarget{_jugador_8cc_source_l00098}00098 \}}
+
+\end{DoxyCode}
