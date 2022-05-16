@@ -1,5 +1,8 @@
 CC=g++ -D_GLIBCXX_DEBUG -O2 -Wall -Wextra -Werror -Wno-sign-compare -std=c++11
 
+all: program.exe clean
+
+
 program.exe: program.o Classificacio.o Torneig.o Jugador.o
 	$(CC) -o program.exe program.o Classificacio.o Torneig.o Jugador.o
 
@@ -16,4 +19,4 @@ Jugador.o: Jugador.cc Jugador.hh Classificacio.hh
 	$(CC) -c Jugador.cc
 
 clean:
-	rm -f *.o
+	rm -f *o

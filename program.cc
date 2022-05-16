@@ -1,14 +1,13 @@
 /** @mainpage Practicà Pro 2: Gestió d'un circuit de Tennis
  *
- * En aquesta resolució del problema, he definit classes per a representar un
- * Jugador, un ConjuntJugadors, un Torneig, un ConjuntTornejos i una
- * Classificacio. He pensat que conceptes com una Categoria i un Resultat no
- * necessitaven ser classes, ja que no tenien mètodes propis, sino que només
- * emmagatzemaven informació. Per això les he definit com a estructures (struc).
- * A'més, en les classes que representen conjunts faig us de diccionaris per a
- * trobar més facilment els objectes. Aquestes classes serveixen per a executar
- * mètodes dels objectes que contenen, principalment. També utilitzo els
- * BinTree, que he agafat d'altres practiques anteriors.
+ * Per a la resolució del problema, he definit classe per a 
+ * representar un Jugador, un Torneig i una Classificació. 
+ A més, també especifico les estructures Resultat i Categoria.
+ Utilitzo diccionaris per a emmagatzemar el jugadors i els
+ tornejos, ja que així és més ràpid consultar-los en funció
+ del nom. El vector ranking conté el ranking del circuir, com 
+ un vector de parells (string, int) indicant el nom del jugadors
+ i els punts que tenen.
  */
 
 /** @file main.cc
