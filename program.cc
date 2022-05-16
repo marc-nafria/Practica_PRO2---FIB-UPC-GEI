@@ -1,14 +1,14 @@
 /** @mainpage Practicà Pro 2: Gestió d'un circuit de Tennis
- *
- * Per a la resolució del problema, he definit classe per a 
- * representar un Jugador, un Torneig i una Classificació. 
- A més, també especifico les estructures Resultat i Categoria.
- Utilitzo diccionaris per a emmagatzemar el jugadors i els
- tornejos, ja que així és més ràpid consultar-los en funció
- del nom. El vector ranking conté el ranking del circuir, com 
- un vector de parells (string, int) indicant el nom del jugadors
- i els punts que tenen.
- */
+Per a la resolució del problema:
++ he definit **classes** per a representar un Jugador, un Torneig i una Classificació. 
++ he definit **estructures** per a respresentar un Resultat i una Categoria.
+
+Utilitzo **diccionaris** per a emmagatzemar el *jugadors* i els
+*tornejos*, ja que així és més ràpid consultar-los en funció
+del nom. El vector *ranking* conté el ranking del circuit, com 
+un vector de parells (string, int) indicant el nom del jugadors
+i els punts que tenen.
+*/
 
 /** @file main.cc
     @brief Implementacio del programa principal
