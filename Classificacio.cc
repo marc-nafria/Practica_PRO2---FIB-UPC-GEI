@@ -45,7 +45,7 @@ map<string, Resultat> Classificacio::consultar_classificacio() const {
 }
 
 void Classificacio::borrar_classificacio() {
-    /* borrem tot el diccionari ijuagdors */
+    /* borrem tot el diccionari jugadors */
     jugadors.clear();
 }
 

@@ -83,8 +83,8 @@ class Jugador {
 
 	private:
 		
-		int punts;
-		int ranking;
+		int punts; /**< Punts actuals del jugador */
+		int ranking; /**< Posició actual del jugador en el ranking */
 
 		int jocs_favor, jocs_contra;
 		int sets_favor, sets_contra;
