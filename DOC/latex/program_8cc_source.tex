@@ -17,357 +17,317 @@
 \DoxyCodeLine{\Hypertarget{program_8cc_source_l00030}00030 \textcolor{keyword}{using namespace }std;}
 \DoxyCodeLine{\Hypertarget{program_8cc_source_l00031}00031 }
 \DoxyCodeLine{\Hypertarget{program_8cc_source_l00032}\mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{00032}} map<string, Jugador> \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}};}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00033}\mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{00033}}     map<string, Torneig> \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}};}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00034}\mbox{\hyperlink{program_8cc_a1cd0d2f55ad04fff27a5c40a2d8b9ec4}{00034}}     vector<Categoria> \mbox{\hyperlink{program_8cc_a1cd0d2f55ad04fff27a5c40a2d8b9ec4}{categories}};}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00035}\mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{00035}}     vector<pair<string, int>> \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}};}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00033}\mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{00033}} map<string, Torneig> \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}};}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00034}\mbox{\hyperlink{program_8cc_a1cd0d2f55ad04fff27a5c40a2d8b9ec4}{00034}} vector<Categoria> \mbox{\hyperlink{program_8cc_a1cd0d2f55ad04fff27a5c40a2d8b9ec4}{categories}};}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00035}\mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{00035}} vector<pair<string, int>> \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}};}
 \DoxyCodeLine{\Hypertarget{program_8cc_source_l00036}00036 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00037}00037 \textcolor{keywordtype}{void} \mbox{\hyperlink{program_8cc_ad6dcdee3f5d3104737f10a28cf538c3a}{escriure\_ranking}}();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00038}00038 \textcolor{keywordtype}{void} \mbox{\hyperlink{program_8cc_ad1fb9c6d0c4d4a73742a9864d24c9da1}{escriure\_jugadors}}();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00039}\mbox{\hyperlink{program_8cc_aaf346b540ca738882b31bc6f805c7d6c}{00039}} \textcolor{keywordtype}{void} \mbox{\hyperlink{program_8cc_aaf346b540ca738882b31bc6f805c7d6c}{escriure\_jugador}}();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00040}00040 \textcolor{keywordtype}{void} \mbox{\hyperlink{program_8cc_a6ce38024ea91cb93dadad960fb7a08da}{actualitzar\_ranking}}();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00041}00041 \textcolor{keywordtype}{void} \mbox{\hyperlink{program_8cc_a74eca210623d919cc7b9fe52f0199d7c}{ordenar\_ranking}}();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00042}00042 \textcolor{keywordtype}{void} \mbox{\hyperlink{program_8cc_af8bbd049fee4d48469d059ea4deaac95}{informar\_ranking}}();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00043}00043 \textcolor{keywordtype}{void} \mbox{\hyperlink{program_8cc_a7dcd7f774addd5d7190e56461145d416}{escriure\_tornejos}}();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00044}00044 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00045}\mbox{\hyperlink{program_8cc_ad6dcdee3f5d3104737f10a28cf538c3a}{00045}} \textcolor{keywordtype}{void} \mbox{\hyperlink{program_8cc_ad6dcdee3f5d3104737f10a28cf538c3a}{escriure\_ranking}}()}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00046}00046 \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00047}00047     \textcolor{comment}{/* recorrem el ranking i imprimirm els valors */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00048}00048     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}.size(); ++i) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00049}00049         cout << i + 1 << \textcolor{stringliteral}{"{} "{}} << \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[i].first << \textcolor{stringliteral}{"{} "{}}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00050}00050              << \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[i].second << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00051}00051     \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00052}00052 \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00053}00053 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00054}\mbox{\hyperlink{program_8cc_ad1fb9c6d0c4d4a73742a9864d24c9da1}{00054}} \textcolor{keywordtype}{void} \mbox{\hyperlink{program_8cc_ad1fb9c6d0c4d4a73742a9864d24c9da1}{escriure\_jugadors}}()}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00055}00055 \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00056}00056     \textcolor{comment}{/* escribim el total de jugadors */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00057}00057     cout << \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}.size() << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00058}00058 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00059}00059     \textcolor{comment}{/* i en ordre els anem escrint un a un */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00060}00060     \textcolor{keywordflow}{for} (map<string, Jugador>::const\_iterator it = \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}.begin();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00061}00061             it != \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}.end(); ++it) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00062}00062         (*it).second.escriure\_estadistiques();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00063}00063     \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00064}00064 \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00065}00065 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00066}\mbox{\hyperlink{program_8cc_a74569b21339ae43cd01ffa4821be58fb}{00066}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{program_8cc_aaf346b540ca738882b31bc6f805c7d6c}{escriure\_jugador}}(\textcolor{keywordtype}{string} nom\_jugador)}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00067}00067 \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00068}00068 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00069}00069     map<string, Jugador>::const\_iterator it =}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00070}00070         \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}.find(nom\_jugador);}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00071}00071 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00072}00072     \textcolor{keywordflow}{if} (it == \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}.end()) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00073}00073         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00074}00074     \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00075}00075 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00076}00076     (*it).second.escriure\_estadistiques();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00077}00077 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00078}00078     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00079}00079 \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00080}00080 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00081}00081 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00082}\mbox{\hyperlink{program_8cc_a6ce38024ea91cb93dadad960fb7a08da}{00082}} \textcolor{keywordtype}{void} \mbox{\hyperlink{program_8cc_a6ce38024ea91cb93dadad960fb7a08da}{actualitzar\_ranking}}() }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00083}00083 \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00084}00084     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}.size(); ++i) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00085}00085         \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[i].second = \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}[\mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[i].first].consultar\_punts();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00086}00086     \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00087}00087     }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00088}00088     \mbox{\hyperlink{program_8cc_a74eca210623d919cc7b9fe52f0199d7c}{ordenar\_ranking}}();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00089}00089     \mbox{\hyperlink{program_8cc_af8bbd049fee4d48469d059ea4deaac95}{informar\_ranking}}();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00090}00090 \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00091}00091 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00092}\mbox{\hyperlink{program_8cc_a74eca210623d919cc7b9fe52f0199d7c}{00092}} \textcolor{keywordtype}{void} \mbox{\hyperlink{program_8cc_a74eca210623d919cc7b9fe52f0199d7c}{ordenar\_ranking}}()}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00093}00093 \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00094}00094     \textcolor{comment}{//sort(ranking.begin(), ranking.end(), i\_ordenar\_ranking);}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00095}00095     }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00096}00096     \textcolor{comment}{// Utilitzarem el bubble sort}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00097}00097     \textcolor{keywordtype}{int} n = \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}.size();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00098}00098     \textcolor{keywordtype}{int} i, j;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00099}00099     \textcolor{keywordtype}{bool} canviat = \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00100}00100     \textcolor{keywordflow}{for} (i = 0; i < n -\/ 1 and canviat; i++) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00101}00101         canviat = \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00102}00102         \textcolor{keywordflow}{for} (j = 0; j < n -\/ i -\/ 1; j++)}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00103}00103             \textcolor{keywordflow}{if} (\mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[j].second < \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[j + 1].second) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00104}00104                 pair<string, int> aux = \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[j];}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00105}00105                 \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[j] = \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[j + 1];}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00106}00106                 \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[j + 1] = aux;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00107}00107                 canviat = \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00108}00108             \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00109}00109     \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00110}00110 \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00039}\mbox{\hyperlink{program_8cc_a6ce38024ea91cb93dadad960fb7a08da}{00039}} \textcolor{keywordtype}{void} \mbox{\hyperlink{program_8cc_a6ce38024ea91cb93dadad960fb7a08da}{actualitzar\_ranking}}() }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00040}00040 \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00041}00041     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}.size(); ++i) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00042}00042         \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[i].second = \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}[\mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[i].first].consultar\_punts();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00043}00043     \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00044}00044     }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00045}00045     \textcolor{comment}{// Utilitzarem el bubble sort}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00046}00046     \textcolor{keywordtype}{int} n = \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}.size();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00047}00047     \textcolor{keywordtype}{int} i, j;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00048}00048     \textcolor{keywordtype}{bool} canviat = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00049}00049     \textcolor{keywordflow}{for} (i = 0; i < n -\/ 1 and canviat; i++) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00050}00050         canviat = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00051}00051         \textcolor{keywordflow}{for} (j = 0; j < n -\/ i -\/ 1; j++)}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00052}00052             \textcolor{keywordflow}{if} (\mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[j].second < \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[j + 1].second) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00053}00053                 pair<string, int> aux = \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[j];}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00054}00054                 \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[j] = \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[j + 1];}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00055}00055                 \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[j + 1] = aux;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00056}00056                 canviat = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00057}00057             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00058}00058     \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00060}00060     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}.size(); ++i) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00061}00061         \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}[\mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[i].first].actualitzar\_ranking(i + 1);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00062}00062     \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00063}00063 \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00065}\mbox{\hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{00065}} \textcolor{keywordtype}{int} \mbox{\hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00066}00066 \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00068}00068     \textcolor{comment}{/* llegim nombre de categories */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00069}00069     \textcolor{keywordtype}{int} C;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00070}00070     cin >> C;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00071}00071     \mbox{\hyperlink{program_8cc_a1cd0d2f55ad04fff27a5c40a2d8b9ec4}{categories}} = vector<Categoria>(C);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00073}00073     \textcolor{comment}{/* llegim nombre maxim nivells */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00074}00074     \textcolor{keywordtype}{int} K;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00075}00075     cin >> K;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00077}00077     \textcolor{comment}{/* llegim C strings i C*K enters */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00078}00078     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < C; ++i) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00079}00079         \textcolor{keywordtype}{string} nom\_categoria;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00080}00080         \textcolor{comment}{/* per a cada categoria, llegim el nom, i inicialitzem}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00081}00081 \textcolor{comment}{        el seu vector punts\_per\_nivell amb una mida de K */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00082}00082         cin >> nom\_categoria;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00083}00083         \mbox{\hyperlink{program_8cc_a1cd0d2f55ad04fff27a5c40a2d8b9ec4}{categories}}[i].nom = nom\_categoria;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00084}00084         \mbox{\hyperlink{program_8cc_a1cd0d2f55ad04fff27a5c40a2d8b9ec4}{categories}}[i].punts\_per\_nivell = vector<int>(K);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00085}00085     \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00087}00087     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < C; ++i) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00088}00088         \textcolor{keywordtype}{int} punts;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00089}00089         \textcolor{comment}{/* per a cada categoria llegim els seus punts per }}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00090}00090 \textcolor{comment}{        nivell */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00091}00091         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < K; ++j) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00092}00092             cin >> punts;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00093}00093             \mbox{\hyperlink{program_8cc_a1cd0d2f55ad04fff27a5c40a2d8b9ec4}{categories}}[i].punts\_per\_nivell[j] = punts;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00094}00094         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00095}00095     \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00097}00097     \textcolor{comment}{/* llegim nombre de tornejos */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00098}00098     \textcolor{keywordtype}{int} T;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00099}00099     cin >> T;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00101}00101     \textcolor{comment}{/* llegim T parells de de string t i enter c (nom torneig, categoria) */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00102}00102     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < T; ++i) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00103}00103         \textcolor{keywordtype}{string} nom\_torneig;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00104}00104         cin >> nom\_torneig;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00106}00106         \textcolor{keywordtype}{int} id\_categoria;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00107}00107         cin >> id\_categoria;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00109}00109         \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}.insert(make\_pair(nom\_torneig, \mbox{\hyperlink{class_torneig}{Torneig}}(\mbox{\hyperlink{program_8cc_a1cd0d2f55ad04fff27a5c40a2d8b9ec4}{categories}}[id\_categoria -\/ 1])));}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00110}00110     \}}
 \DoxyCodeLine{\Hypertarget{program_8cc_source_l00111}00111 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00112}\mbox{\hyperlink{program_8cc_af8bbd049fee4d48469d059ea4deaac95}{00112}} \textcolor{keywordtype}{void} \mbox{\hyperlink{program_8cc_af8bbd049fee4d48469d059ea4deaac95}{informar\_ranking}}()}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00113}00113 \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00114}00114     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}.size(); ++i) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00115}00115         \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}[\mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[i].first].actualitzar\_ranking(i + 1);}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00116}00116     \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00117}00117 \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00118}00118 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00119}\mbox{\hyperlink{program_8cc_a7dcd7f774addd5d7190e56461145d416}{00119}} \textcolor{keywordtype}{void} \mbox{\hyperlink{program_8cc_a7dcd7f774addd5d7190e56461145d416}{escriure\_tornejos}}()}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00120}00120 \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00121}00121 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00122}00122     cout << \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}.size() << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00112}00112     \textcolor{comment}{/* llegim nombre de jugadors */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00113}00113     \textcolor{keywordtype}{int} J;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00114}00114     cin >> J;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00115}00115 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00116}00116     \textcolor{comment}{/* llegim P strings, identificadors jugadors */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00117}00117     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < J; ++i) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00118}00118         \textcolor{keywordtype}{string} nom\_jugador;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00119}00119         cin >> nom\_jugador;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00120}00120         \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}.insert(make\_pair(nom\_jugador, \mbox{\hyperlink{class_jugador}{Jugador}}(nom\_jugador, \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}.size() + 1)));}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00121}00121         \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}.push\_back(make\_pair(nom\_jugador, 0));}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00122}00122     \}}
 \DoxyCodeLine{\Hypertarget{program_8cc_source_l00123}00123 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00124}00124     \textcolor{keywordflow}{for} (map<string, Torneig>::const\_iterator it = \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}.begin();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00125}00125             it != \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}.end(); ++it) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00126}00126 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00127}00127         cout << (*it).first << \textcolor{stringliteral}{"{} "{}} << (*it).second.consultar\_nom\_categoria() << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00128}00128     \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00129}00129 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00130}00130 \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00131}\mbox{\hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{00131}} \textcolor{keywordtype}{int} \mbox{\hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00132}00132 \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00133}00133 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00134}00134     \textcolor{comment}{/* llegim nombre de categories */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00135}00135     \textcolor{keywordtype}{int} C;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00136}00136     cin >> C;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00137}00137     \mbox{\hyperlink{program_8cc_a1cd0d2f55ad04fff27a5c40a2d8b9ec4}{categories}} = vector<Categoria>(C);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00124}00124     \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00125}00125     \textcolor{comment}{/*            a partir d'aqui comencem a llegir les instruccions */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00126}00126     \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00128}00128     \textcolor{keywordtype}{string} instruccio;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00129}00129     cin >> instruccio;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00130}00130 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00131}00131     \textcolor{keywordflow}{while} (instruccio != \textcolor{stringliteral}{"{}fin"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00133}00133         cout << \textcolor{stringliteral}{"{}\#"{}} << instruccio;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00134}00134 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00135}00135         \textcolor{keywordflow}{if} (instruccio == \textcolor{stringliteral}{"{}nuevo\_jugador"{}} or instruccio == \textcolor{stringliteral}{"{}nj"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00136}00136             \textcolor{keywordtype}{string} nom\_jugador;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00137}00137             cin >> nom\_jugador;}
 \DoxyCodeLine{\Hypertarget{program_8cc_source_l00138}00138 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00139}00139     \textcolor{comment}{/* llegim nombre maxim nivells */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00140}00140     \textcolor{keywordtype}{int} K;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00141}00141     cin >> K;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00142}00142 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00143}00143     \textcolor{comment}{/* llegim C strings i C*K enters */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00144}00144     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < C; ++i) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00145}00145         \textcolor{keywordtype}{string} nom\_categoria;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00146}00146         \textcolor{comment}{/* per a cada categoria, llegim el nom, i inicialitzem}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00147}00147 \textcolor{comment}{        el seu vector punts\_per\_nivell amb una mida de K */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00148}00148         cin >> nom\_categoria;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00149}00149         \mbox{\hyperlink{program_8cc_a1cd0d2f55ad04fff27a5c40a2d8b9ec4}{categories}}[i].nom = nom\_categoria;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00150}00150         \mbox{\hyperlink{program_8cc_a1cd0d2f55ad04fff27a5c40a2d8b9ec4}{categories}}[i].punts\_per\_nivell = vector<int>(K);}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00151}00151     \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00152}00152 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00153}00153     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < C; ++i) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00154}00154         \textcolor{keywordtype}{int} punts;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00155}00155         \textcolor{comment}{/* per a cada categoria llegim els seus punts per }}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00156}00156 \textcolor{comment}{        nivell */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00157}00157         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < K; ++j) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00158}00158             cin >> punts;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00159}00159             \mbox{\hyperlink{program_8cc_a1cd0d2f55ad04fff27a5c40a2d8b9ec4}{categories}}[i].punts\_per\_nivell[j] = punts;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00160}00160         \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00161}00161     \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00139}00139             cout << \textcolor{stringliteral}{"{} "{}} << nom\_jugador << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00140}00140 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00141}00141             \textcolor{keywordflow}{if} (\mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}.insert(make\_pair(nom\_jugador,}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00142}00142             \mbox{\hyperlink{class_jugador}{Jugador}}(nom\_jugador, \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}.size() + 1))).second) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00143}00143 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00144}00144                 \textcolor{comment}{/* si al afegir no ens retorna false vol dir que no }}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00145}00145 \textcolor{comment}{                esistia el jugador al diccionari, així que l'afegim }}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00146}00146 \textcolor{comment}{                i retornem que s'ha afegit */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00147}00147                 \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}.push\_back(make\_pair(nom\_jugador, 0));}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00148}00148                 ++J;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00149}00149                 cout << J << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00150}00150             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00151}00151 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00152}00152             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00153}00153                 cout << \textcolor{stringliteral}{"{}error: ya existe un jugador con ese nombre"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00154}00154             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00155}00155         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00156}00156         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (instruccio == \textcolor{stringliteral}{"{}nuevo\_torneo"{}} or instruccio == \textcolor{stringliteral}{"{}nt"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00157}00157             \textcolor{keywordtype}{string} nom\_torneig;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00158}00158             cin >> nom\_torneig;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00159}00159 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00160}00160             \textcolor{keywordtype}{int} id\_categoria;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00161}00161             cin >> id\_categoria;}
 \DoxyCodeLine{\Hypertarget{program_8cc_source_l00162}00162 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00163}00163     \textcolor{comment}{/* llegim nombre de tornejos */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00164}00164     \textcolor{keywordtype}{int} T;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00165}00165     cin >> T;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00166}00166 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00167}00167     \textcolor{comment}{/* llegim T parells de de string t i enter c (nom torneig, categoria) */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00168}00168     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < T; ++i) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00169}00169         \textcolor{keywordtype}{string} nom\_torneig;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00170}00170         cin >> nom\_torneig;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00171}00171 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00172}00172         \textcolor{keywordtype}{int} id\_categoria;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00173}00173         cin >> id\_categoria;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00174}00174 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00175}00175         \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}.insert(make\_pair(nom\_torneig, \mbox{\hyperlink{class_torneig}{Torneig}}(\mbox{\hyperlink{program_8cc_a1cd0d2f55ad04fff27a5c40a2d8b9ec4}{categories}}[id\_categoria -\/ 1])));}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00176}00176     \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00177}00177 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00178}00178     \textcolor{comment}{/* llegim nombre de jugadors */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00179}00179     \textcolor{keywordtype}{int} J;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00180}00180     cin >> J;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00181}00181 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00182}00182     \textcolor{comment}{/* llegim P strings, identificadors jugadors */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00183}00183     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < J; ++i) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00184}00184         \textcolor{keywordtype}{string} nom\_jugador;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00185}00185         cin >> nom\_jugador;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00186}00186         \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}.insert(make\_pair(nom\_jugador, \mbox{\hyperlink{class_jugador}{Jugador}}(nom\_jugador, \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}.size() + 1)));}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00187}00187         \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}.push\_back(make\_pair(nom\_jugador, 0));}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00188}00188     \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00189}00189 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00190}00190     \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00191}00191     \textcolor{comment}{/*            a partir d'aqui comencem a llegir les instruccions */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00192}00192     \textcolor{comment}{/* -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00193}00193 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00194}00194     \textcolor{keywordtype}{string} instruccio;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00195}00195     cin >> instruccio;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00196}00196 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00197}00197     \textcolor{keywordflow}{while} (instruccio != \textcolor{stringliteral}{"{}fin"{}}) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00198}00198 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00199}00199         cout << \textcolor{stringliteral}{"{}\#"{}} << instruccio;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00200}00200 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00201}00201         \textcolor{keywordflow}{if} (instruccio == \textcolor{stringliteral}{"{}nuevo\_jugador"{}} or instruccio == \textcolor{stringliteral}{"{}nj"{}}) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00202}00202             \textcolor{keywordtype}{string} nom\_jugador;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00203}00203             cin >> nom\_jugador;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00204}00204 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00205}00205             cout << \textcolor{stringliteral}{"{} "{}} << nom\_jugador << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00206}00206 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00207}00207             \textcolor{keywordflow}{if} (\mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}.insert(make\_pair(nom\_jugador,}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00208}00208             \mbox{\hyperlink{class_jugador}{Jugador}}(nom\_jugador, \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}.size() + 1))).second) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00209}00209 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00210}00210                 \textcolor{comment}{/* si al afegir no ens retorna false vol dir que no }}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00211}00211 \textcolor{comment}{                esistia el jugador al diccionari, així que l'afegim }}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00212}00212 \textcolor{comment}{                i retornem que s'ha afegit */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00213}00213                 \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}.push\_back(make\_pair(nom\_jugador, 0));}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00214}00214                 ++J;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00215}00215                 cout << J << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00216}00216             \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00217}00217 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00218}00218             \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00219}00219                 cout << \textcolor{stringliteral}{"{}error: ya existe un jugador con ese nombre"{}} << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00220}00220             \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00221}00221         \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00222}00222         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (instruccio == \textcolor{stringliteral}{"{}nuevo\_torneo"{}} or instruccio == \textcolor{stringliteral}{"{}nt"{}}) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00223}00223             \textcolor{keywordtype}{string} nom\_torneig;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00224}00224             cin >> nom\_torneig;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00225}00225 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00226}00226             \textcolor{keywordtype}{int} id\_categoria;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00227}00227             cin >> id\_categoria;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00228}00228 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00229}00229             cout << \textcolor{stringliteral}{"{} "{}} << nom\_torneig << \textcolor{stringliteral}{"{} "{}} << id\_categoria << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00163}00163             cout << \textcolor{stringliteral}{"{} "{}} << nom\_torneig << \textcolor{stringliteral}{"{} "{}} << id\_categoria << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00164}00164 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00165}00165             \textcolor{keywordflow}{if} (id\_categoria >= 1 and id\_categoria <= C) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00166}00166                 \textcolor{comment}{/* existeix categoria */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00167}00167                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}.insert(make\_pair(nom\_torneig, \mbox{\hyperlink{class_torneig}{Torneig}}(\mbox{\hyperlink{program_8cc_a1cd0d2f55ad04fff27a5c40a2d8b9ec4}{categories}}[id\_categoria -\/ 1]))).second) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00168}00168                     \textcolor{comment}{/* el troneig s'ha afegit */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00169}00169                     ++T;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00170}00170                     cout << T << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00171}00171                 \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00172}00172                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00173}00173                     cout << \textcolor{stringliteral}{"{}error: ya existe un torneo con ese nombre"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00174}00174                 \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00175}00175             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00176}00176             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00177}00177                 cout << \textcolor{stringliteral}{"{}error: la categoria no existe"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00178}00178             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00179}00179         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00180}00180         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (instruccio == \textcolor{stringliteral}{"{}baja\_jugador"{}} or instruccio == \textcolor{stringliteral}{"{}bj"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00181}00181             \textcolor{keywordtype}{string} nom\_jugador;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00182}00182             cin >> nom\_jugador;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00183}00183 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00184}00184             cout << \textcolor{stringliteral}{"{} "{}} << nom\_jugador << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00185}00185 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00186}00186             map<string, Jugador>::iterator it =}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00187}00187                 \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}.find(nom\_jugador);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00188}00188 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00189}00189             \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}.end()) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00190}00190                 map<string, Torneig>::iterator it\_t;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00191}00191                 \textcolor{keywordflow}{for} (it\_t = \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}.begin(); it\_t != \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}.end(); ++it\_t) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00192}00192                     (*it\_t).second.borrar\_jugador(nom\_jugador);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00193}00193                 \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00194}00194 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00195}00195                 \textcolor{keywordtype}{int} r = (*it).second.consultar\_ranking();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00196}00196                 \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}.erase(\mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}.begin() + r);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00197}00197 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00198}00198                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = r; j < \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}.size(); ++j) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00199}00199                     \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}[\mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[j].first].actualitzar\_ranking(j + 1);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00200}00200                 \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00201}00201 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00202}00202 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00203}00203                 \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}.erase(nom\_jugador);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00204}00204                 -\/-\/J;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00205}00205                 cout << J << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00206}00206             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00207}00207             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00208}00208                 cout << \textcolor{stringliteral}{"{}error: el jugador no existe"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00209}00209             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00210}00210         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00211}00211         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (instruccio == \textcolor{stringliteral}{"{}baja\_torneo"{}} or instruccio == \textcolor{stringliteral}{"{}bt"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00212}00212             \textcolor{keywordtype}{string} nom\_torneig;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00213}00213             cin >> nom\_torneig;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00214}00214 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00215}00215             cout << \textcolor{stringliteral}{"{} "{}} << nom\_torneig << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00216}00216 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00217}00217             \mbox{\hyperlink{class_classificacio}{Classificacio}} darrera\_classificacio;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00218}00218 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00219}00219             map<string, Torneig>::const\_iterator it = \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}.find(nom\_torneig);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00220}00220 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00221}00221             \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}.end()) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00222}00222                 \textcolor{comment}{/* borrem la darerra classificacio del torneig */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00223}00223 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00224}00224                 \textcolor{comment}{/* copiem la classificació com un diccionari de resultats */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00225}00225                 map<string, Resultat> cl = (*it).second.consultar\_darrera\_classificacio().consultar\_classificacio();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00226}00226 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00227}00227                 \textcolor{comment}{/* el recorrem i afegim cada resultat al jugador corresponent */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00228}00228                 \textcolor{keywordflow}{for} (map<string, Resultat>::const\_iterator it\_cl = cl.begin(); it\_cl != cl.end();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00229}00229                         ++it\_cl) \{}
 \DoxyCodeLine{\Hypertarget{program_8cc_source_l00230}00230 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00231}00231             \textcolor{keywordflow}{if} (id\_categoria >= 1 and id\_categoria <= C) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00232}00232                 \textcolor{comment}{/* existeix categoria */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00233}00233                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}.insert(make\_pair(nom\_torneig, \mbox{\hyperlink{class_torneig}{Torneig}}(\mbox{\hyperlink{program_8cc_a1cd0d2f55ad04fff27a5c40a2d8b9ec4}{categories}}[id\_categoria -\/ 1]))).second) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00234}00234                     \textcolor{comment}{/* el troneig s'ha afegit */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00235}00235                     ++T;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00236}00236                     cout << T << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00237}00237                 \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00238}00238                 \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00239}00239                     cout << \textcolor{stringliteral}{"{}error: ya existe un torneo con ese nombre"{}} << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00240}00240                 \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00241}00241             \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00242}00242             \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00243}00243                 cout << \textcolor{stringliteral}{"{}error: la categoria no existe"{}} << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00244}00244             \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00245}00245         \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00246}00246         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (instruccio == \textcolor{stringliteral}{"{}baja\_jugador"{}} or instruccio == \textcolor{stringliteral}{"{}bj"{}}) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00247}00247             \textcolor{keywordtype}{string} nom\_jugador;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00248}00248             cin >> nom\_jugador;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00249}00249 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00250}00250             cout << \textcolor{stringliteral}{"{} "{}} << nom\_jugador << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00251}00251 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00252}00252             map<string, Jugador>::iterator it =}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00253}00253                 \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}.find(nom\_jugador);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00231}00231                     \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}[(*it\_cl).first].retirar\_resultat((*it\_cl).second);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00232}00232                 \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00233}00233                 \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}.erase(it);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00234}00234                 -\/-\/T;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00235}00235                 cout << T << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00236}00236                 \mbox{\hyperlink{program_8cc_a6ce38024ea91cb93dadad960fb7a08da}{actualitzar\_ranking}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00237}00237             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00238}00238             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00239}00239                 cout << \textcolor{stringliteral}{"{}error: el torneo no existe"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00240}00240             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00241}00241         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00242}00242         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (instruccio == \textcolor{stringliteral}{"{}iniciar\_torneo"{}} or instruccio == \textcolor{stringliteral}{"{}it"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00243}00243             \textcolor{keywordtype}{string} nom\_torneig;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00244}00244             cin >> nom\_torneig;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00245}00245 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00246}00246             cout << \textcolor{stringliteral}{"{} "{}} << nom\_torneig << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00247}00247             \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}[nom\_torneig].iniciar\_torneig(\mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}});}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00248}00248         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00249}00249         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (instruccio == \textcolor{stringliteral}{"{}finalizar\_torneo"{}} or instruccio == \textcolor{stringliteral}{"{}ft"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00250}00250             \textcolor{keywordtype}{string} nom\_torneig;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00251}00251             cin >> nom\_torneig;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00252}00252 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00253}00253             cout << \textcolor{stringliteral}{"{} "{}} << nom\_torneig << endl;}
 \DoxyCodeLine{\Hypertarget{program_8cc_source_l00254}00254 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00255}00255             \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}.end()) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00256}00256                 map<string, Torneig>::iterator it\_t;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00257}00257                 \textcolor{keywordflow}{for} (it\_t = \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}.begin(); it\_t != \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}.end(); ++it\_t) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00258}00258                     (*it\_t).second.borrar\_jugador(nom\_jugador);}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00259}00259                 \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00260}00260 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00261}00261                 \textcolor{keywordtype}{int} r = (*it).second.consultar\_ranking();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00262}00262                 \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}.erase(\mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}.begin() + r);}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00263}00263 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00264}00264                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = r; j < \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}.size(); ++j) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00265}00265                     \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}[\mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[j].first].actualitzar\_ranking(j + 1);}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00266}00266                 \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00267}00267 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00268}00268 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00269}00269                 \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}.erase(nom\_jugador);}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00270}00270                 -\/-\/J;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00271}00271                 cout << J << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00272}00272             \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00273}00273             \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00274}00274                 cout << \textcolor{stringliteral}{"{}error: el jugador no existe"{}} << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00275}00275             \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00276}00276         \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00277}00277         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (instruccio == \textcolor{stringliteral}{"{}baja\_torneo"{}} or instruccio == \textcolor{stringliteral}{"{}bt"{}}) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00278}00278             \textcolor{keywordtype}{string} nom\_torneig;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00279}00279             cin >> nom\_torneig;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00280}00280 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00281}00281             cout << \textcolor{stringliteral}{"{} "{}} << nom\_torneig << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00282}00282 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00283}00283             \mbox{\hyperlink{class_classificacio}{Classificacio}} darrera\_classificacio;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00284}00284 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00285}00285             map<string, Torneig>::const\_iterator it = \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}.find(nom\_torneig);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00255}00255             \textcolor{comment}{/* copiem la classificació com un diccionari de resultats */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00256}00256             map<string, Resultat> darrera\_classificacio = \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}[nom\_torneig].consultar\_darrera\_classificacio().consultar\_classificacio();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00257}00257 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00258}00258             \textcolor{comment}{/* el recorrem i afegim cada resultat al jugador corresponent */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00259}00259             \textcolor{keywordflow}{for} (map<string, Resultat>::const\_iterator it = darrera\_classificacio.begin(); it != darrera\_classificacio.end();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00260}00260                     ++it) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00261}00261 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00262}00262                 \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}[(*it).first].retirar\_resultat((*it).second);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00263}00263             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00264}00264             map<string, Resultat> fi\_torneig = \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}[nom\_torneig].finalitzar\_torneig().consultar\_classificacio();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00265}00265 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00266}00266             \textcolor{comment}{/* el recorrem i afegim cada resultat al jugador corresponent */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00267}00267             \textcolor{keywordflow}{for} (map<string, Resultat>::const\_iterator it = fi\_torneig.begin(); it != fi\_torneig.end();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00268}00268                     ++it) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00269}00269 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00270}00270                 \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}[(*it).first].afegir\_resultat((*it).second);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00271}00271             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00272}00272 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00273}00273             \mbox{\hyperlink{program_8cc_a6ce38024ea91cb93dadad960fb7a08da}{actualitzar\_ranking}}();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00274}00274         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00275}00275         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (instruccio == \textcolor{stringliteral}{"{}listar\_ranking"{}} or instruccio == \textcolor{stringliteral}{"{}lr"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00276}00276             cout << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00277}00277 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00278}00278             \textcolor{comment}{/* recorrem el ranking i imprimirm els valors */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00279}00279             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}.size(); ++i) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00280}00280                 cout << i + 1 << \textcolor{stringliteral}{"{} "{}} << \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[i].first << \textcolor{stringliteral}{"{} "{}}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00281}00281                      << \mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}}[i].second << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00282}00282             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00283}00283         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00284}00284         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (instruccio == \textcolor{stringliteral}{"{}listar\_jugadores"{}} or instruccio == \textcolor{stringliteral}{"{}lj"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00285}00285             cout << endl;}
 \DoxyCodeLine{\Hypertarget{program_8cc_source_l00286}00286 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00287}00287             \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}.end()) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00288}00288                 \textcolor{comment}{/* borrem la darerra classificacio del torneig */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00287}00287             \textcolor{comment}{/* escribim el total de jugadors */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00288}00288             cout << \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}.size() << endl;}
 \DoxyCodeLine{\Hypertarget{program_8cc_source_l00289}00289 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00290}00290                 \textcolor{comment}{/* copiem la classificació com un diccionari de resultats */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00291}00291                 map<string, Resultat> cl = (*it).second.consultar\_darrera\_classificacio().consultar\_classificacio();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00292}00292 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00293}00293                 \textcolor{comment}{/* el recorrem i afegim cada resultat al jugador corresponent */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00294}00294                 \textcolor{keywordflow}{for} (map<string, Resultat>::const\_iterator it\_cl = cl.begin(); it\_cl != cl.end();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00295}00295                         ++it\_cl) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00296}00296 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00297}00297                     \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}[(*it\_cl).first].retirar\_resultat((*it\_cl).second);}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00298}00298                 \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00299}00299                 \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}.erase(it);}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00300}00300                 -\/-\/T;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00301}00301                 cout << T << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00302}00302                 \mbox{\hyperlink{program_8cc_a6ce38024ea91cb93dadad960fb7a08da}{actualitzar\_ranking}}();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00303}00303             \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00304}00304             \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00305}00305                 cout << \textcolor{stringliteral}{"{}error: el torneo no existe"{}} << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00306}00306             \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00307}00307         \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00308}00308         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (instruccio == \textcolor{stringliteral}{"{}iniciar\_torneo"{}} or instruccio == \textcolor{stringliteral}{"{}it"{}}) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00309}00309             \textcolor{keywordtype}{string} nom\_torneig;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00310}00310             cin >> nom\_torneig;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00311}00311 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00312}00312             cout << \textcolor{stringliteral}{"{} "{}} << nom\_torneig << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00313}00313             \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}[nom\_torneig].iniciar\_torneig(\mbox{\hyperlink{program_8cc_a85d32da86b41760a67aaa338741896b8}{ranking}});}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00314}00314         \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00315}00315         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (instruccio == \textcolor{stringliteral}{"{}finalizar\_torneo"{}} or instruccio == \textcolor{stringliteral}{"{}ft"{}}) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00316}00316             \textcolor{keywordtype}{string} nom\_torneig;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00317}00317             cin >> nom\_torneig;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00318}00318 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00319}00319             cout << \textcolor{stringliteral}{"{} "{}} << nom\_torneig << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00320}00320 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00321}00321             \textcolor{comment}{/* copiem la classificació com un diccionari de resultats */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00322}00322             map<string, Resultat> darrera\_classificacio = \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}[nom\_torneig].consultar\_darrera\_classificacio().consultar\_classificacio();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00323}00323 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00324}00324             \textcolor{comment}{/* el recorrem i afegim cada resultat al jugador corresponent */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00325}00325             \textcolor{keywordflow}{for} (map<string, Resultat>::const\_iterator it = darrera\_classificacio.begin(); it != darrera\_classificacio.end();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00326}00326                     ++it) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00290}00290             \textcolor{comment}{/* i en ordre els anem escrint un a un */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00291}00291             \textcolor{keywordflow}{for} (map<string, Jugador>::const\_iterator it = \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}.begin();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00292}00292                     it != \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}.end(); ++it) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00293}00293                 (*it).second.escriure\_estadistiques();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00294}00294             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00295}00295         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00296}00296         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (instruccio == \textcolor{stringliteral}{"{}consultar\_jugador"{}} or instruccio == \textcolor{stringliteral}{"{}cj"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00297}00297             \textcolor{keywordtype}{string} nom\_jugador;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00298}00298             cin >> nom\_jugador;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00299}00299 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00300}00300             cout << \textcolor{stringliteral}{"{} "{}} << nom\_jugador << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00301}00301 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00302}00302             map<string, Jugador>::const\_iterator it =}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00303}00303             \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}.find(nom\_jugador);}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00304}00304 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00305}00305             \textcolor{keywordflow}{if} (it == \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}.end()) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00306}00306                 cout << \textcolor{stringliteral}{"{}error: el jugador no existe"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00307}00307             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00308}00308             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00309}00309                 (*it).second.escriure\_estadistiques();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00310}00310             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00311}00311         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00312}00312         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (instruccio == \textcolor{stringliteral}{"{}listar\_torneos"{}} or instruccio == \textcolor{stringliteral}{"{}lt"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00313}00313             cout << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00314}00314 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00315}00315             cout << \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}.size() << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00316}00316 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00317}00317             \textcolor{keywordflow}{for} (map<string, Torneig>::const\_iterator it = \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}.begin();}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00318}00318                     it != \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}.end(); ++it) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00319}00319 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00320}00320                 cout << (*it).first << \textcolor{stringliteral}{"{} "{}} << (*it).second.consultar\_nom\_categoria() << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00321}00321             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00322}00322         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00323}00323         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (instruccio == \textcolor{stringliteral}{"{}listar\_categorias"{}} or instruccio == \textcolor{stringliteral}{"{}lc"{}}) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00324}00324             cout << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00325}00325             \textcolor{comment}{/* imprimim els valors C i K amb el format corresponent */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00326}00326             cout << C << \textcolor{stringliteral}{"{} "{}} << K << endl;}
 \DoxyCodeLine{\Hypertarget{program_8cc_source_l00327}00327 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00328}00328                 \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}[(*it).first].retirar\_resultat((*it).second);}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00329}00329             \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00330}00330             map<string, Resultat> fi\_torneig = \mbox{\hyperlink{program_8cc_a97a7fe13597b0ed2c30e80d9e0f74832}{tornejos}}[nom\_torneig].finalitzar\_torneig().consultar\_classificacio();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00331}00331 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00332}00332             \textcolor{comment}{/* el recorrem i afegim cada resultat al jugador corresponent */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00333}00333             \textcolor{keywordflow}{for} (map<string, Resultat>::const\_iterator it = fi\_torneig.begin(); it != fi\_torneig.end();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00334}00334                     ++it) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00335}00335 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00336}00336                 \mbox{\hyperlink{program_8cc_af06cd104b07890efd0af7b4a5ab8e84b}{jugadors}}[(*it).first].afegir\_resultat((*it).second);}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00337}00337             \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00338}00338 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00339}00339             \mbox{\hyperlink{program_8cc_a6ce38024ea91cb93dadad960fb7a08da}{actualitzar\_ranking}}();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00340}00340         \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00341}00341         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (instruccio == \textcolor{stringliteral}{"{}listar\_ranking"{}} or instruccio == \textcolor{stringliteral}{"{}lr"{}}) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00342}00342             cout << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00343}00343             \mbox{\hyperlink{program_8cc_ad6dcdee3f5d3104737f10a28cf538c3a}{escriure\_ranking}}();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00344}00344         \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00345}00345         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (instruccio == \textcolor{stringliteral}{"{}listar\_jugadores"{}} or instruccio == \textcolor{stringliteral}{"{}lj"{}}) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00346}00346             cout << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00347}00347             \mbox{\hyperlink{program_8cc_ad1fb9c6d0c4d4a73742a9864d24c9da1}{escriure\_jugadors}}();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00348}00348         \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00349}00349         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (instruccio == \textcolor{stringliteral}{"{}consultar\_jugador"{}} or instruccio == \textcolor{stringliteral}{"{}cj"{}}) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00350}00350             \textcolor{keywordtype}{string} nom\_jugador;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00351}00351             cin >> nom\_jugador;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00352}00352 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00353}00353             cout << \textcolor{stringliteral}{"{} "{}} << nom\_jugador << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00354}00354 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00355}00355             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{program_8cc_aaf346b540ca738882b31bc6f805c7d6c}{escriure\_jugador}}(nom\_jugador)) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00356}00356                 cout << \textcolor{stringliteral}{"{}error: el jugador no existe"{}} << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00357}00357             \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00358}00358         \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00359}00359         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (instruccio == \textcolor{stringliteral}{"{}listar\_torneos"{}} or instruccio == \textcolor{stringliteral}{"{}lt"{}}) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00360}00360             cout << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00361}00361             \mbox{\hyperlink{program_8cc_a7dcd7f774addd5d7190e56461145d416}{escriure\_tornejos}}();}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00362}00362         \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00363}00363         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (instruccio == \textcolor{stringliteral}{"{}listar\_categorias"{}} or instruccio == \textcolor{stringliteral}{"{}lc"{}}) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00364}00364             cout << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00365}00365             \textcolor{comment}{/* imprimim els valors C i K amb el format corresponent */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00366}00366             cout << C << \textcolor{stringliteral}{"{} "{}} << K << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00367}00367 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00368}00368             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < C; ++i) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00369}00369                 \textcolor{comment}{/* per a cada categoria imprimim el seu nom, i iterem en}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00370}00370 \textcolor{comment}{                punts\_per\_nivell per a imprimir cada valor */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00371}00371                 cout << \mbox{\hyperlink{program_8cc_a1cd0d2f55ad04fff27a5c40a2d8b9ec4}{categories}}[i].nom;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00372}00372 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00373}00373                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < K; ++j) \{}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00374}00374                     cout << \textcolor{stringliteral}{"{} "{}} << \mbox{\hyperlink{program_8cc_a1cd0d2f55ad04fff27a5c40a2d8b9ec4}{categories}}[i].punts\_per\_nivell[j];}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00375}00375                 \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00376}00376 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00377}00377                 cout << endl;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00378}00378             \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00379}00379         \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00380}00380 }
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00381}00381         \textcolor{comment}{/* i per ultim llegim la seguent instruccio */}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00382}00382         cin >> instruccio;}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00383}00383     \}}
-\DoxyCodeLine{\Hypertarget{program_8cc_source_l00384}00384 \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00328}00328             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < C; ++i) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00329}00329                 \textcolor{comment}{/* per a cada categoria imprimim el seu nom, i iterem en}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00330}00330 \textcolor{comment}{                punts\_per\_nivell per a imprimir cada valor */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00331}00331                 cout << \mbox{\hyperlink{program_8cc_a1cd0d2f55ad04fff27a5c40a2d8b9ec4}{categories}}[i].nom;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00332}00332 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00333}00333                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < K; ++j) \{}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00334}00334                     cout << \textcolor{stringliteral}{"{} "{}} << \mbox{\hyperlink{program_8cc_a1cd0d2f55ad04fff27a5c40a2d8b9ec4}{categories}}[i].punts\_per\_nivell[j];}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00335}00335                 \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00336}00336 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00337}00337                 cout << endl;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00338}00338             \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00339}00339         \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00340}00340 }
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00341}00341         \textcolor{comment}{/* i per ultim llegim la seguent instruccio */}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00342}00342         cin >> instruccio;}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00343}00343     \}}
+\DoxyCodeLine{\Hypertarget{program_8cc_source_l00344}00344 \}}
 
 \end{DoxyCode}
