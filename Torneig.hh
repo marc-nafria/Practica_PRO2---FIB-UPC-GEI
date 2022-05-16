@@ -7,9 +7,9 @@
 
 #include "Categoria.hh"
 #include "Classificacio.hh"
-#include "BinTree.hh"
 
 #ifndef NO_DIAGRAM 
+#include "BinTree.hh"
 
 #include <iostream>
 #include <string>
@@ -20,11 +20,11 @@
  * 
  * Aquest consta de dues funcions
  * principals, la d'inici i la de final. La de final resumeix la tasca del
- * torneig, retornar un classificació que resumeixi que ha passat.
+ * torneig, retornar un Classificacio que resumeixi que ha passat.
  * A més, un torneig sempre guarda la classificació de la última edició, perque 
  * farà falta treure punts a certs jugadors, ja sigui quan es borrir el torneig
  * o s'en faci una nova edició.
- * També es contempla que, en esborrar un torneig del circui, s'ha de borrar
+ * També es contempla que, en esborrar un jugador del circuit, s'ha de borrar
  * aquest de la darrera classificació en cas de que hi sigui, ja que hi poden 
  * haver futurs jugadors amb el mateix nom.
  */
@@ -65,12 +65,12 @@ class Torneig {
 		Classificacio finalitzar_torneig();
 
 		/** @brief Borra un jugador de la darrera classificació del torneig
-		 * \pre Un string (nom del jugador a borrar)
-		 * \post Es borra el jugador de la darrera classificació del torneig
+		 * \pre Un string (nom del jugador a borrar).
+		 * \post Es borra el jugador de la darrera classificació del torneig.
 		 */
 		void borrar_jugador(string nom_jugador);
 
-		/** @brief Retorna la classificaió de la
+		/** @brief Retorna la Classificacio de la
 		 * útlima edició del torneig.
 		 * \pre Cert.
 		 * \post Una copia de la darrera classificacio.
@@ -92,7 +92,7 @@ class Torneig {
         void construir_arbre_emparellaments(BinTree<int> &a, int i, int k, int k_max);
 
         /* modifica l'arbre d'emparellaments amb els guanaydors definitius de cada 
-        enfrontament */
+        enfrontament, també reparteix els punts corresponents a cada jugador */
         void modificar_arbre_emparellaments(BinTree<int> &a, const BinTree<string> &b, int nivell);
 
         /* llegeix els resultats de cada partit del torneig i els guarda a un arbre */

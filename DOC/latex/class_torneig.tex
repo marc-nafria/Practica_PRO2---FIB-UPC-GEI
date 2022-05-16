@@ -23,7 +23,7 @@ void \mbox{\hyperlink{class_torneig_a0a12df5121f79dd97d43a7cbfd291ddf}{iniciar\+
 void \mbox{\hyperlink{class_torneig_ad05e7c87b8e338194582001a89e5c6aa}{borrar\+\_\+jugador}} (string nom\+\_\+jugador)
 \begin{DoxyCompactList}\small\item\em Borra un jugador de la darrera classificació del torneig. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_classificacio}{Classificacio}} \mbox{\hyperlink{class_torneig_a2fdf459665896c0bc542d6d9f1e40586}{consultar\+\_\+darrera\+\_\+classificacio}} () const
-\begin{DoxyCompactList}\small\item\em Retorna la classificaió de la útlima edició del torneig. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Retorna la \mbox{\hyperlink{class_classificacio}{Classificacio}} de la útlima edició del torneig. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_torneig_ad126d3be0c787e50ba49278acf5c8937}{consultar\+\_\+nom\+\_\+categoria}} () const
 \begin{DoxyCompactList}\small\item\em Retorna un string amb el nom de la categoria. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -31,7 +31,7 @@ string \mbox{\hyperlink{class_torneig_ad126d3be0c787e50ba49278acf5c8937}{consult
 \doxysubsection{Descripción detallada}
 Representa un torneig del circuit. 
 
-Aquest consta de dues funcions principals, la d\textquotesingle{}inici i la de final. La de final resumeix la tasca del torneig, retornar un classificació que resumeixi que ha passat. A més, un torneig sempre guarda la classificació de la última edició, perque farà falta treure punts a certs jugadors, ja sigui quan es borrir el torneig o s\textquotesingle{}en faci una nova edició. També es contempla que, en esborrar un torneig del circui, s\textquotesingle{}ha de borrar aquest de la darrera classificació en cas de que hi sigui, ja que hi poden haver futurs jugadors amb el mateix nom. 
+Aquest consta de dues funcions principals, la d\textquotesingle{}inici i la de final. La de final resumeix la tasca del torneig, retornar un \mbox{\hyperlink{class_classificacio}{Classificacio}} que resumeixi que ha passat. A més, un torneig sempre guarda la classificació de la última edició, perque farà falta treure punts a certs jugadors, ja sigui quan es borrir el torneig o s\textquotesingle{}en faci una nova edició. També es contempla que, en esborrar un jugador del circuit, s\textquotesingle{}ha de borrar aquest de la darrera classificació en cas de que hi sigui, ja que hi poden haver futurs jugadors amb el mateix nom. 
 
 Definición en la línea \mbox{\hyperlink{_torneig_8hh_source_l00031}{31}} del archivo \mbox{\hyperlink{_torneig_8hh_source}{Torneig.\+hh}}.
 
@@ -115,10 +115,10 @@ Es llegeixen els resultats del torneig i es retorna i guarda la classificació.
 Borra un jugador de la darrera classificació del torneig. 
 
 \begin{DoxyPrecond}{Precondición}
-Un string (nom del jugador a borrar) 
+Un string (nom del jugador a borrar). 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Es borra el jugador de la darrera classificació del torneig 
+Es borra el jugador de la darrera classificació del torneig. 
 \end{DoxyPostcond}
 \mbox{\Hypertarget{class_torneig_a2fdf459665896c0bc542d6d9f1e40586}\label{class_torneig_a2fdf459665896c0bc542d6d9f1e40586}} 
 \index{Torneig@{Torneig}!consultar\_darrera\_classificacio@{consultar\_darrera\_classificacio}}
@@ -128,7 +128,7 @@ Es borra el jugador de la darrera classificació del torneig
 
 
 
-Retorna la classificaió de la útlima edició del torneig. 
+Retorna la \mbox{\hyperlink{class_classificacio}{Classificacio}} de la útlima edició del torneig. 
 
 \begin{DoxyPrecond}{Precondición}
 Cert. 

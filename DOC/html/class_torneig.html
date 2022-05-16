@@ -91,7 +91,7 @@ Métodos públicos</h2></td></tr>
 <tr class="memdesc:ad05e7c87b8e338194582001a89e5c6aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Borra un jugador de la darrera classificació del torneig.  <a href="class_torneig.html#ad05e7c87b8e338194582001a89e5c6aa">Más...</a><br /></td></tr>
 <tr class="separator:ad05e7c87b8e338194582001a89e5c6aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fdf459665896c0bc542d6d9f1e40586"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_classificacio.html">Classificacio</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_torneig.html#a2fdf459665896c0bc542d6d9f1e40586">consultar_darrera_classificacio</a> () const</td></tr>
-<tr class="memdesc:a2fdf459665896c0bc542d6d9f1e40586"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna la classificaió de la útlima edició del torneig.  <a href="class_torneig.html#a2fdf459665896c0bc542d6d9f1e40586">Más...</a><br /></td></tr>
+<tr class="memdesc:a2fdf459665896c0bc542d6d9f1e40586"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna la <a class="el" href="class_classificacio.html" title="Representa el resum d&#39;un torneig, es a dir, es un conjunt dels resultats de tots els jugadors.">Classificacio</a> de la útlima edició del torneig.  <a href="class_torneig.html#a2fdf459665896c0bc542d6d9f1e40586">Más...</a><br /></td></tr>
 <tr class="separator:a2fdf459665896c0bc542d6d9f1e40586"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad126d3be0c787e50ba49278acf5c8937"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_torneig.html#ad126d3be0c787e50ba49278acf5c8937">consultar_nom_categoria</a> () const</td></tr>
 <tr class="memdesc:ad126d3be0c787e50ba49278acf5c8937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna un string amb el nom de la categoria.  <a href="class_torneig.html#ad126d3be0c787e50ba49278acf5c8937">Más...</a><br /></td></tr>
@@ -99,7 +99,7 @@ Métodos públicos</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p >Representa un torneig del circuit. </p>
-<p >Aquest consta de dues funcions principals, la d'inici i la de final. La de final resumeix la tasca del torneig, retornar un classificació que resumeixi que ha passat. A més, un torneig sempre guarda la classificació de la última edició, perque farà falta treure punts a certs jugadors, ja sigui quan es borrir el torneig o s'en faci una nova edició. També es contempla que, en esborrar un torneig del circui, s'ha de borrar aquest de la darrera classificació en cas de que hi sigui, ja que hi poden haver futurs jugadors amb el mateix nom. </p>
+<p >Aquest consta de dues funcions principals, la d'inici i la de final. La de final resumeix la tasca del torneig, retornar un <a class="el" href="class_classificacio.html" title="Representa el resum d&#39;un torneig, es a dir, es un conjunt dels resultats de tots els jugadors.">Classificacio</a> que resumeixi que ha passat. A més, un torneig sempre guarda la classificació de la última edició, perque farà falta treure punts a certs jugadors, ja sigui quan es borrir el torneig o s'en faci una nova edició. També es contempla que, en esborrar un jugador del circuit, s'ha de borrar aquest de la darrera classificació en cas de que hi sigui, ja que hi poden haver futurs jugadors amb el mateix nom. </p>
 
 <p class="definition">Definición en la línea <a class="el" href="_torneig_8hh_source.html#l00031">31</a> del archivo <a class="el" href="_torneig_8hh_source.html">Torneig.hh</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
@@ -206,8 +206,8 @@ Métodos públicos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Borra un jugador de la darrera classificació del torneig. </p>
-<dl class="section pre"><dt>Precondición</dt><dd>Un string (nom del jugador a borrar) </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Es borra el jugador de la darrera classificació del torneig </dd></dl>
+<dl class="section pre"><dt>Precondición</dt><dd>Un string (nom del jugador a borrar). </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Es borra el jugador de la darrera classificació del torneig. </dd></dl>
 
 </div>
 </div>
@@ -226,7 +226,7 @@ Métodos públicos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Retorna la classificaió de la útlima edició del torneig. </p>
+<p>Retorna la <a class="el" href="class_classificacio.html" title="Representa el resum d&#39;un torneig, es a dir, es un conjunt dels resultats de tots els jugadors.">Classificacio</a> de la útlima edició del torneig. </p>
 <dl class="section pre"><dt>Precondición</dt><dd>Cert. </dd></dl>
 <dl class="section post"><dt>Postcondición</dt><dd>Una copia de la darrera classificacio. </dd></dl>
 

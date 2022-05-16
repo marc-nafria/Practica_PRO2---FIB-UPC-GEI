@@ -44,16 +44,9 @@ Classificacio Torneig::finalitzar_torneig() {
     ranking_punts = vector<int> (ranking.size());
     modificar_arbre_emparellaments(arbre_emparellaments, arbre_resultat, 0);
 
-    /* escrivim l'output de la funció amb l'ajuda dels dos arbres */
+    /* escribim l'output de la funció amb l'ajuda dels dos arbres */
     escriure_arbres(arbre_emparellaments, arbre_resultat);
     cout << endl;
-
-    /* inicialitzem el ranking auxiliar per saber els punts en l'ordre 
-    del ranking */
-
-    /* guardem a la classificació els punts de cada jugador i guardem a
-    ranking_punts de cada jugador en ordre */
-    //repartir_punts(arbre_emparellaments, 0);
 
     /* escribim els punts de cada jugador per ordre del ranking en el
     moment de començar el torneig */
@@ -94,6 +87,10 @@ void Torneig::modificar_arbre_emparellaments(BinTree<int> &a, const BinTree<stri
         guanyador,
         left,
         right);
+
+    /* i al guanyador li actualitzem els punts en funció del nivell en el que estem,
+    d'aquesta manera assegurem que, al llegir-lo en postordre, al final de recorre'l,
+    cada jugadors tindrà els punts del nivell més alt en el que hagi guanyat */
     nova_classificacio.establir_punts(ranking[guanyador - 1],
         categoria.punts_per_nivell[nivell]);
     ranking_punts[guanyador - 1] = categoria.punts_per_nivell[nivell];

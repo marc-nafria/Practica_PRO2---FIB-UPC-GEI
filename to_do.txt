@@ -1,3 +1,0 @@
-A lhora de repartir punts, en ekl vector ranking punts es pot utiblitzar un bolea per indicar si 
-ja se li han afegit els punts o no. aixi nomes cridarem la funcio quan siugi necesaria.
-

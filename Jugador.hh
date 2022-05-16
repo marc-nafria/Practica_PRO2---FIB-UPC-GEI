@@ -31,7 +31,7 @@ class Jugador {
 
 		/** @brief Inicialitza un Jugador amb nom i posició en el ranking,
 		 * inicialitzant les estadístiques a zero.
-		 * \pre Un string no nul (nom del jugador)
+		 * \pre Un string no nul (nom del jugador).
 		 * \post Un jugador amb nom i ranking,
 		 * i les estadístiques inicialitzades a zero.
 		 */
@@ -58,8 +58,8 @@ class Jugador {
 		void retirar_resultat(const Resultat &r);
         
         /** @brief Modifica la posició del ranking del jugador.
-         * \pre Un enter >= 1
-         * \post S'actualitza this->ranking
+         * \pre Un enter >= 1.
+         * \post S'actualitza this->ranking.
          */
         void actualitzar_ranking(int r);
 
