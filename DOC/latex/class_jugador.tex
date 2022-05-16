@@ -1,0 +1,160 @@
+\hypertarget{class_jugador}{}\doxysection{Referencia de la Clase Jugador}
+\label{class_jugador}\index{Jugador@{Jugador}}
+
+
+Representa a un jugador.  
+
+
+
+
+{\ttfamily \#include $<$Jugador.\+hh$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_jugador_a7888f2833f55ff67626eea8469069839}{Jugador}} (string nom, int ranking)
+\begin{DoxyCompactList}\small\item\em Inicialitza un \mbox{\hyperlink{class_jugador}{Jugador}} amb nom i posició en el ranking, inicialitzant les estadístiques a zero. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_jugador_a48a89d6fd87bec6abe759bdfc4490962}{Jugador}} (const \mbox{\hyperlink{class_jugador}{Jugador}} \&j)
+\begin{DoxyCompactList}\small\item\em Inicialitza un \mbox{\hyperlink{class_jugador}{Jugador}} igual a un altre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jugador_a62b77d189737a104bdb146ea0cac1e80}{afegir\+\_\+resultat}} (const \mbox{\hyperlink{struct_resultat}{Resultat}} \&r)
+\begin{DoxyCompactList}\small\item\em Actualitza els punts i les estadístiques del jugador respecte el resultat obtigut en un torneig. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jugador_adf706a1f4a79da9495f47874c11810f5}{retirar\+\_\+resultat}} (const \mbox{\hyperlink{struct_resultat}{Resultat}} \&r)
+\begin{DoxyCompactList}\small\item\em Es retiren punts al jugador en funció a un resultat d\textquotesingle{}un torneig. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jugador_a209b78b3ece7c6226f76998ffc0d85f7}{actualitzar\+\_\+ranking}} (int r)
+\begin{DoxyCompactList}\small\item\em Modifica la posició del ranking del jugador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jugador_a0beaa483a2c4608d6012adb1c457ade4}{escriure\+\_\+estadistiques}} () const
+\begin{DoxyCompactList}\small\item\em Escriu les principals estadístiques del jugador a la sortida. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_jugador_a9db8d3e750619e7723065d74baf96529}{consultar\+\_\+punts}} () const
+\begin{DoxyCompactList}\small\item\em Retorna els punts actuals del jugador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa a un jugador. 
+
+Emmagatzema el seu nom, la seva posició en el ranking, els seus punts i les estadístiques d\textquotesingle{}aquest. Conté funcions de consulta necessaries, i també dues per actualitzar-\/lo en base a un resultat que hagi obtingut en un torneig. 
+
+Definición en la línea \mbox{\hyperlink{_jugador_8hh_source_l00026}{26}} del archivo \mbox{\hyperlink{_jugador_8hh_source}{Jugador.\+hh}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_jugador_a7888f2833f55ff67626eea8469069839}\label{class_jugador_a7888f2833f55ff67626eea8469069839}} 
+\index{Jugador@{Jugador}!Jugador@{Jugador}}
+\index{Jugador@{Jugador}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{Jugador()}{Jugador()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Jugador\+::\+Jugador (\begin{DoxyParamCaption}\item[{string}]{nom,  }\item[{int}]{ranking }\end{DoxyParamCaption})}
+
+
+
+Inicialitza un \mbox{\hyperlink{class_jugador}{Jugador}} amb nom i posició en el ranking, inicialitzant les estadístiques a zero. 
+
+\begin{DoxyPrecond}{Precondición}
+Un string no nul (nom del jugador) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Un jugador amb nom i ranking, i les estadístiques inicialitzades a zero. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_jugador_a48a89d6fd87bec6abe759bdfc4490962}\label{class_jugador_a48a89d6fd87bec6abe759bdfc4490962}} 
+\index{Jugador@{Jugador}!Jugador@{Jugador}}
+\index{Jugador@{Jugador}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{Jugador()}{Jugador()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Jugador\+::\+Jugador (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_jugador}{Jugador}} \&}]{j }\end{DoxyParamCaption})}
+
+
+
+Inicialitza un \mbox{\hyperlink{class_jugador}{Jugador}} igual a un altre. 
+
+\begin{DoxyPrecond}{Precondición}
+Un jugador. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Es copia el jugador. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_jugador_a62b77d189737a104bdb146ea0cac1e80}\label{class_jugador_a62b77d189737a104bdb146ea0cac1e80}} 
+\index{Jugador@{Jugador}!afegir\_resultat@{afegir\_resultat}}
+\index{afegir\_resultat@{afegir\_resultat}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{afegir\_resultat()}{afegir\_resultat()}}
+{\footnotesize\ttfamily void Jugador\+::afegir\+\_\+resultat (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_resultat}{Resultat}} \&}]{r }\end{DoxyParamCaption})}
+
+
+
+Actualitza els punts i les estadístiques del jugador respecte el resultat obtigut en un torneig. 
+
+\begin{DoxyPrecond}{Precondición}
+Un resultat. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+S\textquotesingle{}actualitzen les estadistiques de, jugador en base a les del resultat. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_jugador_adf706a1f4a79da9495f47874c11810f5}\label{class_jugador_adf706a1f4a79da9495f47874c11810f5}} 
+\index{Jugador@{Jugador}!retirar\_resultat@{retirar\_resultat}}
+\index{retirar\_resultat@{retirar\_resultat}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{retirar\_resultat()}{retirar\_resultat()}}
+{\footnotesize\ttfamily void Jugador\+::retirar\+\_\+resultat (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_resultat}{Resultat}} \&}]{r }\end{DoxyParamCaption})}
+
+
+
+Es retiren punts al jugador en funció a un resultat d\textquotesingle{}un torneig. 
+
+\begin{DoxyPrecond}{Precondición}
+Un resultat. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Es retiren els punts obtinguts en el resultat. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_jugador_a209b78b3ece7c6226f76998ffc0d85f7}\label{class_jugador_a209b78b3ece7c6226f76998ffc0d85f7}} 
+\index{Jugador@{Jugador}!actualitzar\_ranking@{actualitzar\_ranking}}
+\index{actualitzar\_ranking@{actualitzar\_ranking}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{actualitzar\_ranking()}{actualitzar\_ranking()}}
+{\footnotesize\ttfamily void Jugador\+::actualitzar\+\_\+ranking (\begin{DoxyParamCaption}\item[{int}]{r }\end{DoxyParamCaption})}
+
+
+
+Modifica la posició del ranking del jugador. 
+
+\begin{DoxyPrecond}{Precondición}
+Un enter \texorpdfstring{$>$}{>}= 1 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+S\textquotesingle{}actualitza this-\/\texorpdfstring{$>$}{>}ranking 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_jugador_a0beaa483a2c4608d6012adb1c457ade4}\label{class_jugador_a0beaa483a2c4608d6012adb1c457ade4}} 
+\index{Jugador@{Jugador}!escriure\_estadistiques@{escriure\_estadistiques}}
+\index{escriure\_estadistiques@{escriure\_estadistiques}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{escriure\_estadistiques()}{escriure\_estadistiques()}}
+{\footnotesize\ttfamily void Jugador\+::escriure\+\_\+estadistiques (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Escriu les principals estadístiques del jugador a la sortida. 
+
+\begin{DoxyPrecond}{Precondición}
+Cert. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Les estadístiques a la sortida. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_jugador_a9db8d3e750619e7723065d74baf96529}\label{class_jugador_a9db8d3e750619e7723065d74baf96529}} 
+\index{Jugador@{Jugador}!consultar\_punts@{consultar\_punts}}
+\index{consultar\_punts@{consultar\_punts}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{consultar\_punts()}{consultar\_punts()}}
+{\footnotesize\ttfamily int Jugador\+::consultar\+\_\+punts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna els punts actuals del jugador. 
+
+\begin{DoxyPrecond}{Precondición}
+Cert. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Els punts del jugadors. 
+\end{DoxyPostcond}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_jugador_8hh}{Jugador.\+hh}}\end{DoxyCompactItemize}

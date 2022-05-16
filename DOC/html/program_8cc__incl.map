@@ -1,0 +1,13 @@
+<map id="program.cc" name="program.cc">
+<area shape="rect" id="node1" title=" " alt="" coords="159,5,250,32"/>
+<area shape="rect" id="node2" href="$_conjunt_jugadors_8hh.html" title="Especificació de la classe ConjuntJugadors." alt="" coords="5,155,151,181"/>
+<area shape="rect" id="node6" href="$_conjunt_tornejos_8hh.html" title="Especificació de la classe ConjuntTornejos." alt="" coords="259,155,401,181"/>
+<area shape="rect" id="node10" href="$_circuit_i_o_8hh.html" title="Conté funcions bàsiques d&#39;entrada i sortida de les diferents classes." alt="" coords="157,80,252,107"/>
+<area shape="rect" id="node3" href="$_jugador_8hh.html" title="Especificació de la classe Jugador." alt="" coords="34,229,122,256"/>
+<area shape="rect" id="node5" href="$_classificacio_8hh.html" title=" " alt="" coords="116,304,229,331"/>
+<area shape="rect" id="node4" href="$_resultat_8hh.html" title="Especificació de la estructura Resultat." alt="" coords="79,379,171,405"/>
+<area shape="rect" id="node7" href="$_torneig_8hh.html" title="Especificació de la classe Torneig.aaaa." alt="" coords="279,229,368,256"/>
+<area shape="rect" id="node8" href="$_categoria_8hh.html" title="Especificació de l&#39;estructura categoria." alt="" coords="265,304,368,331"/>
+<area shape="rect" id="node9" href="$_bin_tree_8hh.html" title=" " alt="" coords="393,304,483,331"/>
+<area shape="rect" id="node11" title=" " alt="" coords="175,155,234,181"/>
+</map>

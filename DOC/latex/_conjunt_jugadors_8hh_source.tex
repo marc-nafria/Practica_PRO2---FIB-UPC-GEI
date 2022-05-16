@@ -1,0 +1,60 @@
+\hypertarget{_conjunt_jugadors_8hh_source}{}\doxysection{Conjunt\+Jugadors.\+hh}
+\mbox{\hyperlink{_conjunt_jugadors_8hh}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00005}00005 \textcolor{preprocessor}{\#ifndef \_ConjuntTornejos\_HH\_}}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00006}00006 \textcolor{preprocessor}{\#define \_ConjuntTornejos\_HH\_}}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_jugador_8hh}{Jugador.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00009}00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_classificacio_8hh}{Classificacio.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00011}00011 \textcolor{preprocessor}{\#ifndef NO\_DIAGRAM  }}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00012}00012 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00013}00013 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00014}00014 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00015}00015 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00017}00017 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00026}\mbox{\hyperlink{class_conjunt_jugadors}{00026}} \textcolor{keyword}{class }\mbox{\hyperlink{class_conjunt_jugadors}{ConjuntJugadors}} \{}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00028}00028   \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00029}00029     }
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00034}\mbox{\hyperlink{class_conjunt_jugadors_a481007df495095c5154509e6e8bcab95}{00034}}     \mbox{\hyperlink{class_conjunt_jugadors_a481007df495095c5154509e6e8bcab95}{ConjuntJugadors}}() \{\};}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00041}\mbox{\hyperlink{class_conjunt_jugadors_a4bc0ced561c8a97b0501633c634b0816}{00041}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_conjunt_jugadors_a4bc0ced561c8a97b0501633c634b0816}{afegir\_jugador}}(\textcolor{keywordtype}{string} nom\_jugador);}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00048}\mbox{\hyperlink{class_conjunt_jugadors_a3f44a21c93b5062016ff16f65c212df2}{00048}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_conjunt_jugadors_a3f44a21c93b5062016ff16f65c212df2}{borrar\_jugador}}(\textcolor{keywordtype}{string} nom\_jugador);}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00056}\mbox{\hyperlink{class_conjunt_jugadors_ada9b13104688cffa79da08cc749e87cd}{00056}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_conjunt_jugadors_ada9b13104688cffa79da08cc749e87cd}{afegir\_classificacio}}(\mbox{\hyperlink{class_classificacio}{Classificacio}} \&c);}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00062}\mbox{\hyperlink{class_conjunt_jugadors_aebc015fe71341863d9d1c7adb61b0885}{00062}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_conjunt_jugadors_aebc015fe71341863d9d1c7adb61b0885}{retirar\_classificacio}}(\mbox{\hyperlink{class_classificacio}{Classificacio}} \&c);}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00063}00063     }
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00068}\mbox{\hyperlink{class_conjunt_jugadors_a77aed90d404a94c49e3e71b2c9ce2e2b}{00068}}     vector<pair<string, int> > \mbox{\hyperlink{class_conjunt_jugadors_a77aed90d404a94c49e3e71b2c9ce2e2b}{consultar\_ranking}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00074}\mbox{\hyperlink{class_conjunt_jugadors_a0df5292f8f731bf8a5e2f71eb510e75b}{00074}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_conjunt_jugadors_a0df5292f8f731bf8a5e2f71eb510e75b}{escriure\_ranking}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00080}\mbox{\hyperlink{class_conjunt_jugadors_a5362ae1d583d75ed21841272f3fce04d}{00080}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_conjunt_jugadors_a5362ae1d583d75ed21841272f3fce04d}{escriure\_jugadors}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00087}\mbox{\hyperlink{class_conjunt_jugadors_a1ad1f31df98296ac4aa7279c2a89dac9}{00087}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_conjunt_jugadors_a1ad1f31df98296ac4aa7279c2a89dac9}{escriure\_jugador}}(\textcolor{keywordtype}{string} nom\_jugador) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00093}\mbox{\hyperlink{class_conjunt_jugadors_a17446393541c564a0850a33761edd6a8}{00093}}       \textcolor{keywordtype}{void} \mbox{\hyperlink{class_conjunt_jugadors_a17446393541c564a0850a33761edd6a8}{actualitzar\_ranking}}();}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00095}00095     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00097}00097       \textcolor{comment}{/* Pre: cert */}}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00098}00098       \textcolor{comment}{/* Post: el vector ranking esta ordenat representant un ranking */}}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00099}00099       \textcolor{keywordtype}{void} ordenar\_ranking();}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00101}00101         \textcolor{comment}{/* Pre: cert */}}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00102}00102         \textcolor{comment}{/* Post: informa del ranking als jugador, es a dir }}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00103}00103 \textcolor{comment}{        quina es la seva posició actual */}}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00104}00104         \textcolor{keywordtype}{void} informar\_ranking();}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00106}00106         map<string, Jugador> jugadors;}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00107}00107         vector<pair<string, int> > ranking;}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00108}00108 \};}
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{_conjunt_jugadors_8hh_source_l00110}00110 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

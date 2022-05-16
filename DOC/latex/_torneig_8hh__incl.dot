@@ -1,0 +1,15 @@
+digraph "Torneig.hh"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="Torneig.hh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Especificació de la classe Torneig.aaaa."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Categoria.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_categoria_8hh.html",tooltip="Especificació de l'estructura categoria."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Classificacio.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_classificacio_8hh.html",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Resultat.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_resultat_8hh.html",tooltip="Especificació de la estructura Resultat."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="BinTree.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_bin_tree_8hh.html",tooltip=" "];
+}

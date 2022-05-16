@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gestió d&#39;un circuit de tennis: Referencia de la Clase Classificacio</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Gestió d&#39;un circuit de tennis<span id="projectnumber">&#160;version 4 15-abr-2018</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="class_classificacio-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle"><div class="title">Referencia de la Clase Classificacio</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Representa el resum d'un torneig, es a dir, es un conjunt dels resultats de tots els jugadors.  
+ <a href="class_classificacio.html#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_classificacio_8hh_source.html">Classificacio.hh</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a1164331a4fd08d20f2bb6e1ab2a85a5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_classificacio.html#a1164331a4fd08d20f2bb6e1ab2a85a5e">afegir_partit</a> (string nom_jugador, int jocs_favor, int jocs_contra, int sets_favor, int sets_contra, int resultat_partit)</td></tr>
+<tr class="memdesc:a1164331a4fd08d20f2bb6e1ab2a85a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Afegeix un nou partir a la classificacio d'un jugador, modificant el seu resultat en el diccionari jugadors.  <a href="class_classificacio.html#a1164331a4fd08d20f2bb6e1ab2a85a5e">Más...</a><br /></td></tr>
+<tr class="separator:a1164331a4fd08d20f2bb6e1ab2a85a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90492b724cacacff426bd3632f32902d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_classificacio.html#a90492b724cacacff426bd3632f32902d">establir_punts</a> (string nom_jugador, int punts)</td></tr>
+<tr class="memdesc:a90492b724cacacff426bd3632f32902d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determina els punts que guanya el jugador en el torneig, afegint-los al seu resultat en el diccionari jugadors. També retorna si s'han afegit amb exit, ja que potser hem afegit menys punts dels que tocavem perquè ens trobem en un nivell inferior al que ha quedat el jugador.  <a href="class_classificacio.html#a90492b724cacacff426bd3632f32902d">Más...</a><br /></td></tr>
+<tr class="separator:a90492b724cacacff426bd3632f32902d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75f3ac772019e0e020c02f79de7a37f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_classificacio.html#a75f3ac772019e0e020c02f79de7a37f7">borrar_jugador</a> (string nom_jugador)</td></tr>
+<tr class="memdesc:a75f3ac772019e0e020c02f79de7a37f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Borra el jugador de la classificacio.  <a href="class_classificacio.html#a75f3ac772019e0e020c02f79de7a37f7">Más...</a><br /></td></tr>
+<tr class="separator:a75f3ac772019e0e020c02f79de7a37f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d2e4d797a1793ccbbec6f700a467b2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_classificacio.html#a5d2e4d797a1793ccbbec6f700a467b2d">copiar_classificacio</a> (const <a class="el" href="class_classificacio.html">Classificacio</a> &amp;copia)</td></tr>
+<tr class="memdesc:a5d2e4d797a1793ccbbec6f700a467b2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifica el parametre implícit com una copia de una altra classficacio.  <a href="class_classificacio.html#a5d2e4d797a1793ccbbec6f700a467b2d">Más...</a><br /></td></tr>
+<tr class="separator:a5d2e4d797a1793ccbbec6f700a467b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a195ac9a0ea2b43d67122d17e121fc520"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_classificacio.html#a195ac9a0ea2b43d67122d17e121fc520">borrar_classificacio</a> ()</td></tr>
+<tr class="memdesc:a195ac9a0ea2b43d67122d17e121fc520"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esborra tots els resultats de la classificacio.  <a href="class_classificacio.html#a195ac9a0ea2b43d67122d17e121fc520">Más...</a><br /></td></tr>
+<tr class="separator:a195ac9a0ea2b43d67122d17e121fc520"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8ecec54f53d504f95f18dba9b96a531"><td class="memItemLeft" align="right" valign="top">map&lt; string, <a class="el" href="struct_resultat.html">Resultat</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_classificacio.html#ad8ecec54f53d504f95f18dba9b96a531">consultar_classificacio</a> () const</td></tr>
+<tr class="memdesc:ad8ecec54f53d504f95f18dba9b96a531"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna una copia del diccionari 'jugadors', per a modificar els jugadors desde el programa principal.  <a href="class_classificacio.html#ad8ecec54f53d504f95f18dba9b96a531">Más...</a><br /></td></tr>
+<tr class="separator:ad8ecec54f53d504f95f18dba9b96a531"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p >Representa el resum d'un torneig, es a dir, es un conjunt dels resultats de tots els jugadors. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_classificacio_8hh_source.html#l00022">22</a> del archivo <a class="el" href="_classificacio_8hh_source.html">Classificacio.hh</a>.</p>
+</div><h2 class="groupheader">Documentación de las funciones miembro</h2>
+<a id="a1164331a4fd08d20f2bb6e1ab2a85a5e" name="a1164331a4fd08d20f2bb6e1ab2a85a5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1164331a4fd08d20f2bb6e1ab2a85a5e">&#9670;&nbsp;</a></span>afegir_partit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Classificacio::afegir_partit </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>nom_jugador</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>jocs_favor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>jocs_contra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sets_favor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sets_contra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>resultat_partit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Afegeix un nou partir a la classificacio d'un jugador, modificant el seu resultat en el diccionari jugadors. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Un string, 4 enters d'estadistiques, més un enter que determina si ha guanyat(1) o ha perdut(-1). </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>S'afegeix aquest partit al resultat del jugador. </dd></dl>
+
+</div>
+</div>
+<a id="a90492b724cacacff426bd3632f32902d" name="a90492b724cacacff426bd3632f32902d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90492b724cacacff426bd3632f32902d">&#9670;&nbsp;</a></span>establir_punts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Classificacio::establir_punts </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>nom_jugador</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>punts</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determina els punts que guanya el jugador en el torneig, afegint-los al seu resultat en el diccionari jugadors. També retorna si s'han afegit amb exit, ja que potser hem afegit menys punts dels que tocavem perquè ens trobem en un nivell inferior al que ha quedat el jugador. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Un string (nom del jugador) i els respectius punts. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Es guarden els punts al resultat del jugador. </dd></dl>
+
+</div>
+</div>
+<a id="a75f3ac772019e0e020c02f79de7a37f7" name="a75f3ac772019e0e020c02f79de7a37f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75f3ac772019e0e020c02f79de7a37f7">&#9670;&nbsp;</a></span>borrar_jugador()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Classificacio::borrar_jugador </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>nom_jugador</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Borra el jugador de la classificacio. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Un string (nom del jugador). </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>S'esborra el jugador. </dd></dl>
+
+</div>
+</div>
+<a id="a5d2e4d797a1793ccbbec6f700a467b2d" name="a5d2e4d797a1793ccbbec6f700a467b2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d2e4d797a1793ccbbec6f700a467b2d">&#9670;&nbsp;</a></span>copiar_classificacio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Classificacio::copiar_classificacio </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_classificacio.html">Classificacio</a> &amp;&#160;</td>
+          <td class="paramname"><em>copia</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modifica el parametre implícit com una copia de una altra classficacio. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Una classificacio a copiar </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>this-&gt;jugadors = copia.jugadors </dd></dl>
+
+</div>
+</div>
+<a id="a195ac9a0ea2b43d67122d17e121fc520" name="a195ac9a0ea2b43d67122d17e121fc520"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a195ac9a0ea2b43d67122d17e121fc520">&#9670;&nbsp;</a></span>borrar_classificacio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Classificacio::borrar_classificacio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Esborra tots els resultats de la classificacio. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Cert. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>S'esborra la classificacio. </dd></dl>
+
+</div>
+</div>
+<a id="ad8ecec54f53d504f95f18dba9b96a531" name="ad8ecec54f53d504f95f18dba9b96a531"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8ecec54f53d504f95f18dba9b96a531">&#9670;&nbsp;</a></span>consultar_classificacio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">map&lt; string, <a class="el" href="struct_resultat.html">Resultat</a> &gt; Classificacio::consultar_classificacio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna una copia del diccionari 'jugadors', per a modificar els jugadors desde el programa principal. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Cert. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Una copia de la classificacio. </dd></dl>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
+<li><a class="el" href="_classificacio_8hh_source.html">Classificacio.hh</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

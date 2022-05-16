@@ -1,0 +1,150 @@
+\hypertarget{class_conjunt_tornejos}{}\doxysection{Referencia de la Clase Conjunt\+Tornejos}
+\label{class_conjunt_tornejos}\index{ConjuntTornejos@{ConjuntTornejos}}
+
+
+Representa a un conjunt de tornejos d\textquotesingle{}un circuit.  
+
+
+
+
+{\ttfamily \#include $<$Conjunt\+Tornejos.\+hh$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_conjunt_tornejos_aab3da5a18ce98e5244ca0c9ac0432242}{Conjunt\+Tornejos}} ()
+\begin{DoxyCompactList}\small\item\em Contructora defecte\+: Iniciatilza un conjunt de tornejos buit. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_conjunt_tornejos_a28bd156a6ffd99e1001686698c9dc9f1}{afegir\+\_\+torneig}} (string nom\+\_\+torneig, \mbox{\hyperlink{struct_categoria}{Categoria}} categoria\+\_\+torneig)
+\begin{DoxyCompactList}\small\item\em Afegir torneig\+: Afegeix un torneig al conjunt en funció d\textquotesingle{}un nom i una categoria. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_conjunt_tornejos_a8388f73b40be280088c30d94dbfeb3d9}{borrar\+\_\+torneig}} (string nom\+\_\+torneig, \mbox{\hyperlink{class_classificacio}{Classificacio}} \&darrera\+\_\+classificacio)
+\begin{DoxyCompactList}\small\item\em Borrar \mbox{\hyperlink{class_torneig}{Torneig}}\+: Borra un torneg del conjunt i retorna la seva classificació en l\textquotesingle{}última edició, per a que es puguin retirar els punts des del programa principal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_conjunt_tornejos_acf78fc163213fce63b4b5d332f82d08e}{iniciar\+\_\+torneig}} (string nom\+\_\+torneig, const vector$<$ pair$<$ string, int $>$ $>$ \&ranking)
+\begin{DoxyCompactList}\small\item\em Iniciar \mbox{\hyperlink{class_torneig}{Torneig}}\+: Inicia un torneig del conjunt en funció del seu nom. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_classificacio}{Classificacio}} \mbox{\hyperlink{class_conjunt_tornejos_ad4c22ba580f9a0c85589366bba24b7a4}{finalitzar\+\_\+torneig}} (string nom\+\_\+torneig, \mbox{\hyperlink{class_classificacio}{Classificacio}} \&darrera\+\_\+classificacio)
+\begin{DoxyCompactList}\small\item\em Finalitzar torneig\+: Finalitza un torneig i retorna la seva classificació. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_conjunt_tornejos_ad4e25616a224fa672201fdc81c38a770}{escriure\+\_\+tornejos}} ()
+\begin{DoxyCompactList}\small\item\em Escriure Tornejos\+: LLista els torneijos a la sortida. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_conjunt_tornejos_ab539149ef1613f32b091764f4087e84b}{borrar\+\_\+jugador}} (string nom\+\_\+jugador)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa a un conjunt de tornejos d\textquotesingle{}un circuit. 
+
+Conté funcions bàsiques per a afegir, borrar, iniciar, finalitzar els tornejos que conté. Els emmagatzema en un diccionari, ja que no es poden repertir noms de tornejos i serà més ràpid buscar-\/los. L\textquotesingle{}identificador del diccionari es el nom del torneig. 
+
+Definición en la línea \mbox{\hyperlink{_conjunt_tornejos_8hh_source_l00026}{26}} del archivo \mbox{\hyperlink{_conjunt_tornejos_8hh_source}{Conjunt\+Tornejos.\+hh}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_conjunt_tornejos_aab3da5a18ce98e5244ca0c9ac0432242}\label{class_conjunt_tornejos_aab3da5a18ce98e5244ca0c9ac0432242}} 
+\index{ConjuntTornejos@{ConjuntTornejos}!ConjuntTornejos@{ConjuntTornejos}}
+\index{ConjuntTornejos@{ConjuntTornejos}!ConjuntTornejos@{ConjuntTornejos}}
+\doxysubsubsection{\texorpdfstring{ConjuntTornejos()}{ConjuntTornejos()}}
+{\footnotesize\ttfamily Conjunt\+Tornejos\+::\+Conjunt\+Tornejos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Contructora defecte\+: Iniciatilza un conjunt de tornejos buit. 
+
+\begin{DoxyPrecond}{Precondición}
+Cert. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Un conjunt de tornejos buit. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_conjunt_tornejos_a28bd156a6ffd99e1001686698c9dc9f1}\label{class_conjunt_tornejos_a28bd156a6ffd99e1001686698c9dc9f1}} 
+\index{ConjuntTornejos@{ConjuntTornejos}!afegir\_torneig@{afegir\_torneig}}
+\index{afegir\_torneig@{afegir\_torneig}!ConjuntTornejos@{ConjuntTornejos}}
+\doxysubsubsection{\texorpdfstring{afegir\_torneig()}{afegir\_torneig()}}
+{\footnotesize\ttfamily bool Conjunt\+Tornejos\+::afegir\+\_\+torneig (\begin{DoxyParamCaption}\item[{string}]{nom\+\_\+torneig,  }\item[{\mbox{\hyperlink{struct_categoria}{Categoria}}}]{categoria\+\_\+torneig }\end{DoxyParamCaption})}
+
+
+
+Afegir torneig\+: Afegeix un torneig al conjunt en funció d\textquotesingle{}un nom i una categoria. 
+
+\begin{DoxyPrecond}{Precondición}
+Un string (nom torneig) i una categoria. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+True\+: S\textquotesingle{}ha afegit el torneig. False\+: no s\textquotesingle{}ha afegit perque ja existia. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_conjunt_tornejos_a8388f73b40be280088c30d94dbfeb3d9}\label{class_conjunt_tornejos_a8388f73b40be280088c30d94dbfeb3d9}} 
+\index{ConjuntTornejos@{ConjuntTornejos}!borrar\_torneig@{borrar\_torneig}}
+\index{borrar\_torneig@{borrar\_torneig}!ConjuntTornejos@{ConjuntTornejos}}
+\doxysubsubsection{\texorpdfstring{borrar\_torneig()}{borrar\_torneig()}}
+{\footnotesize\ttfamily bool Conjunt\+Tornejos\+::borrar\+\_\+torneig (\begin{DoxyParamCaption}\item[{string}]{nom\+\_\+torneig,  }\item[{\mbox{\hyperlink{class_classificacio}{Classificacio}} \&}]{darrera\+\_\+classificacio }\end{DoxyParamCaption})}
+
+
+
+Borrar \mbox{\hyperlink{class_torneig}{Torneig}}\+: Borra un torneg del conjunt i retorna la seva classificació en l\textquotesingle{}última edició, per a que es puguin retirar els punts des del programa principal. 
+
+\begin{DoxyPrecond}{Precondición}
+Un string (nom del torneig). 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+True\+: S\textquotesingle{}ha borrat el torneig i es retorna la seva classicifació. False\+: No s\textquotesingle{}ha trobat el torneig. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_conjunt_tornejos_acf78fc163213fce63b4b5d332f82d08e}\label{class_conjunt_tornejos_acf78fc163213fce63b4b5d332f82d08e}} 
+\index{ConjuntTornejos@{ConjuntTornejos}!iniciar\_torneig@{iniciar\_torneig}}
+\index{iniciar\_torneig@{iniciar\_torneig}!ConjuntTornejos@{ConjuntTornejos}}
+\doxysubsubsection{\texorpdfstring{iniciar\_torneig()}{iniciar\_torneig()}}
+{\footnotesize\ttfamily void Conjunt\+Tornejos\+::iniciar\+\_\+torneig (\begin{DoxyParamCaption}\item[{string}]{nom\+\_\+torneig,  }\item[{const vector$<$ pair$<$ string, int $>$ $>$ \&}]{ranking }\end{DoxyParamCaption})}
+
+
+
+Iniciar \mbox{\hyperlink{class_torneig}{Torneig}}\+: Inicia un torneig del conjunt en funció del seu nom. 
+
+\begin{DoxyPrecond}{Precondición}
+Un string (nom del torneig), i existeig un torneig amb aquest nom. També el ranking actual del circuit. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+S\textquotesingle{}inicia el torneig. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_conjunt_tornejos_ad4c22ba580f9a0c85589366bba24b7a4}\label{class_conjunt_tornejos_ad4c22ba580f9a0c85589366bba24b7a4}} 
+\index{ConjuntTornejos@{ConjuntTornejos}!finalitzar\_torneig@{finalitzar\_torneig}}
+\index{finalitzar\_torneig@{finalitzar\_torneig}!ConjuntTornejos@{ConjuntTornejos}}
+\doxysubsubsection{\texorpdfstring{finalitzar\_torneig()}{finalitzar\_torneig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_classificacio}{Classificacio}} Conjunt\+Tornejos\+::finalitzar\+\_\+torneig (\begin{DoxyParamCaption}\item[{string}]{nom\+\_\+torneig,  }\item[{\mbox{\hyperlink{class_classificacio}{Classificacio}} \&}]{darrera\+\_\+classificacio }\end{DoxyParamCaption})}
+
+
+
+Finalitzar torneig\+: Finalitza un torneig i retorna la seva classificació. 
+
+\begin{DoxyPrecond}{Precondición}
+Un string (nom torneig), existeix un torneig amb aquest nom. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Es finalitza el torneig i es retorna la seva cassificació. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_conjunt_tornejos_ad4e25616a224fa672201fdc81c38a770}\label{class_conjunt_tornejos_ad4e25616a224fa672201fdc81c38a770}} 
+\index{ConjuntTornejos@{ConjuntTornejos}!escriure\_tornejos@{escriure\_tornejos}}
+\index{escriure\_tornejos@{escriure\_tornejos}!ConjuntTornejos@{ConjuntTornejos}}
+\doxysubsubsection{\texorpdfstring{escriure\_tornejos()}{escriure\_tornejos()}}
+{\footnotesize\ttfamily void Conjunt\+Tornejos\+::escriure\+\_\+tornejos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Escriure Tornejos\+: LLista els torneijos a la sortida. 
+
+\begin{DoxyPrecond}{Precondición}
+Cert. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Els tornejos a la sortida. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_conjunt_tornejos_ab539149ef1613f32b091764f4087e84b}\label{class_conjunt_tornejos_ab539149ef1613f32b091764f4087e84b}} 
+\index{ConjuntTornejos@{ConjuntTornejos}!borrar\_jugador@{borrar\_jugador}}
+\index{borrar\_jugador@{borrar\_jugador}!ConjuntTornejos@{ConjuntTornejos}}
+\doxysubsubsection{\texorpdfstring{borrar\_jugador()}{borrar\_jugador()}}
+{\footnotesize\ttfamily void Conjunt\+Tornejos\+::borrar\+\_\+jugador (\begin{DoxyParamCaption}\item[{string}]{nom\+\_\+jugador }\end{DoxyParamCaption})}
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_conjunt_tornejos_8hh}{Conjunt\+Tornejos.\+hh}}\end{DoxyCompactItemize}
