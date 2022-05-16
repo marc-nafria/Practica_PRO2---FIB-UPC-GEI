@@ -5,7 +5,7 @@
 #ifndef _JUGADOR_HH_
 #define _JUGADOR_HH_
 
-#include "Resultat.hh"
+#include "Classificacio.hh"
 
 #ifndef NO_DIAGRAM  
 #include <iostream>

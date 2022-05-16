@@ -1,11 +1,10 @@
 /** @file Classificació.hh
- * @brief Especificació de la classe Classificació.
+ * @brief Especificació de la classe Classificació i de l'estructura
+ * Resultat
  */
 
 #ifndef _CLASSIFICACIO_HH_
 #define _CLASSIFICACIO_HH_
-
-#include "Resultat.hh"
 
 #ifndef NO_DIAGRAM  
 #include <vector>
@@ -14,6 +13,15 @@
 #endif
 
 using namespace std;
+
+/** @struct Resultat: Conté un resum de les estadístiques d'un Jugador en un torneig.
+ */
+struct Resultat {
+  int punts = 0;
+  int jocs_favor = 0, jocs_contra = 0;
+  int sets_favor = 0, sets_contra = 0;
+  int partits_favor = 0, partits_contra = 0;
+};
 
 /** @class Classificacio.
  * @brief Representa el resum d'un torneig, es a dir, 

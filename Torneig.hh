@@ -10,7 +10,6 @@
 #include "BinTree.hh"
 
 #ifndef NO_DIAGRAM 
-#include "Resultat.hh"
 
 #include <iostream>
 #include <string>

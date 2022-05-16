@@ -19,7 +19,6 @@
 #include "Categoria.hh"
 #include "Classificacio.hh"
 #include "Jugador.hh"
-#include "Resultat.hh"
 #include "Torneig.hh"
 
 #include <iostream>
@@ -42,59 +41,6 @@ void actualitzar_ranking();
 void ordenar_ranking();
 void informar_ranking();
 void escriure_tornejos();
-void afegir_classificacio(const Classificacio &c);
-void retirar_classifiacio(const Classificacio &c);
-
-
-void afegir_classificacio(const Classificacio &c) {
-    map<string, Resultat> classificacio = c.consultar_classificacio();
-    
-    for (map<string, Resultat>::const_iterator it = classificacio.begin();
-        it != classificacio.end(); ++it) {
-
-        int r = jugadors[(*it).first].consultar_ranking();
-        if (r < 0) cout << (*it).first << endl;
-        jugadors[(*it).first].afegir_resultat((*it).second);
-        ranking[r].second += (*it).second.punts;
-
-        while (r > 0 and ranking[r - 1].second < ranking[r].second) {
-            jugadors[ranking[r - 1].first].actualitzar_ranking(r + 1);
-            pair<string, int> aux = ranking[r];
-                ranking[r] = ranking[r - 1];
-                ranking[r] = aux;
-            --r;
-        }
-        jugadors[(*it).first].actualitzar_ranking(r + 1);
-    }
-}
-
-void retirar_classifiacio(const Classificacio &c) {
-    map<string, Resultat> classificacio = c.consultar_classificacio();
-    
-    for (map<string, Resultat>::const_iterator it = classificacio.begin();
-        it != classificacio.end(); ++it) {
-
-        int r = jugadors[(*it).first].consultar_rankin;
-        jugadors[(*it).first].retirar_resultat((*it).second);
-        ranking[r].second -= (*it).second.punts;
-
-        while (r < ranking.size() - 1 and ranking[r].second < ranking[r + 1].second) {
-            jugadors[ranking[r + 1].first].actualitzar_ranking(r + 1);
-            pair<string, int> aux = ranking[r + 1];
-                ranking[r + 1] = ranking[r];
-                ranking[r + 1] = aux;
-            ++r;
-        }
-        jugadors[(*it).first].actualitzar_ranking(r + 1);
-    }
-}
-
-bool i_ordenar_ranking (pair<string,int> &j1, pair<string,int> &j2) {
-    if (j1.second == j2.second) {
-        return false;
-    }
-    else return j1.second > j2.second;
-}
 
 void escriure_ranking()
 {
@@ -342,20 +288,18 @@ int main()
                 /* borrem la darerra classificacio del torneig */
 
                 /* copiem la classificació com un diccionari de resultats */
-                /*map<string, Resultat> cl = (*it).second.consultar_darrera_classificacio().consultar_classificacio();
+                map<string, Resultat> cl = (*it).second.consultar_darrera_classificacio().consultar_classificacio();
 
-                
+                /* el recorrem i afegim cada resultat al jugador corresponent */
                 for (map<string, Resultat>::const_iterator it_cl = cl.begin(); it_cl != cl.end();
                         ++it_cl) {
 
                     jugadors[(*it_cl).first].retirar_resultat((*it_cl).second);
                 }
-                */
-                retirar_classifiacio(tornejos[nom_torneig].consultar_darrera_classificacio());
                 tornejos.erase(it);
                 --T;
                 cout << T << endl;
-                //actualitzar_ranking();
+                actualitzar_ranking();
             }
             else {
                 cout << "error: el torneo no existe" << endl;
@@ -374,9 +318,25 @@ int main()
 
             cout << " " << nom_torneig << endl;
 
-            retirar_classifiacio(tornejos[nom_torneig].consultar_darrera_classificacio());
-            Classificacio nova_classificacio = tornejos[nom_torneig].finalitzar_torneig();
-            afegir_classificacio(nova_classificacio);
+            /* copiem la classificació com un diccionari de resultats */
+            map<string, Resultat> darrera_classificacio = tornejos[nom_torneig].consultar_darrera_classificacio().consultar_classificacio();
+
+            /* el recorrem i afegim cada resultat al jugador corresponent */
+            for (map<string, Resultat>::const_iterator it = darrera_classificacio.begin(); it != darrera_classificacio.end();
+                    ++it) {
+
+                jugadors[(*it).first].retirar_resultat((*it).second);
+            }
+            map<string, Resultat> fi_torneig = tornejos[nom_torneig].finalitzar_torneig().consultar_classificacio();
+
+            /* el recorrem i afegim cada resultat al jugador corresponent */
+            for (map<string, Resultat>::const_iterator it = fi_torneig.begin(); it != fi_torneig.end();
+                    ++it) {
+
+                jugadors[(*it).first].afegir_resultat((*it).second);
+            }
+
+            actualitzar_ranking();
         }
         else if (instruccio == "listar_ranking" or instruccio == "lr") {
             cout << endl;

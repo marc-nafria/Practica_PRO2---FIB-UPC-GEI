@@ -1,5 +1,4 @@
 #include "Classificacio.hh"
-#include "Resultat.hh"
 
 #include <vector>
 #include <map>
