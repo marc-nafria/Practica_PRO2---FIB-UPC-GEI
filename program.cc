@@ -30,53 +30,10 @@
 using namespace std;
 
 map<string, Jugador> jugadors;
-    map<string, Torneig> tornejos;
-    vector<Categoria> categories;
-    vector<pair<string, int>> ranking;
+map<string, Torneig> tornejos;
+vector<Categoria> categories;
+vector<pair<string, int>> ranking;
 
-void escriure_ranking();
-void escriure_jugadors();
-void escriure_jugador();
-void actualitzar_ranking();
-void ordenar_ranking();
-void informar_ranking();
-void escriure_tornejos();
-
-void escriure_ranking()
-{
-    /* recorrem el ranking i imprimirm els valors */
-    for (int i = 0; i < ranking.size(); ++i) {
-        cout << i + 1 << " " << ranking[i].first << " "
-             << ranking[i].second << endl;
-    }
-}
-
-void escriure_jugadors()
-{
-    /* escribim el total de jugadors */
-    cout << jugadors.size() << endl;
-
-    /* i en ordre els anem escrint un a un */
-    for (map<string, Jugador>::const_iterator it = jugadors.begin();
-            it != jugadors.end(); ++it) {
-        (*it).second.escriure_estadistiques();
-    }
-}
-
-bool escriure_jugador(string nom_jugador)
-{
-
-    map<string, Jugador>::const_iterator it =
-        jugadors.find(nom_jugador);
-
-    if (it == jugadors.end()) {
-        return false;
-    }
-
-    (*it).second.escriure_estadistiques();
-
-    return true;
-}
 
 
 void actualitzar_ranking() 
@@ -84,14 +41,6 @@ void actualitzar_ranking()
     for (int i = 0; i < ranking.size(); ++i) {
         ranking[i].second = jugadors[ranking[i].first].consultar_punts();
     }
-    
-    ordenar_ranking();
-    informar_ranking();
-}
-
-void ordenar_ranking()
-{
-    //sort(ranking.begin(), ranking.end(), i_ordenar_ranking);
     
     // Utilitzarem el bubble sort
     int n = ranking.size();
@@ -107,27 +56,12 @@ void ordenar_ranking()
                 canviat = true;
             }
     }
-}
 
-void informar_ranking()
-{
     for (int i = 0; i < ranking.size(); ++i) {
         jugadors[ranking[i].first].actualitzar_ranking(i + 1);
     }
 }
 
-void escriure_tornejos()
-{
-
-    cout << tornejos.size() << endl;
-
-    for (map<string, Torneig>::const_iterator it = tornejos.begin();
-            it != tornejos.end(); ++it) {
-
-        cout << (*it).first << " " << (*it).second.consultar_nom_categoria() << endl;
-    }
-
-}
 int main()
 {
 
@@ -340,11 +274,24 @@ int main()
         }
         else if (instruccio == "listar_ranking" or instruccio == "lr") {
             cout << endl;
-            escriure_ranking();
+
+            /* recorrem el ranking i imprimirm els valors */
+            for (int i = 0; i < ranking.size(); ++i) {
+                cout << i + 1 << " " << ranking[i].first << " "
+                     << ranking[i].second << endl;
+            }
         }
         else if (instruccio == "listar_jugadores" or instruccio == "lj") {
             cout << endl;
-            escriure_jugadors();
+
+            /* escribim el total de jugadors */
+            cout << jugadors.size() << endl;
+
+            /* i en ordre els anem escrint un a un */
+            for (map<string, Jugador>::const_iterator it = jugadors.begin();
+                    it != jugadors.end(); ++it) {
+                (*it).second.escriure_estadistiques();
+            }
         }
         else if (instruccio == "consultar_jugador" or instruccio == "cj") {
             string nom_jugador;
@@ -352,13 +299,26 @@ int main()
 
             cout << " " << nom_jugador << endl;
 
-            if (!escriure_jugador(nom_jugador)) {
+            map<string, Jugador>::const_iterator it =
+            jugadors.find(nom_jugador);
+
+            if (it == jugadors.end()) {
                 cout << "error: el jugador no existe" << endl;
+            }
+            else {
+                (*it).second.escriure_estadistiques();
             }
         }
         else if (instruccio == "listar_torneos" or instruccio == "lt") {
             cout << endl;
-            escriure_tornejos();
+
+            cout << tornejos.size() << endl;
+
+            for (map<string, Torneig>::const_iterator it = tornejos.begin();
+                    it != tornejos.end(); ++it) {
+
+                cout << (*it).first << " " << (*it).second.consultar_nom_categoria() << endl;
+            }
         }
         else if (instruccio == "listar_categorias" or instruccio == "lc") {
             cout << endl;

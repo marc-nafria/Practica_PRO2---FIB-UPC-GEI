@@ -76,9 +76,11 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Métodos públicos</h2></td></tr>
-<tr class="memitem:a4cc640b56b52be52edfee258fe2a9ebe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_torneig.html#a4cc640b56b52be52edfee258fe2a9ebe">Torneig</a> (string nom_torneig, <a class="el" href="struct_categoria.html">Categoria</a> categoria_torneig)</td></tr>
-<tr class="memdesc:a4cc640b56b52be52edfee258fe2a9ebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construeix un <a class="el" href="class_torneig.html" title="Representa un torneig del circuit.">Torneig</a> en funció d'un nom i una categoria. La categoria s'emmagatzema per a saber quants punts corresponen a cada jugador en acabar el torneig.  <a href="class_torneig.html#a4cc640b56b52be52edfee258fe2a9ebe">Más...</a><br /></td></tr>
-<tr class="separator:a4cc640b56b52be52edfee258fe2a9ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a833b2f486a1648a8741d2115a9bb186c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_torneig.html#a833b2f486a1648a8741d2115a9bb186c">Torneig</a> ()</td></tr>
+<tr class="separator:a833b2f486a1648a8741d2115a9bb186c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d476aced1063c8a0ff8e4d0d31b8da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_torneig.html#a98d476aced1063c8a0ff8e4d0d31b8da">Torneig</a> (<a class="el" href="struct_categoria.html">Categoria</a> categoria_torneig)</td></tr>
+<tr class="memdesc:a98d476aced1063c8a0ff8e4d0d31b8da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construeix un <a class="el" href="class_torneig.html" title="Representa un torneig del circuit.">Torneig</a> en funció d'una categoria. La categoria s'emmagatzema per a saber quants punts corresponen a cada jugador en acabar el torneig.  <a href="class_torneig.html#a98d476aced1063c8a0ff8e4d0d31b8da">Más...</a><br /></td></tr>
+<tr class="separator:a98d476aced1063c8a0ff8e4d0d31b8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a12df5121f79dd97d43a7cbfd291ddf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_torneig.html#a0a12df5121f79dd97d43a7cbfd291ddf">iniciar_torneig</a> (const vector&lt; pair&lt; string, int &gt; &gt; &amp;ranking)</td></tr>
 <tr class="memdesc:a0a12df5121f79dd97d43a7cbfd291ddf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia el torneig, es a dir, llegeix les inscripcions, es confecciona i imprimeix l'arbre d'emparellaments.  <a href="class_torneig.html#a0a12df5121f79dd97d43a7cbfd291ddf">Más...</a><br /></td></tr>
 <tr class="separator:a0a12df5121f79dd97d43a7cbfd291ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -99,10 +101,10 @@ Métodos públicos</h2></td></tr>
 <div class="textblock"><p >Representa un torneig del circuit. </p>
 <p >Aquest consta de dues funcions principals, la d'inici i la de final. La de final resumeix la tasca del torneig, retornar un classificació que resumeixi que ha passat. A més, un torneig sempre guarda la classificació de la última edició, perque farà falta treure punts a certs jugadors, ja sigui quan es borrir el torneig o s'en faci una nova edició. També es contempla que, en esborrar un torneig del circui, s'ha de borrar aquest de la darrera classificació en cas de que hi sigui, ja que hi poden haver futurs jugadors amb el mateix nom. </p>
 
-<p class="definition">Definición en la línea <a class="el" href="_torneig_8hh_source.html#l00032">32</a> del archivo <a class="el" href="_torneig_8hh_source.html">Torneig.hh</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_torneig_8hh_source.html#l00031">31</a> del archivo <a class="el" href="_torneig_8hh_source.html">Torneig.hh</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
-<a id="a4cc640b56b52be52edfee258fe2a9ebe" name="a4cc640b56b52be52edfee258fe2a9ebe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cc640b56b52be52edfee258fe2a9ebe">&#9670;&nbsp;</a></span>Torneig()</h2>
+<a id="a833b2f486a1648a8741d2115a9bb186c" name="a833b2f486a1648a8741d2115a9bb186c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a833b2f486a1648a8741d2115a9bb186c">&#9670;&nbsp;</a></span>Torneig() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -110,24 +112,34 @@ Métodos públicos</h2></td></tr>
         <tr>
           <td class="memname">Torneig::Torneig </td>
           <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>nom_torneig</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct_categoria.html">Categoria</a>&#160;</td>
-          <td class="paramname"><em>categoria_torneig</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construeix un <a class="el" href="class_torneig.html" title="Representa un torneig del circuit.">Torneig</a> en funció d'un nom i una categoria. La categoria s'emmagatzema per a saber quants punts corresponen a cada jugador en acabar el torneig. </p>
+<p class="definition">Definición en la línea <a class="el" href="_torneig_8hh_source.html#l00035">35</a> del archivo <a class="el" href="_torneig_8hh_source.html">Torneig.hh</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>{};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a98d476aced1063c8a0ff8e4d0d31b8da" name="a98d476aced1063c8a0ff8e4d0d31b8da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98d476aced1063c8a0ff8e4d0d31b8da">&#9670;&nbsp;</a></span>Torneig() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Torneig::Torneig </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_categoria.html">Categoria</a>&#160;</td>
+          <td class="paramname"><em>categoria_torneig</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construeix un <a class="el" href="class_torneig.html" title="Representa un torneig del circuit.">Torneig</a> en funció d'una categoria. La categoria s'emmagatzema per a saber quants punts corresponen a cada jugador en acabar el torneig. </p>
 <dl class="section pre"><dt>Precondición</dt><dd>Un string (nom del torneig) i una categoria. </dd></dl>
 <dl class="section post"><dt>Postcondición</dt><dd>Es crea un torneig amb el nom i la categoria corresponents. </dd></dl>
 

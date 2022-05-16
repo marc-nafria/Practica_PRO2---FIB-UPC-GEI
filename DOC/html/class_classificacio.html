@@ -79,9 +79,9 @@ Métodos públicos</h2></td></tr>
 <tr class="memitem:a1164331a4fd08d20f2bb6e1ab2a85a5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_classificacio.html#a1164331a4fd08d20f2bb6e1ab2a85a5e">afegir_partit</a> (string nom_jugador, int jocs_favor, int jocs_contra, int sets_favor, int sets_contra, int resultat_partit)</td></tr>
 <tr class="memdesc:a1164331a4fd08d20f2bb6e1ab2a85a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Afegeix un nou partir a la classificacio d'un jugador, modificant el seu resultat en el diccionari jugadors.  <a href="class_classificacio.html#a1164331a4fd08d20f2bb6e1ab2a85a5e">Más...</a><br /></td></tr>
 <tr class="separator:a1164331a4fd08d20f2bb6e1ab2a85a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90492b724cacacff426bd3632f32902d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_classificacio.html#a90492b724cacacff426bd3632f32902d">establir_punts</a> (string nom_jugador, int punts)</td></tr>
-<tr class="memdesc:a90492b724cacacff426bd3632f32902d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determina els punts que guanya el jugador en el torneig, afegint-los al seu resultat en el diccionari jugadors. També retorna si s'han afegit amb exit, ja que potser hem afegit menys punts dels que tocavem perquè ens trobem en un nivell inferior al que ha quedat el jugador.  <a href="class_classificacio.html#a90492b724cacacff426bd3632f32902d">Más...</a><br /></td></tr>
-<tr class="separator:a90492b724cacacff426bd3632f32902d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a861e0203f1dac9af26f3c5ee80264bb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_classificacio.html#a861e0203f1dac9af26f3c5ee80264bb8">establir_punts</a> (string nom_jugador, int punts)</td></tr>
+<tr class="memdesc:a861e0203f1dac9af26f3c5ee80264bb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determina els punts que guanya el jugador en el torneig, afegint-los al seu resultat en el diccionari jugadors. També retorna si s'han afegit amb exit, ja que potser hem afegit menys punts dels que tocavem perquè ens trobem en un nivell inferior al que ha quedat el jugador.  <a href="class_classificacio.html#a861e0203f1dac9af26f3c5ee80264bb8">Más...</a><br /></td></tr>
+<tr class="separator:a861e0203f1dac9af26f3c5ee80264bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75f3ac772019e0e020c02f79de7a37f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_classificacio.html#a75f3ac772019e0e020c02f79de7a37f7">borrar_jugador</a> (string nom_jugador)</td></tr>
 <tr class="memdesc:a75f3ac772019e0e020c02f79de7a37f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Borra el jugador de la classificacio.  <a href="class_classificacio.html#a75f3ac772019e0e020c02f79de7a37f7">Más...</a><br /></td></tr>
 <tr class="separator:a75f3ac772019e0e020c02f79de7a37f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -98,7 +98,7 @@ Métodos públicos</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p >Representa el resum d'un torneig, es a dir, es un conjunt dels resultats de tots els jugadors. </p>
 
-<p class="definition">Definición en la línea <a class="el" href="_classificacio_8hh_source.html#l00022">22</a> del archivo <a class="el" href="_classificacio_8hh_source.html">Classificacio.hh</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_classificacio_8hh_source.html#l00030">30</a> del archivo <a class="el" href="_classificacio_8hh_source.html">Classificacio.hh</a>.</p>
 </div><h2 class="groupheader">Documentación de las funciones miembro</h2>
 <a id="a1164331a4fd08d20f2bb6e1ab2a85a5e" name="a1164331a4fd08d20f2bb6e1ab2a85a5e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1164331a4fd08d20f2bb6e1ab2a85a5e">&#9670;&nbsp;</a></span>afegir_partit()</h2>
@@ -156,14 +156,14 @@ Métodos públicos</h2></td></tr>
 
 </div>
 </div>
-<a id="a90492b724cacacff426bd3632f32902d" name="a90492b724cacacff426bd3632f32902d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90492b724cacacff426bd3632f32902d">&#9670;&nbsp;</a></span>establir_punts()</h2>
+<a id="a861e0203f1dac9af26f3c5ee80264bb8" name="a861e0203f1dac9af26f3c5ee80264bb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a861e0203f1dac9af26f3c5ee80264bb8">&#9670;&nbsp;</a></span>establir_punts()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Classificacio::establir_punts </td>
+          <td class="memname">void Classificacio::establir_punts </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>nom_jugador</em>, </td>

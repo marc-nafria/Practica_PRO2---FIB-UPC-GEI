@@ -12,6 +12,8 @@ Representa a un jugador.
 \doxysubsection*{Métodos públicos}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{class_jugador_a232c46f75691af6210096e5972535d71}{Jugador}} ()
+\item 
 \mbox{\hyperlink{class_jugador_a7888f2833f55ff67626eea8469069839}{Jugador}} (string nom, int ranking)
 \begin{DoxyCompactList}\small\item\em Inicialitza un \mbox{\hyperlink{class_jugador}{Jugador}} amb nom i posició en el ranking, inicialitzant les estadístiques a zero. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_jugador_a48a89d6fd87bec6abe759bdfc4490962}{Jugador}} (const \mbox{\hyperlink{class_jugador}{Jugador}} \&j)
@@ -25,7 +27,9 @@ void \mbox{\hyperlink{class_jugador_a209b78b3ece7c6226f76998ffc0d85f7}{actualitz
 void \mbox{\hyperlink{class_jugador_a0beaa483a2c4608d6012adb1c457ade4}{escriure\+\_\+estadistiques}} () const
 \begin{DoxyCompactList}\small\item\em Escriu les principals estadístiques del jugador a la sortida. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_jugador_a9db8d3e750619e7723065d74baf96529}{consultar\+\_\+punts}} () const
-\begin{DoxyCompactList}\small\item\em Retorna els punts actuals del jugador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Retorna els punts actuals del jugador. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_jugador_a2b28e8d54fdc699ac9383f9b539e6119}{consultar\+\_\+ranking}} () const
+\begin{DoxyCompactList}\small\item\em Retorna la posició al ranking. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descripción detallada}
@@ -38,10 +42,25 @@ Definición en la línea \mbox{\hyperlink{_jugador_8hh_source_l00026}{26}} del a
 
 
 \doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_jugador_a232c46f75691af6210096e5972535d71}\label{class_jugador_a232c46f75691af6210096e5972535d71}} 
+\index{Jugador@{Jugador}!Jugador@{Jugador}}
+\index{Jugador@{Jugador}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{Jugador()}{Jugador()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Jugador\+::\+Jugador (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_jugador_8hh_source_l00030}{30}} del archivo \mbox{\hyperlink{_jugador_8hh_source}{Jugador.\+hh}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030 \{\};}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_jugador_a7888f2833f55ff67626eea8469069839}\label{class_jugador_a7888f2833f55ff67626eea8469069839}} 
 \index{Jugador@{Jugador}!Jugador@{Jugador}}
 \index{Jugador@{Jugador}!Jugador@{Jugador}}
-\doxysubsubsection{\texorpdfstring{Jugador()}{Jugador()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{Jugador()}{Jugador()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily Jugador\+::\+Jugador (\begin{DoxyParamCaption}\item[{string}]{nom,  }\item[{int}]{ranking }\end{DoxyParamCaption})}
 
 
@@ -57,7 +76,7 @@ Un jugador amb nom i ranking, i les estadístiques inicialitzades a zero.
 \mbox{\Hypertarget{class_jugador_a48a89d6fd87bec6abe759bdfc4490962}\label{class_jugador_a48a89d6fd87bec6abe759bdfc4490962}} 
 \index{Jugador@{Jugador}!Jugador@{Jugador}}
 \index{Jugador@{Jugador}!Jugador@{Jugador}}
-\doxysubsubsection{\texorpdfstring{Jugador()}{Jugador()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{Jugador()}{Jugador()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
 {\footnotesize\ttfamily Jugador\+::\+Jugador (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_jugador}{Jugador}} \&}]{j }\end{DoxyParamCaption})}
 
 
@@ -152,6 +171,22 @@ Cert.
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 Els punts del jugadors. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_jugador_a2b28e8d54fdc699ac9383f9b539e6119}\label{class_jugador_a2b28e8d54fdc699ac9383f9b539e6119}} 
+\index{Jugador@{Jugador}!consultar\_ranking@{consultar\_ranking}}
+\index{consultar\_ranking@{consultar\_ranking}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{consultar\_ranking()}{consultar\_ranking()}}
+{\footnotesize\ttfamily int Jugador\+::consultar\+\_\+ranking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna la posició al ranking. 
+
+\begin{DoxyPrecond}{Precondición}
+\+: Cert. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+\+: La posicició al ranking 
 \end{DoxyPostcond}
 
 

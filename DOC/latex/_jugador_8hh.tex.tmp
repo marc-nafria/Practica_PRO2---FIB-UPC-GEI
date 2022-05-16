@@ -1,0 +1,23 @@
+\hypertarget{_jugador_8hh}{}\doxysection{Referencia del Archivo Jugador.\+hh}
+\label{_jugador_8hh}\index{Jugador.hh@{Jugador.hh}}
+
+
+Especificació de la classe \mbox{\hyperlink{class_jugador}{Jugador}}.  
+
+
+Dependencia gráfica adjunta para Jugador.\+hh\+:
+% FIG 0
+\doxysubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_jugador}{Jugador}}
+\begin{DoxyCompactList}\small\item\em Representa a un jugador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Especificació de la classe \mbox{\hyperlink{class_jugador}{Jugador}}. 
+
+
+
+Definición en el archivo \mbox{\hyperlink{_jugador_8hh_source}{Jugador.\+hh}}.
+

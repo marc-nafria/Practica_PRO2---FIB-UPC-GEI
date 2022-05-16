@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['resultat_2ehh_0',['Resultat.hh',['../_resultat_8hh.html',1,'']]]
+  ['torneig_2ehh_0',['Torneig.hh',['../_torneig_8hh.html',1,'']]]
 ];

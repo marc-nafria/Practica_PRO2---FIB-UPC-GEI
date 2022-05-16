@@ -76,6 +76,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Métodos públicos</h2></td></tr>
+<tr class="memitem:a232c46f75691af6210096e5972535d71"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jugador.html#a232c46f75691af6210096e5972535d71">Jugador</a> ()</td></tr>
+<tr class="separator:a232c46f75691af6210096e5972535d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7888f2833f55ff67626eea8469069839"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jugador.html#a7888f2833f55ff67626eea8469069839">Jugador</a> (string nom, int ranking)</td></tr>
 <tr class="memdesc:a7888f2833f55ff67626eea8469069839"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicialitza un <a class="el" href="class_jugador.html" title="Representa a un jugador.">Jugador</a> amb nom i posició en el ranking, inicialitzant les estadístiques a zero.  <a href="class_jugador.html#a7888f2833f55ff67626eea8469069839">Más...</a><br /></td></tr>
 <tr class="separator:a7888f2833f55ff67626eea8469069839"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -97,6 +99,9 @@ Métodos públicos</h2></td></tr>
 <tr class="memitem:a9db8d3e750619e7723065d74baf96529"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jugador.html#a9db8d3e750619e7723065d74baf96529">consultar_punts</a> () const</td></tr>
 <tr class="memdesc:a9db8d3e750619e7723065d74baf96529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna els punts actuals del jugador.  <a href="class_jugador.html#a9db8d3e750619e7723065d74baf96529">Más...</a><br /></td></tr>
 <tr class="separator:a9db8d3e750619e7723065d74baf96529"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b28e8d54fdc699ac9383f9b539e6119"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jugador.html#a2b28e8d54fdc699ac9383f9b539e6119">consultar_ranking</a> () const</td></tr>
+<tr class="memdesc:a2b28e8d54fdc699ac9383f9b539e6119"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna la posició al ranking.  <a href="class_jugador.html#a2b28e8d54fdc699ac9383f9b539e6119">Más...</a><br /></td></tr>
+<tr class="separator:a2b28e8d54fdc699ac9383f9b539e6119"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p >Representa a un jugador. </p>
@@ -104,8 +109,28 @@ Métodos públicos</h2></td></tr>
 
 <p class="definition">Definición en la línea <a class="el" href="_jugador_8hh_source.html#l00026">26</a> del archivo <a class="el" href="_jugador_8hh_source.html">Jugador.hh</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
+<a id="a232c46f75691af6210096e5972535d71" name="a232c46f75691af6210096e5972535d71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a232c46f75691af6210096e5972535d71">&#9670;&nbsp;</a></span>Jugador() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Jugador::Jugador </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_jugador_8hh_source.html#l00030">30</a> del archivo <a class="el" href="_jugador_8hh_source.html">Jugador.hh</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>{};</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a7888f2833f55ff67626eea8469069839" name="a7888f2833f55ff67626eea8469069839"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7888f2833f55ff67626eea8469069839">&#9670;&nbsp;</a></span>Jugador() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7888f2833f55ff67626eea8469069839">&#9670;&nbsp;</a></span>Jugador() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -137,7 +162,7 @@ Métodos públicos</h2></td></tr>
 </div>
 </div>
 <a id="a48a89d6fd87bec6abe759bdfc4490962" name="a48a89d6fd87bec6abe759bdfc4490962"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48a89d6fd87bec6abe759bdfc4490962">&#9670;&nbsp;</a></span>Jugador() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a48a89d6fd87bec6abe759bdfc4490962">&#9670;&nbsp;</a></span>Jugador() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -264,6 +289,27 @@ Métodos públicos</h2></td></tr>
 <p>Retorna els punts actuals del jugador. </p>
 <dl class="section pre"><dt>Precondición</dt><dd>Cert. </dd></dl>
 <dl class="section post"><dt>Postcondición</dt><dd>Els punts del jugadors. </dd></dl>
+
+</div>
+</div>
+<a id="a2b28e8d54fdc699ac9383f9b539e6119" name="a2b28e8d54fdc699ac9383f9b539e6119"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b28e8d54fdc699ac9383f9b539e6119">&#9670;&nbsp;</a></span>consultar_ranking()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Jugador::consultar_ranking </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna la posició al ranking. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>: Cert. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>: La posicició al ranking </dd></dl>
 
 </div>
 </div>

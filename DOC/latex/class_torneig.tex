@@ -12,8 +12,10 @@ Representa un torneig del circuit.
 \doxysubsection*{Métodos públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_torneig_a4cc640b56b52be52edfee258fe2a9ebe}{Torneig}} (string nom\+\_\+torneig, \mbox{\hyperlink{struct_categoria}{Categoria}} categoria\+\_\+torneig)
-\begin{DoxyCompactList}\small\item\em Construeix un \mbox{\hyperlink{class_torneig}{Torneig}} en funció d\textquotesingle{}un nom i una categoria. La categoria s\textquotesingle{}emmagatzema per a saber quants punts corresponen a cada jugador en acabar el torneig. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_torneig_a833b2f486a1648a8741d2115a9bb186c}{Torneig}} ()
+\item 
+\mbox{\hyperlink{class_torneig_a98d476aced1063c8a0ff8e4d0d31b8da}{Torneig}} (\mbox{\hyperlink{struct_categoria}{Categoria}} categoria\+\_\+torneig)
+\begin{DoxyCompactList}\small\item\em Construeix un \mbox{\hyperlink{class_torneig}{Torneig}} en funció d\textquotesingle{}una categoria. La categoria s\textquotesingle{}emmagatzema per a saber quants punts corresponen a cada jugador en acabar el torneig. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_torneig_a0a12df5121f79dd97d43a7cbfd291ddf}{iniciar\+\_\+torneig}} (const vector$<$ pair$<$ string, int $>$ $>$ \&ranking)
 \begin{DoxyCompactList}\small\item\em Inicia el torneig, es a dir, llegeix les inscripcions, es confecciona i imprimeix l\textquotesingle{}arbre d\textquotesingle{}emparellaments. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_classificacio}{Classificacio}} \mbox{\hyperlink{class_torneig_a13a2d58c29700e30a052ea2e6d9c833b}{finalitzar\+\_\+torneig}} ()
@@ -31,20 +33,35 @@ Representa un torneig del circuit.
 
 Aquest consta de dues funcions principals, la d\textquotesingle{}inici i la de final. La de final resumeix la tasca del torneig, retornar un classificació que resumeixi que ha passat. A més, un torneig sempre guarda la classificació de la última edició, perque farà falta treure punts a certs jugadors, ja sigui quan es borrir el torneig o s\textquotesingle{}en faci una nova edició. També es contempla que, en esborrar un torneig del circui, s\textquotesingle{}ha de borrar aquest de la darrera classificació en cas de que hi sigui, ja que hi poden haver futurs jugadors amb el mateix nom. 
 
-Definición en la línea \mbox{\hyperlink{_torneig_8hh_source_l00032}{32}} del archivo \mbox{\hyperlink{_torneig_8hh_source}{Torneig.\+hh}}.
+Definición en la línea \mbox{\hyperlink{_torneig_8hh_source_l00031}{31}} del archivo \mbox{\hyperlink{_torneig_8hh_source}{Torneig.\+hh}}.
 
 
 
 \doxysubsection{Documentación del constructor y destructor}
-\mbox{\Hypertarget{class_torneig_a4cc640b56b52be52edfee258fe2a9ebe}\label{class_torneig_a4cc640b56b52be52edfee258fe2a9ebe}} 
+\mbox{\Hypertarget{class_torneig_a833b2f486a1648a8741d2115a9bb186c}\label{class_torneig_a833b2f486a1648a8741d2115a9bb186c}} 
 \index{Torneig@{Torneig}!Torneig@{Torneig}}
 \index{Torneig@{Torneig}!Torneig@{Torneig}}
-\doxysubsubsection{\texorpdfstring{Torneig()}{Torneig()}}
-{\footnotesize\ttfamily Torneig\+::\+Torneig (\begin{DoxyParamCaption}\item[{string}]{nom\+\_\+torneig,  }\item[{\mbox{\hyperlink{struct_categoria}{Categoria}}}]{categoria\+\_\+torneig }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{Torneig()}{Torneig()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Torneig\+::\+Torneig (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Construeix un \mbox{\hyperlink{class_torneig}{Torneig}} en funció d\textquotesingle{}un nom i una categoria. La categoria s\textquotesingle{}emmagatzema per a saber quants punts corresponen a cada jugador en acabar el torneig. 
+Definición en la línea \mbox{\hyperlink{_torneig_8hh_source_l00035}{35}} del archivo \mbox{\hyperlink{_torneig_8hh_source}{Torneig.\+hh}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035 \{\};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneig_a98d476aced1063c8a0ff8e4d0d31b8da}\label{class_torneig_a98d476aced1063c8a0ff8e4d0d31b8da}} 
+\index{Torneig@{Torneig}!Torneig@{Torneig}}
+\index{Torneig@{Torneig}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{Torneig()}{Torneig()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Torneig\+::\+Torneig (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_categoria}{Categoria}}}]{categoria\+\_\+torneig }\end{DoxyParamCaption})}
+
+
+
+Construeix un \mbox{\hyperlink{class_torneig}{Torneig}} en funció d\textquotesingle{}una categoria. La categoria s\textquotesingle{}emmagatzema per a saber quants punts corresponen a cada jugador en acabar el torneig. 
 
 \begin{DoxyPrecond}{Precondición}
 Un string (nom del torneig) i una categoria. 

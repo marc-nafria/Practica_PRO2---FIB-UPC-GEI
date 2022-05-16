@@ -5,6 +5,5 @@ var searchData=
   ['bintree_3c_20int_20_3e_2',['BinTree&lt; int &gt;',['../class_bin_tree.html',1,'']]],
   ['bintree_3c_20string_20_3e_3',['BinTree&lt; string &gt;',['../class_bin_tree.html',1,'']]],
   ['borrar_5fclassificacio_4',['borrar_classificacio',['../class_classificacio.html#a195ac9a0ea2b43d67122d17e121fc520',1,'Classificacio']]],
-  ['borrar_5fjugador_5',['borrar_jugador',['../class_classificacio.html#a75f3ac772019e0e020c02f79de7a37f7',1,'Classificacio::borrar_jugador()'],['../class_conjunt_jugadors.html#a3f44a21c93b5062016ff16f65c212df2',1,'ConjuntJugadors::borrar_jugador()'],['../class_conjunt_tornejos.html#ab539149ef1613f32b091764f4087e84b',1,'ConjuntTornejos::borrar_jugador()'],['../class_torneig.html#ad05e7c87b8e338194582001a89e5c6aa',1,'Torneig::borrar_jugador()']]],
-  ['borrar_5ftorneig_6',['borrar_torneig',['../class_conjunt_tornejos.html#a8388f73b40be280088c30d94dbfeb3d9',1,'ConjuntTornejos']]]
+  ['borrar_5fjugador_5',['borrar_jugador',['../class_classificacio.html#a75f3ac772019e0e020c02f79de7a37f7',1,'Classificacio::borrar_jugador()'],['../class_torneig.html#ad05e7c87b8e338194582001a89e5c6aa',1,'Torneig::borrar_jugador()']]]
 ];

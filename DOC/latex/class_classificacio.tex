@@ -14,7 +14,7 @@ Representa el resum d\textquotesingle{}un torneig, es a dir, es un conjunt dels 
 \item 
 void \mbox{\hyperlink{class_classificacio_a1164331a4fd08d20f2bb6e1ab2a85a5e}{afegir\+\_\+partit}} (string nom\+\_\+jugador, int jocs\+\_\+favor, int jocs\+\_\+contra, int sets\+\_\+favor, int sets\+\_\+contra, int resultat\+\_\+partit)
 \begin{DoxyCompactList}\small\item\em Afegeix un nou partir a la classificacio d\textquotesingle{}un jugador, modificant el seu resultat en el diccionari jugadors. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_classificacio_a90492b724cacacff426bd3632f32902d}{establir\+\_\+punts}} (string nom\+\_\+jugador, int punts)
+void \mbox{\hyperlink{class_classificacio_a861e0203f1dac9af26f3c5ee80264bb8}{establir\+\_\+punts}} (string nom\+\_\+jugador, int punts)
 \begin{DoxyCompactList}\small\item\em Determina els punts que guanya el jugador en el torneig, afegint-\/los al seu resultat en el diccionari jugadors. També retorna si s\textquotesingle{}han afegit amb exit, ja que potser hem afegit menys punts dels que tocavem perquè ens trobem en un nivell inferior al que ha quedat el jugador. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_classificacio_a75f3ac772019e0e020c02f79de7a37f7}{borrar\+\_\+jugador}} (string nom\+\_\+jugador)
 \begin{DoxyCompactList}\small\item\em Borra el jugador de la classificacio. \end{DoxyCompactList}\item 
@@ -29,7 +29,7 @@ map$<$ string, \mbox{\hyperlink{struct_resultat}{Resultat}} $>$ \mbox{\hyperlink
 \doxysubsection{Descripción detallada}
 Representa el resum d\textquotesingle{}un torneig, es a dir, es un conjunt dels resultats de tots els jugadors. 
 
-Definición en la línea \mbox{\hyperlink{_classificacio_8hh_source_l00022}{22}} del archivo \mbox{\hyperlink{_classificacio_8hh_source}{Classificacio.\+hh}}.
+Definición en la línea \mbox{\hyperlink{_classificacio_8hh_source_l00030}{30}} del archivo \mbox{\hyperlink{_classificacio_8hh_source}{Classificacio.\+hh}}.
 
 
 
@@ -50,11 +50,11 @@ Un string, 4 enters d\textquotesingle{}estadistiques, més un enter que determin
 \begin{DoxyPostcond}{Postcondición}
 S\textquotesingle{}afegeix aquest partit al resultat del jugador. 
 \end{DoxyPostcond}
-\mbox{\Hypertarget{class_classificacio_a90492b724cacacff426bd3632f32902d}\label{class_classificacio_a90492b724cacacff426bd3632f32902d}} 
+\mbox{\Hypertarget{class_classificacio_a861e0203f1dac9af26f3c5ee80264bb8}\label{class_classificacio_a861e0203f1dac9af26f3c5ee80264bb8}} 
 \index{Classificacio@{Classificacio}!establir\_punts@{establir\_punts}}
 \index{establir\_punts@{establir\_punts}!Classificacio@{Classificacio}}
 \doxysubsubsection{\texorpdfstring{establir\_punts()}{establir\_punts()}}
-{\footnotesize\ttfamily bool Classificacio\+::establir\+\_\+punts (\begin{DoxyParamCaption}\item[{string}]{nom\+\_\+jugador,  }\item[{int}]{punts }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Classificacio\+::establir\+\_\+punts (\begin{DoxyParamCaption}\item[{string}]{nom\+\_\+jugador,  }\item[{int}]{punts }\end{DoxyParamCaption})}
 
 
 
